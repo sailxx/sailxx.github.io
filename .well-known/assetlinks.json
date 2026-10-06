@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sailxx.okto",
+      "sha256_cert_fingerprints": ["DA:30:C4:16:A3:1B:98:A0:E5:9D:A7:F8:F3:52:03:6A:95:DC:4D:A0:09:37:DC:0F:99:75:C0:D3:8B:08:83:A3"]
+    }
+  }
+]
