@@ -7,38 +7,79 @@
   <meta name="description" content="Проекты sailxx. Okto — планер задач, календарь и фокус на любом устройстве. FITTER — Telegram-бот для подсчёта калорий и БЖУ по фото еды. Okto Notes — заметки и дневник, Budila — будильник для Android. TrayMixer — громкость в трее Windows 11.">
   <link rel="canonical" href="https://sailxx.github.io/">
   <link rel="icon" href="https://sailxx.github.io/FITTER-AI/icon-32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--paper:#f7f8f2;--ink:#171916;--muted:#687067;--green:#c9f36b;--line:#dfe3d8}
-    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif;display:grid;place-items:center;min-height:100vh;padding:24px}
-    main{max-width:560px;width:100%}h1{font-size:28px;letter-spacing:-1px;margin:0 0 20px}
-    a.card+a.card{margin-top:12px}a.card{display:flex;gap:16px;align-items:center;padding:20px;background:#fff;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:inherit}
-    a.card:hover{border-color:#9fbf5a}.card img{width:56px;height:56px;border-radius:14px}
-    .card b{display:block;font-size:18px}.card span{color:var(--muted);font-size:14px;line-height:1.5}
+    :root{--bg:#000;--ink:#f5f5f4;--muted:#8d918c;--line:#1f2220;--card:#0b0c0b}
+    *{box-sizing:border-box}
+    html{background:var(--bg)}
+    body{margin:0;min-height:100vh;color:var(--ink);font-family:"Golos Text",Arial,sans-serif;padding:72px 20px 56px;
+      background:radial-gradient(60% 40% at 50% 0,rgba(255,255,255,.08),transparent 70%),var(--bg)}
+    main{max-width:620px;margin:0 auto}
+    header{margin-bottom:36px}
+    .tag{font:500 13px "JetBrains Mono",monospace;color:var(--muted);letter-spacing:.04em}
+    h1{font-size:40px;letter-spacing:-1.5px;margin:6px 0 10px;font-weight:700}
+    header p{margin:0;color:var(--muted);font-size:16px;line-height:1.55}
+    h2{font:500 13px "JetBrains Mono",monospace;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin:44px 0 14px}
+    a.card{--c:#fff;position:relative;display:flex;gap:18px;align-items:center;padding:20px;background:var(--card);
+      border:1px solid var(--line);border-radius:22px;text-decoration:none;color:inherit;
+      transition:border-color .2s,box-shadow .2s,transform .2s}
+    a.card+a.card{margin-top:12px}
+    a.card:hover,a.card:focus-visible{border-color:var(--c);box-shadow:0 0 36px -8px var(--c);transform:translateY(-2px);outline:none}
+    .card img{width:60px;height:60px;border-radius:15px;flex:none;box-shadow:0 0 24px -6px var(--c)}
+    .card b{display:block;font-size:18px;font-weight:700;letter-spacing:-.3px}
+    .card span{display:block;color:var(--muted);font-size:14px;line-height:1.5;margin-top:3px}
+    .card i{display:inline-block;margin-top:9px;font:400 11.5px "JetBrains Mono",monospace;color:var(--c);font-style:normal;
+      border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:99px;padding:2px 9px}
+    .okto{--c:#fff}.fitter{--c:#4ade80}.notes{--c:#ffd60a}.budila{--c:#ff7a1a}.tray{--c:#3b82f6}
+    .links{display:flex;flex-wrap:wrap;gap:10px}
+    .links a{font:400 14px "JetBrains Mono",monospace;color:var(--ink);text-decoration:none;padding:10px 16px;
+      border:1px solid var(--line);border-radius:12px;background:var(--card);transition:border-color .2s,box-shadow .2s}
+    .links a:hover,.links a:focus-visible{border-color:#fff;box-shadow:0 0 24px -8px #fff;outline:none}
+    footer{margin-top:48px;color:var(--muted);font:400 12px "JetBrains Mono",monospace}
+    @media(max-width:480px){body{padding-top:48px}h1{font-size:32px}a.card{padding:16px;gap:14px}.card img{width:52px;height:52px}}
   </style>
 </head>
 <body>
 <main>
-  <h1>Проекты</h1>
-  <a class="card" href="https://sailxx.github.io/Okto/">
-    <img src="https://sailxx.github.io/Okto/assets/icon-180.png" alt="Логотип Okto" width="56" height="56">
-    <div><b>Okto — планер, задачи и фокус</b><span>Задачи, календарь, Pomodoro и счётчик. Работает в браузере на любом устройстве, для Android — приложение с виджетом</span></div>
+  <header>
+    <div class="tag">github.com/sailxx</div>
+    <h1>sailxx</h1>
+    <p>Небольшие инструменты для себя: планер, заметки, будильник, калории и громкость. Без рекламы и лишних разрешений.</p>
+  </header>
+
+  <h2>Проекты</h2>
+  <a class="card okto" href="https://sailxx.github.io/Okto/">
+    <img src="https://sailxx.github.io/Okto/assets/icon-180.png" alt="Логотип Okto" width="60" height="60">
+    <div><b>Okto — планер, задачи и фокус</b><span>Задачи, календарь, Pomodoro и счётчик. Работает в браузере на любом устройстве, для Android — приложение с виджетом.</span><i>Web · Android</i></div>
   </a>
-  <a class="card" href="https://sailxx.github.io/FITTER-AI/">
-    <img src="https://sailxx.github.io/FITTER-AI/icon-120.png" alt="Логотип FITTER" width="56" height="56">
-    <div><b>FITTER — подсчёт калорий по фото</b><span>Telegram-бот: сфотографируй еду, и ИИ посчитает калории и БЖУ и запишет в дневник</span></div>
+  <a class="card fitter" href="https://sailxx.github.io/FITTER-AI/">
+    <img src="https://sailxx.github.io/FITTER-AI/icon-120.png" alt="Логотип FITTER" width="60" height="60">
+    <div><b>FITTER — калории по фото</b><span>Telegram-бот: сфотографируй еду, и ИИ посчитает калории и БЖУ и запишет в дневник.</span><i>Telegram</i></div>
   </a>
-  <a class="card" href="https://github.com/sailxx/Okto-Notes">
-    <img src="icons/oktonotes.svg" alt="Логотип Okto Notes" width="56" height="56">
-    <div><b>Okto Notes — заметки и дневник</b><span>Android: заметки, дневник с настроением и серией дней, фото и файлы. Без интернета, рекламы и разрешений</span></div>
+  <a class="card notes" href="https://github.com/sailxx/Okto-Notes">
+    <img src="icons/oktonotes.svg" alt="Логотип Okto Notes" width="60" height="60">
+    <div><b>Okto Notes — заметки и дневник</b><span>Заметки, дневник с настроением и серией дней, фото и файлы. Без интернета, рекламы и разрешений.</span><i>Android</i></div>
   </a>
-  <a class="card" href="https://github.com/sailxx/Budila">
-    <img src="icons/budila.png" alt="Логотип Budila" width="56" height="56">
-    <div><b>Budila — будильник</b><span>Android: спокойное пробуждение, теги и 17 тем. Без рекламы, работает офлайн</span></div>
+  <a class="card budila" href="https://github.com/sailxx/Budila">
+    <img src="icons/budila.png" alt="Логотип Budila" width="60" height="60">
+    <div><b>Budila — будильник</b><span>Спокойное пробуждение, теги и 17 тем. Без рекламы, работает офлайн.</span><i>Android</i></div>
   </a>
-  <a class="card" href="https://github.com/sailxx/TrayMixer">
-    <img src="icons/traymixer.png" alt="Логотип TrayMixer" width="56" height="56">
-    <div><b>TrayMixer — громкость в трее</b><span>Windows 11: громкость устройств и приложений и яркость экранов в одном окне. Один exe, без установки</span></div>
+  <a class="card tray" href="https://github.com/sailxx/TrayMixer">
+    <img src="icons/traymixer.png" alt="Логотип TrayMixer" width="60" height="60">
+    <div><b>TrayMixer — громкость в трее</b><span>Громкость устройств и приложений и яркость экранов в одном окне. Один exe, без установки.</span><i>Windows 11</i></div>
   </a>
+
+  <h2>Ссылки</h2>
+  <div class="links">
+    <a href="https://github.com/sailxx">GitHub</a>
+    <a href="https://github.com/sailxx?tab=repositories">Все репозитории</a>
+    <a href="https://github.com/sailxx/Okto-Notes/releases">Релизы Okto Notes</a>
+    <a href="https://github.com/sailxx/TrayMixer/releases">Релизы TrayMixer</a>
+  </div>
+
+  <footer>© sailxx</footer>
 </main>
 </body>
 </html>
