@@ -6,7 +6,9 @@
   <title>NERD CINEMA. — библиотека фильмов и подбор по вайбу</title>
   <meta name="description" content="Каталог фильмов и подборки по настроению: опиши атмосферу — получи фильмы, которые её передают.">
   <meta name="theme-color" content="#fafaf8">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Cpath d='M9 8h14v3H13v4h8v3h-8v6H9z' fill='%23fafaf8'/%3E%3C/svg%3E">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <script>
   (function () {
     var t = null;
@@ -22,7 +24,10 @@
 
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="#/" data-brand aria-label="На главную">NERD CINEMA.</a>
+    <a class="brand" href="#/" aria-label="На главную">
+      <svg class="mark" viewBox="0 0 64 64" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 16h7v32h-7zM33 16h7v32h-7zM12 16h7l21 32h-7zM44 40h8v8h-8z"/></svg>
+      <span data-brand>NERD CINEMA.</span>
+    </a>
     <nav class="nav" aria-label="Основная навигация">
       <a href="#/library" data-nav="library">Библиотека</a>
       <a href="#/vibe" data-nav="vibe">По вайбу</a>
