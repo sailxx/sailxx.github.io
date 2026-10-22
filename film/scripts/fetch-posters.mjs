@@ -3,7 +3,7 @@
 // Запуск локально:  OMDB_KEY=<ключ> node film/scripts/fetch-posters.mjs
 // Ключ бесплатный: https://www.omdbapi.com/apikey.aspx
 // Рейтинг — снимок на дату в поле updated; чтобы обновить, запусти скрипт ещё раз.
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 
@@ -41,7 +41,12 @@ async function api(params) {
   return j;
 }
 
+// Уже найденные id берём из прошлого запуска: экономим лимит OMDb (1000 запросов в сутки).
+const prevFile = fileURLToPath(new URL("assets/posters.json", root));
+const prev = existsSync(prevFile) ? JSON.parse(readFileSync(prevFile, "utf8")).films || {} : {};
+
 async function findId(f) {
+  if (prev[f.id] && prev[f.id].imdb) return prev[f.id].imdb;
   if (HINT[f.id]) return HINT[f.id];
   const title = f.tmdbQuery || f.en;
   const j = await api({ s: title, y: String(f.year), type: "movie" });
@@ -60,12 +65,13 @@ const missing = [];
 for (const f of films) {
   const id = await findId(f);
   const j = id ? await api({ i: id }) : null;
-  const tol = HINT[f.id] ? 3 : 1; // у id из подсказок год в OMDb бывает прокатным, а не премьерным
+  const tol = HINT[f.id] || prev[f.id] ? 3 : 1; // у id из подсказок год в OMDb бывает прокатным, а не премьерным
   if (!j || j.Response === "False" || j.Type !== "movie" || Math.abs(parseInt(j.Year) - f.year) > tol || !titleOk(f, j.Title)) {
     missing.push(f.id); console.log("MISS", f.id, j && j.Title ? `(получено: ${j.Title}, ${j.Year})` : ""); continue;
   }
   const poster = j.Poster && j.Poster !== "N/A" ? j.Poster : null;
-  films_out[f.id] = { imdb: j.imdbID, poster, rating: num(j.imdbRating), votes: num(j.imdbVotes) };
+  const actors = j.Actors && j.Actors !== "N/A" ? j.Actors.split(",").map((a) => a.trim()) : [];
+  films_out[f.id] = { imdb: j.imdbID, poster, rating: num(j.imdbRating), votes: num(j.imdbVotes), actors };
   console.log(poster ? "ok  " : "ok* ", f.id.padEnd(22), `${j.Title} (${j.Year})`, j.imdbRating, poster ? "" : "— без постера");
 }
 const out = { source: "OMDb (IMDb)", updated: new Date().toISOString().slice(0, 10), films: films_out };

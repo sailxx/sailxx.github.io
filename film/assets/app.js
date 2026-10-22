@@ -90,7 +90,7 @@
   function ratingHTML(f) {
     const r = rating(f);
     return r
-      ? `<span title="Источник: ${r.src}, оценок: ${(r.n || 0).toLocaleString("ru")}">${r.src} ${r.v.toFixed(1)}</span>`
+      ? `<span class="rt" title="Источник: ${r.src}, оценок: ${(r.n || 0).toLocaleString("ru")}">★ ${r.v.toFixed(1)}</span> <span class="src">${r.src}</span>`
       : `<span class="mute">рейтинг не найден</span>`;
   }
   function availLine(f) {
@@ -101,6 +101,11 @@
     if (!r) return "";
     const names = r.flatrate.length ? ["Подписка", r.flatrate] : r.free.length ? ["Бесплатно", r.free] : null;
     return names ? `<p class="avail">${names[0]}: ${esc(names[1].slice(0, 2).join(", "))}</p>` : "";
+  }
+  function castLine(f, opt) {
+    if (opt.noCast || !S.f.q.trim()) return "";
+    const m = matchedActors(f);
+    return m.length ? `<p class="cast">В ролях: ${m.slice(0, 3).map((a) => esc(ruName(a))).join(", ")}</p>` : "";
   }
   function card(f, opt = {}) {
     const fav = S.fav.has(f.id), later = S.later.has(f.id);
@@ -121,7 +126,7 @@
       </div>
       <h3 class="card-title"><a href="#/film/${esc(f.id)}">${esc(f.ru)}</a></h3>
       <p class="meta">${f.year || "год не найден"} · ${ratingHTML(f)}</p>
-      <p class="desc">${esc(f.desc) || '<span class="mute">Описание не найдено</span>'}</p>
+      ${castLine(f, opt)}<p class="desc">${esc(f.desc) || '<span class="mute">Описание не найдено</span>'}</p>
       ${availLine(f)}${reason}
     </article>`;
   }
@@ -166,11 +171,29 @@
     $("#foot-status").textContent = on ? "Данные: TMDB (постеры, рейтинги, доступность)." : "Демо-режим: данные TMDB не подключены.";
   }
 
+  /* Поиск: нормализация убирает различия э/е, й/и, ё/е, удвоенные буквы и диакритику (Керри = Кэрри = Carrey). */
+  const nrm = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+    .replace(/э/g, "е").replace(/[ъь]/g, "").replace(/(.)\1/g, "$1").replace(/[^a-zа-я0-9]+/g, " ").trim();
+  const actorsOf = (m) => (S.posters[m.id] && S.posters[m.id].actors) || [];
+  const ruName = (a) => (window.PEOPLE_RU && window.PEOPLE_RU[a]) || a;
+  const hayCache = new Map();
+  function haystack(m) {
+    const key = m.id + ":" + actorsOf(m).length;
+    if (!hayCache.has(key)) hayCache.set(key, nrm([m.ru, m.en, m.dir, ...actorsOf(m), ...actorsOf(m).map(ruName)].join(" ")));
+    return hayCache.get(key);
+  }
+  const queryTokens = () => nrm(S.f.q).split(" ").filter(Boolean);
+  const matchedActors = (m) => {
+    const t = queryTokens();
+    if (!t.length) return [];
+    return actorsOf(m).filter((a) => { const h = " " + nrm(a + " " + ruName(a)); return t.some((x) => h.includes(" " + x)); });
+  };
+
   function filtered() {
     const f = S.f;
-    const q = f.q.trim().toLowerCase().replace(/ё/g, "е");
+    const tokens = queryTokens();
     let list = FILMS.filter((m) => {
-      if (q && !(`${m.ru} ${m.en} ${m.dir}`.toLowerCase().replace(/ё/g, "е").includes(q))) return false;
+      if (tokens.length) { const h = " " + haystack(m); if (!tokens.every((t) => h.includes(" " + t))) return false; }
       if (f.genre && !m.genres.includes(f.genre)) return false;
       if (f.country && !m.countries.includes(f.country)) return false;
       if (!inPeriod(m.year, f.period)) return false;
@@ -254,7 +277,7 @@
         <p class="lead dark">${esc(r.description)}</p>
         <p class="logic">${recognized} Подбор — локальный: запрос сопоставляется с жанрами, темами, тоном и местом действия каждого фильма каталога. Это не нейросеть.</p>
       </div>
-      <div class="grid vibe-grid">${set.map((x) => card(x.film, { hits: x.hits })).join("")}</div>
+      <div class="grid vibe-grid">${set.map((x) => card(x.film, { hits: x.hits, noCast: true })).join("")}</div>
       <div class="vibe-actions">
         <button class="btn btn-ghost" type="button" data-act="edit-vibe">Изменить запрос</button>
         ${pool.length > VIBE_N ? `<button class="btn" type="button" data-act="more-vibe">Другая подборка</button>` : ""}
@@ -283,6 +306,7 @@
         <p class="orig" id="fm-orig">${f.en && f.en !== f.ru ? esc(f.en) : ""}</p>
         <p class="facts" id="fm-facts">${[f.dir ? "Режиссёр: " + esc(f.dir) : "Режиссёр: не найден", f.runtime ? f.runtime + " мин" : "Длительность: не найдена"].join(" · ")}</p>
         <p class="facts" id="fm-genres">${(f.genres || []).map(esc).join(" · ")}${f.countries && f.countries.length ? " · " + f.countries.map(esc).join(", ") : ""}</p>
+        ${actorsOf(f).length ? `<p class="facts">В ролях: ${actorsOf(f).map((a) => esc(ruName(a))).join(", ")}</p>` : ""}
         <p class="rate" id="fm-rate"></p>
         <div class="actions" id="fm-actions"></div>
 
@@ -310,7 +334,7 @@
   function renderRate(f) {
     const r = rating(f);
     $("#fm-rate").innerHTML = r
-      ? `<b>${r.v.toFixed(1)}</b> / 10 · источник: ${r.src === "IMDb" ? "IMDb (через OMDb)" : "TMDB"} (${(r.n || 0).toLocaleString("ru")} оценок)`
+      ? `<b class="rt big">★ ${r.v.toFixed(1)}</b> / 10 · источник: ${r.src === "IMDb" ? "IMDb (через OMDb)" : "TMDB"} (${(r.n || 0).toLocaleString("ru")} оценок)`
       : `<span class="mute">Рейтинг не найден</span>`;
   }
   function syncFilmButtons(id) {
