@@ -163,12 +163,12 @@
 
     const note = $("#demo-note");
     if (S.error) note.innerHTML = `${esc(S.error)} <button class="link" type="button" data-act="open-settings">Источник данных</button>`;
-    else if (!on) note.innerHTML = `${Object.keys(S.posters).length ? "Постеры и рейтинги: OMDb (IMDb)." : "Демо-режим: постеры и рейтинги не загружены."} Сервисы просмотра появятся после подключения TMDB. <button class="link" type="button" data-act="open-settings">Подключить</button>`;
+    else if (!on) note.innerHTML = `${Object.keys(S.posters).length ? "Постеры и рейтинги: OMDb (IMDb)." : "Постеры и рейтинги не загружены."} Сервисы просмотра появятся после подключения TMDB. <button class="link" type="button" data-act="open-settings">Подключить</button>`;
     else if (S.progress) note.textContent = `Загружаем данные TMDB… ${S.progress[0]} из ${S.progress[1]}`;
     else note.textContent = "";
     note.hidden = !note.textContent && !note.innerHTML;
 
-    $("#foot-status").textContent = on ? "Данные: TMDB (постеры, рейтинги, доступность)." : "Демо-режим: данные TMDB не подключены.";
+    $("#foot-status").textContent = on ? "Данные: OMDb (постеры, рейтинги IMDb), TMDB (описания, доступность просмотра)." : "Данные: OMDb (постеры, рейтинги IMDb). Доступность просмотра появится после подключения TMDB.";
   }
 
   /* Поиск: нормализация убирает различия э/е, й/и, ё/е, удвоенные буквы и диакритику (Керри = Кэрри = Carrey). */
@@ -577,7 +577,7 @@
     const d = $("#settings-dialog");
     $("#key-input").value = "";
     $("#set-error").textContent = "";
-    $("#set-status").textContent = CFG.tmdbProxy ? "Сейчас: TMDB через прокси." : window.Tmdb.enabled() ? "Сейчас: TMDB подключён." : "Сейчас: демо-режим.";
+    $("#set-status").textContent = CFG.tmdbProxy ? "Сейчас: TMDB через прокси." : window.Tmdb.enabled() ? "Сейчас: TMDB подключён." : "Сейчас: TMDB не подключён.";
     if (!d.open) d.showModal();
     $("#key-input").focus();
   }
