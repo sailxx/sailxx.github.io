@@ -40,6 +40,7 @@
     later: new Set(store.get("film:later", [])),
     ext: store.get("film:ext", {}),
     enrich: {},
+    posters: {}, // assets/posters.json: id -> { tmdbId, poster } (без ключа)
     f: { q: "", genre: "", period: "", country: "", rating: "", sort: "default", cat: "" },
     shown: PAGE,
     view: "home",
@@ -52,7 +53,7 @@
   };
 
   const byId = (id) => FILMS.find((f) => f.id === id) || S.ext[id] || null;
-  const poster = (f) => (S.enrich[f.id] && S.enrich[f.id].poster) || f.poster || null;
+  const poster = (f) => (S.enrich[f.id] && S.enrich[f.id].poster) || (S.posters[f.id] && S.posters[f.id].poster) || f.poster || null;
   const rating = (f) => {
     const e = S.enrich[f.id];
     return e && e.rating != null ? { v: e.rating, n: e.votes } : f.rating != null ? { v: f.rating, n: f.votes } : null;
@@ -145,7 +146,7 @@
 
     const note = $("#demo-note");
     if (S.error) note.innerHTML = `${esc(S.error)} <button class="link" type="button" data-act="open-settings">Источник данных</button>`;
-    else if (!on) note.innerHTML = `Демо-режим: постеры, рейтинги и сервисы просмотра не показываются, пока не подключён TMDB. <button class="link" type="button" data-act="open-settings">Подключить</button>`;
+    else if (!on) note.innerHTML = `${Object.keys(S.posters).length ? "Постеры — TMDB." : "Демо-режим: постеры не показываются."} Рейтинги и сервисы просмотра появятся после подключения TMDB. <button class="link" type="button" data-act="open-settings">Подключить</button>`;
     else if (S.progress) note.textContent = `Загружаем данные TMDB… ${S.progress[0]} из ${S.progress[1]}`;
     else note.textContent = "";
     note.hidden = !note.textContent && !note.innerHTML;
@@ -566,6 +567,7 @@
   $("#film-dialog").addEventListener("close", () => document.documentElement.classList.remove("lock"));
 
   /* ---------- старт ---------- */
+  fetch("assets/posters.json").then((r) => (r.ok ? r.json() : {})).then((j) => { S.posters = j || {}; scheduleRender(); }).catch(() => {});
   fillSelects();
   applyTmdbUI();
   refreshAll();
