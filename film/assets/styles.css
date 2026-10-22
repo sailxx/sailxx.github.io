@@ -79,14 +79,14 @@ h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 
 /* vibe */
 .vibe-section{padding-top:clamp(20px,3vw,40px)}
-.vibe-box{background:var(--pl-bg);color:var(--pl-ink);border:1px solid var(--pl-bg);padding:clamp(24px,4vw,56px);display:grid;gap:clamp(14px,2vw,22px)}
+.vibe-box{border-radius:calc(var(--r) + 4px);background:var(--pl-bg);color:var(--pl-ink);border:1px solid var(--pl-bg);padding:clamp(24px,4vw,56px);display:grid;gap:clamp(14px,2vw,22px)}
 .vibe-box .eyebrow{color:var(--pl-mute)}
 .vibe-box .lead{color:var(--pl-soft)}
 .vibe-form{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;margin-top:8px}
 .vibe-form textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--pl-line);border-radius:0;color:var(--pl-ink);font-size:clamp(1.1rem,2.2vw,1.6rem);line-height:1.35;padding:10px 0;resize:vertical;min-height:76px}
 .vibe-form textarea::placeholder{color:var(--pl-hold)}
 .vibe-form textarea:focus{outline:0;border-bottom-color:var(--pl-ink)}
-.vibe-form .btn{min-height:56px;white-space:nowrap}
+.vibe-form .btn{min-height:56px;white-space:nowrap;border-radius:var(--r)}
 .tags{display:flex;flex-wrap:wrap;gap:0 18px}
 .tags button{background:none;border:0;padding:6px 0;min-height:36px;color:var(--pl-soft);text-decoration:underline;text-decoration-color:var(--pl-under);text-underline-offset:5px;font-size:15px}
 .tags button:hover{color:var(--pl-ink);text-decoration-color:var(--pl-ink)}
