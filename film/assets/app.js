@@ -16,6 +16,20 @@
   $$("[data-brand]").forEach((el) => (el.textContent = CFG.projectName));
   document.title = CFG.projectName + " — библиотека фильмов и подбор по вайбу";
 
+  /* ---------- тема ---------- */
+  const root = document.documentElement;
+  const mq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
+  function applyTheme(t, save) {
+    root.dataset.theme = t;
+    const meta = $('meta[name="theme-color"]');
+    if (meta) meta.content = t === "dark" ? "#0a0a0a" : "#fafaf8";
+    const b = $(".theme-btn");
+    if (b) { const l = t === "dark" ? "Включить светлую тему" : "Включить тёмную тему"; b.setAttribute("aria-label", l); b.title = l; }
+    if (save) { try { localStorage.setItem("film:theme", t); } catch { /* ignore */ } }
+  }
+  applyTheme(root.dataset.theme || "light", false);
+  if (mq) mq.addEventListener("change", (e) => { let saved = null; try { saved = localStorage.getItem("film:theme"); } catch { /* ignore */ } if (!saved) applyTheme(e.matches ? "dark" : "light", false); });
+
   /* ---------- состояние ---------- */
   const guessRegion = () => {
     const m = (navigator.language || "").match(/-([A-Za-z]{2})$/);
@@ -473,6 +487,7 @@
     if (t.matches("[data-nav], [data-brand]")) { if (location.hash === t.getAttribute("href")) { ev.preventDefault(); route(); } return; }
     switch (t.dataset.act) {
       case "fav": case "later": toggle(t.dataset.act, t.dataset.id); break;
+      case "theme": applyTheme(root.dataset.theme === "dark" ? "light" : "dark", true); break;
       case "close-film": closeFilm(); break;
       case "focus-search":
         if (S.view !== "home") { history.replaceState(null, "", "#/"); route(); }
