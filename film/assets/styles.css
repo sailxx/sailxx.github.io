@@ -12,6 +12,7 @@
   --btn-hover:#d6d6d0; --err:#ff8a80; --veil:rgba(0,0,0,.7);
   --pl-bg:#f2f2ee; --pl-ink:#0a0a0a; --pl-soft:#2a2a27; --pl-mute:#55554f; --pl-line:#66665f; --pl-hold:#66665f; --pl-under:#a9a9a2;
 }
+[hidden]{display:none!important}
 *{box-sizing:border-box}
 html{background:var(--bg);-webkit-text-size-adjust:100%;scroll-padding-top:72px}
 html.lock{overflow:hidden}
@@ -156,6 +157,7 @@ input[type=search]::placeholder{color:var(--mute)}
 .meta{font-size:13px;color:var(--mute);margin-top:2px}
 .meta span:not(.mute){color:var(--ink)}
 .desc{font-size:14px;margin-top:8px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink2)}
+.cast{font-size:13px;margin-top:6px}
 .avail{font-size:12px;margin-top:8px;color:var(--mute)}
 .card .reason{margin-top:auto;padding-top:10px}
 .card .desc + .reason{margin-top:12px}

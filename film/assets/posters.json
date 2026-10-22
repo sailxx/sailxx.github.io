@@ -6,283 +6,517 @@
    "imdb": "tt0083658",
    "poster": "https://m.media-amazon.com/images/M/MV5BOWQ4YTBmNTQtMDYxMC00NGFjLTkwOGQtNzdhNmY1Nzc1MzUxXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
    "rating": 8.1,
-   "votes": 893169
+   "votes": 893169,
+   "actors": [
+    "Harrison Ford",
+    "Rutger Hauer",
+    "Sean Young"
+   ]
   },
   "arrival": {
    "imdb": "tt2543164",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_QL75_UX380_CR0,16,380,562_.jpg",
    "rating": 7.9,
-   "votes": 882127
+   "votes": 882127,
+   "actors": [
+    "Amy Adams",
+    "Jeremy Renner",
+    "Forest Whitaker"
+   ]
   },
   "fight-club": {
    "imdb": "tt0137523",
    "poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
    "rating": 8.8,
-   "votes": 2669989
+   "votes": 2669989,
+   "actors": [
+    "Brad Pitt",
+    "Edward Norton",
+    "Meat Loaf"
+   ]
   },
   "her": {
    "imdb": "tt1798709",
    "poster": "https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.9,
-   "votes": 735364
+   "votes": 735364,
+   "actors": [
+    "Joaquin Phoenix",
+    "Amy Adams",
+    "Scarlett Johansson"
+   ]
   },
   "donnie-darko": {
    "imdb": "tt0246578",
    "poster": "https://m.media-amazon.com/images/M/MV5BMWE3NTYzZmEtM2U5MS00MDZhLTk2ZTQtZTgzNjg0ZGQ5ZjM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
    "rating": 8,
-   "votes": 922075
+   "votes": 922075,
+   "actors": [
+    "Jake Gyllenhaal",
+    "Jena Malone",
+    "Mary McDonnell"
+   ]
   },
   "stalker": {
    "imdb": "tt0079944",
    "poster": "https://m.media-amazon.com/images/M/MV5BMDIzMDRiYjgtM2U1Yy00MjlhLTliODMtM2E5NDI5Njc3YmZkXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
    "rating": 8,
-   "votes": 158399
+   "votes": 158399,
+   "actors": [
+    "Alisa Freyndlikh",
+    "Aleksandr Kaydanovskiy",
+    "Anatoliy Solonitsyn"
+   ]
   },
   "birdman": {
    "imdb": "tt2562232",
    "poster": "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.7,
-   "votes": 704581
+   "votes": 704581,
+   "actors": [
+    "Michael Keaton",
+    "Zach Galifianakis",
+    "Edward Norton"
+   ]
   },
   "eternal-sunshine": {
    "imdb": "tt0338013",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 8.3,
-   "votes": 1198489
+   "votes": 1198489,
+   "actors": [
+    "Jim Carrey",
+    "Kate Winslet",
+    "Tom Wilkinson"
+   ]
   },
   "city-of-god": {
    "imdb": "tt0317248",
    "poster": "https://m.media-amazon.com/images/M/MV5BYjY4NGI5OTUtY2ZlZS00Zjk4LTk5N2MtN2JmYWVjNGNmMGRlXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
    "rating": 8.6,
-   "votes": 884133
+   "votes": 884133,
+   "actors": [
+    "Alexandre Rodrigues",
+    "Leandro Firmino",
+    "Matheus Nachtergaele"
+   ]
   },
   "lost-in-translation": {
    "imdb": "tt0335266",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTUxMzk0NDg1MV5BMl5BanBnXkFtZTgwNDg0NjkxMDI@._V1_QL75_UX380_CR0,12,380,562_.jpg",
    "rating": 7.7,
-   "votes": 535644
+   "votes": 535644,
+   "actors": [
+    "Bill Murray",
+    "Scarlett Johansson",
+    "Giovanni Ribisi"
+   ]
   },
   "ex-machina": {
    "imdb": "tt0470752",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.7,
-   "votes": 646912
+   "votes": 646912,
+   "actors": [
+    "Alicia Vikander",
+    "Domhnall Gleeson",
+    "Oscar Isaac"
+   ]
   },
   "mulholland-drive": {
    "imdb": "tt0166924",
    "poster": "https://m.media-amazon.com/images/M/MV5BNjliY2UwMjQtYjVlNi00NzExLTg1MDMtMjE2OTYwYjI0NTcxXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.9,
-   "votes": 435237
+   "votes": 435237,
+   "actors": [
+    "Naomi Watts",
+    "Laura Harring",
+    "Justin Theroux"
+   ]
   },
   "blade-runner-2049": {
    "imdb": "tt1856101",
    "poster": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 8,
-   "votes": 769711
+   "votes": 769711,
+   "actors": [
+    "Harrison Ford",
+    "Ryan Gosling",
+    "Ana de Armas"
+   ]
   },
   "matrix": {
    "imdb": "tt0133093",
    "poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
    "rating": 8.7,
-   "votes": 2284373
+   "votes": 2284373,
+   "actors": [
+    "Keanu Reeves",
+    "Laurence Fishburne",
+    "Carrie-Anne Moss"
+   ]
   },
   "akira": {
    "imdb": "tt0094625",
    "poster": "https://m.media-amazon.com/images/M/MV5BNzlhZGRmZGEtM2ZjNC00MWRmLTk0MDctYzU1NzAzODIxYzEyXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
    "rating": 8,
-   "votes": 232830
+   "votes": 232830,
+   "actors": [
+    "Mitsuo Iwata",
+    "Nozomu Sasaki",
+    "Mami Koyama"
+   ]
   },
   "ghost-in-the-shell": {
    "imdb": "tt0113568",
    "poster": "https://m.media-amazon.com/images/M/MV5BNzljMjA3MTQtMjM1OS00OGJjLWJiYzctZDRiMTk1NWI5YzQ5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.9,
-   "votes": 177519
+   "votes": 177519,
+   "actors": [
+    "Atsuko Tanaka",
+    "Iemasa Kayumi",
+    "Akio Otsuka"
+   ]
   },
   "taxi-driver": {
    "imdb": "tt0075314",
    "poster": "https://m.media-amazon.com/images/M/MV5BZDNhMGYwM2UtMTdlZS00MGQ1LWI2YzAtODY5YWI1MjYyNzRmXkEyXkFqcGc@._V1_QL75_UX380_CR0,7,380,562_.jpg",
    "rating": 8.2,
-   "votes": 1044669
+   "votes": 1044669,
+   "actors": [
+    "Robert De Niro",
+    "Jodie Foster",
+    "Cybill Shepherd"
+   ]
   },
   "drive": {
    "imdb": "tt0780504",
    "poster": "https://m.media-amazon.com/images/M/MV5BYTFmNTFlOTAtNzEyNi00MWU2LTg3MGEtYjA2NWY3MDliNjlkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.8,
-   "votes": 775952
+   "votes": 775952,
+   "actors": [
+    "Ryan Gosling",
+    "Carey Mulligan",
+    "Bryan Cranston"
+   ]
   },
   "solaris": {
    "imdb": "tt0069293",
    "poster": "https://m.media-amazon.com/images/M/MV5BYTYyMjU4MjItYzZkNy00NmIyLTg1ZGEtYTY5ZTEyM2U2NDM2XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
    "rating": 7.9,
-   "votes": 105426
+   "votes": 105426,
+   "actors": [
+    "Natalya Bondarchuk",
+    "Donatas Banionis",
+    "Jüri Järvet"
+   ]
   },
   "in-the-mood-for-love": {
    "imdb": "tt0118694",
    "poster": "https://m.media-amazon.com/images/M/MV5BN2Q4NjllMDgtOTk2Zi00YzM1LWJmOTMtNmRiZDgyZGJmMjQzXkEyXkFqcGc@._V1_QL75_UX380_CR0,3,380,562_.jpg",
    "rating": 8,
-   "votes": 192046
+   "votes": 192046,
+   "actors": [
+    "Maggie Cheung",
+    "Tony Leung Chiu-wai",
+    "Ping-Lam Siu"
+   ]
   },
   "chungking-express": {
    "imdb": "tt0109424",
    "poster": "https://m.media-amazon.com/images/M/MV5BNDQ4ZmYxODctZDVlZC00OTcxLWJjOGItZjRlMzk4MDA1Yjg1XkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
    "rating": 7.9,
-   "votes": 114344
+   "votes": 114344,
+   "actors": [
+    "Brigitte Lin",
+    "Takeshi Kaneshiro",
+    "Tony Leung Chiu-wai"
+   ]
   },
   "paris-texas": {
    "imdb": "tt0087884",
    "poster": "https://m.media-amazon.com/images/M/MV5BYWY5YzE4YmUtZWFhMS00YjYxLWI5ZGUtNDEyNmMzNDVjMGEwXkEyXkFqcGc@._V1_QL75_UX380_CR0,12,380,562_.jpg",
    "rating": 8.1,
-   "votes": 145470
+   "votes": 145470,
+   "actors": [
+    "Harry Dean Stanton",
+    "Nastassja Kinski",
+    "Dean Stockwell"
+   ]
   },
   "into-the-wild": {
    "imdb": "tt0758758",
    "poster": "https://m.media-amazon.com/images/M/MV5BNTgwZTJhNWMtNzVjMy00YzQzLWI4MTAtYmJhOGQ5ZmQ3MDM0XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
    "rating": 8,
-   "votes": 700422
+   "votes": 700422,
+   "actors": [
+    "Emile Hirsch",
+    "Vince Vaughn",
+    "Catherine Keener"
+   ]
   },
   "y-tu-mama-tambien": {
    "imdb": "tt0245574",
    "poster": "https://m.media-amazon.com/images/M/MV5BNTRmZmNlMjktZDRkMi00OGNjLWJkZGUtMDljNDViMGE3MjNhXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
    "rating": 7.7,
-   "votes": 143272
+   "votes": 143272,
+   "actors": [
+    "Maribel Verdú",
+    "Gael García Bernal",
+    "Daniel Giménez Cacho"
+   ]
   },
   "moon": {
    "imdb": "tt1182345",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_QL75_UY562_CR1,0,380,562_.jpg",
    "rating": 7.8,
-   "votes": 398994
+   "votes": 398994,
+   "actors": [
+    "Sam Rockwell",
+    "Kevin Spacey",
+    "Dominique McElligott"
+   ]
   },
   "under-the-skin": {
    "imdb": "tt4698852",
    "poster": "https://m.media-amazon.com/images/M/MV5BYjdlZmQxZjMtNjNiZi00MDRiLTliNjYtYWY5OWNkMjQwMWE5XkEyXkFqcGc@._V1_SX300.jpg",
    "rating": 6.6,
-   "votes": 16
+   "votes": 16,
+   "actors": [
+    "Rita Carelli",
+    "Mariano Mattos Martins"
+   ]
   },
   "perfect-blue": {
    "imdb": "tt0156887",
    "poster": "https://m.media-amazon.com/images/M/MV5BYjkyZjY1OWItNjYyNC00ZjlhLTgwOTAtMGNiYTFmYTNmZDI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 8,
-   "votes": 127828
+   "votes": 127828,
+   "actors": [
+    "Junko Iwao",
+    "Rica Matsumoto",
+    "Shinpachi Tsuji"
+   ]
   },
   "paprika": {
    "imdb": "tt0851578",
    "poster": "https://m.media-amazon.com/images/M/MV5BZGJkYjkyMDUtM2U3ZC00NDM3LWI0MzItZjU5MmYwYjg2YmIwXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
    "rating": 7.7,
-   "votes": 116262
+   "votes": 116262,
+   "actors": [
+    "Megumi Hayashibara",
+    "Tôru Emori",
+    "Katsunosuke Hori"
+   ]
   },
   "mad-max-fury-road": {
    "imdb": "tt1392190",
    "poster": "https://m.media-amazon.com/images/M/MV5BZDRkODJhOTgtOTc1OC00NTgzLTk4NjItNDgxZDY4YjlmNDY2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 8.1,
-   "votes": 1223352
+   "votes": 1223352,
+   "actors": [
+    "Tom Hardy",
+    "Charlize Theron",
+    "Nicholas Hoult"
+   ]
   },
   "virgin-suicides": {
    "imdb": "tt0159097",
    "poster": "https://m.media-amazon.com/images/M/MV5BMmNhYTE5MjQtMzI2Ny00MDRhLWE4ZjAtYTg0YjNhNjZmMTVlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.2,
-   "votes": 188840
+   "votes": 188840,
+   "actors": [
+    "Kirsten Dunst",
+    "Josh Hartnett",
+    "James Woods"
+   ]
   },
   "amelie": {
    "imdb": "tt0211915",
    "poster": "https://m.media-amazon.com/images/M/MV5BOTNmYzY0MWQtZGZmNy00Y2Y4LWFmMDQtMTZjYTdiYzEwZGQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
    "rating": 8.2,
-   "votes": 848391
+   "votes": 848391,
+   "actors": [
+    "Audrey Tautou",
+    "Mathieu Kassovitz",
+    "Rufus"
+   ]
   },
   "grand-budapest-hotel": {
    "imdb": "tt2278388",
    "poster": "https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 8.1,
-   "votes": 988783
+   "votes": 988783,
+   "actors": [
+    "Ralph Fiennes",
+    "F. Murray Abraham",
+    "Mathieu Amalric"
+   ]
   },
   "nostalghia": {
    "imdb": "tt0086022",
    "poster": "https://m.media-amazon.com/images/M/MV5BMWFjMGFhYzEtODZkZS00MDRjLWE2NGEtMWRhODcwMzNiN2I1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.9,
-   "votes": 33732
+   "votes": 33732,
+   "actors": [
+    "Oleg Yankovskiy",
+    "Erland Josephson",
+    "Domiziana Giordano"
+   ]
   },
   "cinema-paradiso": {
    "imdb": "tt0095765",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTljNzc4YWEtYTZlMS00ODMyLWIwMTAtNWQxY2VkMDEwYTk5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 8.5,
-   "votes": 321617
+   "votes": 321617,
+   "actors": [
+    "Philippe Noiret",
+    "Enzo Cannavale",
+    "Antonella Attili"
+   ]
   },
   "back-to-the-future": {
    "imdb": "tt0088763",
    "poster": "https://m.media-amazon.com/images/M/MV5BZmM3ZjE0NzctNjBiOC00MDZmLTgzMTUtNGVlOWFlOTNiZDJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,14,380,562_.jpg",
    "rating": 8.5,
-   "votes": 1480321
+   "votes": 1480321,
+   "actors": [
+    "Michael J. Fox",
+    "Christopher Lloyd",
+    "Lea Thompson"
+   ]
   },
   "aftersun": {
    "imdb": "tt19770238",
    "poster": "https://m.media-amazon.com/images/M/MV5BZWU5Y2MyZjQtNGVjYi00ZDRkLTk1MGYtYmNlMzI0MTFmNDU2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.6,
-   "votes": 133967
+   "votes": 133967,
+   "actors": [
+    "Paul Mescal",
+    "Frankie Corio",
+    "Celia Rowlson-Hall"
+   ]
   },
   "roma": {
    "imdb": "tt6155172",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTU0OTc3ODk4Ml5BMl5BanBnXkFtZTgwMzM4NzI5NjM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.6,
-   "votes": 179999
+   "votes": 179999,
+   "actors": [
+    "Yalitza Aparicio",
+    "Marina de Tavira",
+    "Diego Cortina Autrey"
+   ]
   },
   "enter-the-void": {
    "imdb": "tt1191111",
    "poster": "https://m.media-amazon.com/images/M/MV5BZmUyYjM1YjUtYTVhZC00YzYwLThiYTMtZjE3ZmZmNzA2NDA4XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
    "rating": 7.2,
-   "votes": 95791
+   "votes": 95791,
+   "actors": [
+    "Nathaniel Brown",
+    "Paz de la Huerta",
+    "Cyril Roy"
+   ]
   },
   "the-lighthouse": {
    "imdb": "tt7984734",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTI4MjFhMjAtNmQxYi00N2IxLWJjMGEtYWY1YmU3OTQ0Zjk3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.3,
-   "votes": 311065
+   "votes": 311065,
+   "actors": [
+    "Robert Pattinson",
+    "Willem Dafoe",
+    "Valeriia Karaman"
+   ]
   },
   "interstellar": {
    "imdb": "tt0816692",
    "poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 8.7,
-   "votes": 2617722
+   "votes": 2617722,
+   "actors": [
+    "Matthew McConaughey",
+    "Anne Hathaway",
+    "Jessica Chastain"
+   ]
   },
   "persona": {
    "imdb": "tt0060827",
    "poster": "https://m.media-amazon.com/images/M/MV5BYTRhNzkzMDktZDNlNi00MDIwLWFiNjAtNTlmYjZjYWZlMTEzXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
    "rating": 8,
-   "votes": 142440
+   "votes": 142440,
+   "actors": [
+    "Bibi Andersson",
+    "Liv Ullmann",
+    "Margaretha Krook"
+   ]
   },
   "easy-rider": {
    "imdb": "tt0064276",
    "poster": "https://m.media-amazon.com/images/M/MV5BMTc2MjI2NDc4Ml5BMl5BanBnXkFtZTgwODI4NzU0MTI@._V1_QL75_UX380_CR0,6,380,562_.jpg",
    "rating": 7.2,
-   "votes": 123767
+   "votes": 123767,
+   "actors": [
+    "Peter Fonda",
+    "Dennis Hopper",
+    "Jack Nicholson"
+   ]
   },
   "motorcycle-diaries": {
    "imdb": "tt0318462",
    "poster": "https://m.media-amazon.com/images/M/MV5BYTJkMWE5ZWEtYzQ1OS00ZDZkLTkzYTUtMzEzZTI3MjBmM2E1XkEyXkFqcGc@._V1_SX300.jpg",
    "rating": 7.7,
-   "votes": 105718
+   "votes": 105718,
+   "actors": [
+    "Gael García Bernal",
+    "Rodrigo de la Serna",
+    "Mía Maestro"
+   ]
   },
   "walter-mitty": {
    "imdb": "tt0359950",
    "poster": "https://m.media-amazon.com/images/M/MV5BODYwNDYxNDk1Nl5BMl5BanBnXkFtZTgwOTAwMTk2MDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 7.3,
-   "votes": 378518
+   "votes": 378518,
+   "actors": [
+    "Ben Stiller",
+    "Kristen Wiig",
+    "Jon Daly"
+   ]
   },
   "children-of-men": {
    "imdb": "tt0206634",
    "poster": "https://m.media-amazon.com/images/M/MV5BMDNkNmNiYzYtYWY0YS00NWEwLTgwMWUtYjM0M2E4Nzk3MzhmXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
    "rating": 7.9,
-   "votes": 572962
+   "votes": 572962,
+   "actors": [
+    "Julianne Moore",
+    "Clive Owen",
+    "Chiwetel Ejiofor"
+   ]
   },
   "se7en": {
    "imdb": "tt0114369",
    "poster": "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_QL75_UX380_CR0,16,380,562_.jpg",
    "rating": 8.6,
-   "votes": 2066262
+   "votes": 2066262,
+   "actors": [
+    "Morgan Freeman",
+    "Brad Pitt",
+    "Kevin Spacey"
+   ]
   },
   "a-ghost-story": {
    "imdb": "tt6265828",
    "poster": "https://m.media-amazon.com/images/M/MV5BMzcyNTc1ODQzMF5BMl5BanBnXkFtZTgwNTgzMzY4MTI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
    "rating": 6.8,
-   "votes": 87715
+   "votes": 87715,
+   "actors": [
+    "Casey Affleck",
+    "Rooney Mara",
+    "McColm Cephas Jr."
+   ]
   }
  }
 }
