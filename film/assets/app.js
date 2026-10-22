@@ -90,7 +90,7 @@
   function ratingHTML(f) {
     const r = rating(f);
     return r
-      ? `<span title="Источник: ${r.src}, оценок: ${(r.n || 0).toLocaleString("ru")}">${r.src} ${r.v.toFixed(1)}</span>`
+      ? `<span class="rt" title="Источник: ${r.src}, оценок: ${(r.n || 0).toLocaleString("ru")}">★ ${r.v.toFixed(1)}</span> <span class="src">${r.src}</span>`
       : `<span class="mute">рейтинг не найден</span>`;
   }
   function availLine(f) {
@@ -334,7 +334,7 @@
   function renderRate(f) {
     const r = rating(f);
     $("#fm-rate").innerHTML = r
-      ? `<b>${r.v.toFixed(1)}</b> / 10 · источник: ${r.src === "IMDb" ? "IMDb (через OMDb)" : "TMDB"} (${(r.n || 0).toLocaleString("ru")} оценок)`
+      ? `<b class="rt big">★ ${r.v.toFixed(1)}</b> / 10 · источник: ${r.src === "IMDb" ? "IMDb (через OMDb)" : "TMDB"} (${(r.n || 0).toLocaleString("ru")} оценок)`
       : `<span class="mute">Рейтинг не найден</span>`;
   }
   function syncFilmButtons(id) {
