@@ -1,8 +1,8 @@
-# FILM / PROJECT
+# NERD CINEMA.
 
-Библиотека фильмов с подбором по настроению.
+Фильмы под твой вайб.
 
-![FILM / PROJECT](docs/screenshot.png)
+![NERD CINEMA.](docs/screenshot.png)
 
 ## Features
 
@@ -24,5 +24,5 @@
 
 ---
 
-Название меняется в одном месте: `assets/config.js`.
+Название меняется в одном месте: `assets/config.js` (`projectName`).(`projectName`).
 Без ключа TMDB сайт работает в демо-режиме: без постеров, рейтингов и сервисов просмотра.
