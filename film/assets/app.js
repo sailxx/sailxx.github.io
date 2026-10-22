@@ -40,7 +40,7 @@
     later: new Set(store.get("film:later", [])),
     ext: store.get("film:ext", {}),
     enrich: {},
-    posters: {}, // assets/posters.json: id -> { tmdbId, poster } (без ключа)
+    posters: {}, // assets/posters.json (OMDb): id -> { imdb, poster, rating, votes } — работает без ключа в браузере
     f: { q: "", genre: "", period: "", country: "", rating: "", sort: "default", cat: "" },
     shown: PAGE,
     view: "home",
@@ -53,11 +53,22 @@
   };
 
   const byId = (id) => FILMS.find((f) => f.id === id) || S.ext[id] || null;
-  const poster = (f) => (S.enrich[f.id] && S.enrich[f.id].poster) || (S.posters[f.id] && S.posters[f.id].poster) || f.poster || null;
+  /* Источники постеров: живой TMDB (с ключом) -> assets/posters.json (OMDb, без ключа) -> постер внешнего фильма TMDB. */
+  function posterSrc(f) {
+    const T = window.Tmdb;
+    const tm = (S.enrich[f.id] && S.enrich[f.id].poster) || f.poster;
+    if (tm) return { src: T.img(tm, "w342"), srcset: `${T.img(tm, "w185")} 185w, ${T.img(tm, "w342")} 342w, ${T.img(tm, "w500")} 500w` };
+    const sp = S.posters[f.id];
+    return sp && sp.poster ? { src: sp.poster, srcset: "" } : null;
+  }
   const rating = (f) => {
     const e = S.enrich[f.id];
-    return e && e.rating != null ? { v: e.rating, n: e.votes } : f.rating != null ? { v: f.rating, n: f.votes } : null;
+    if (e && e.rating != null) return { v: e.rating, n: e.votes, src: "TMDB" };
+    const sp = S.posters[f.id];
+    if (sp && sp.rating != null) return { v: sp.rating, n: sp.votes, src: "IMDb" };
+    return f.rating != null ? { v: f.rating, n: f.votes, src: "TMDB" } : null;
   };
+  const hasRatings = () => S.tmdb || Object.values(S.posters).some((x) => x.rating != null);
 
   if (S.tmdb) for (const f of FILMS) { const h = window.Tmdb.peekResolve(f); if (h) S.enrich[f.id] = h; }
 
@@ -70,17 +81,16 @@
 
   /* ---------- карточка ---------- */
   function posterHTML(f, sizes) {
-    const p = poster(f);
+    const p = posterSrc(f);
     if (p) {
-      const T = window.Tmdb;
-      return `<img class="poster-img" src="${T.img(p, "w342")}" srcset="${T.img(p, "w185")} 185w, ${T.img(p, "w342")} 342w, ${T.img(p, "w500")} 500w" sizes="${sizes}" width="342" height="513" loading="lazy" decoding="async" alt="Постер: ${esc(f.ru)}">`;
+      return `<img class="poster-img" src="${esc(p.src)}"${p.srcset ? ` srcset="${p.srcset}" sizes="${sizes}"` : ""} width="342" height="513" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="Постер: ${esc(f.ru)}">`;
     }
     return `<span class="ph" aria-hidden="true"><span class="ph-t">${esc(f.ru)}</span><span class="ph-y">${f.year || ""}</span></span>`;
   }
   function ratingHTML(f) {
     const r = rating(f);
     return r
-      ? `<span title="Источник: TMDB, оценок: ${r.n}">TMDB ${r.v.toFixed(1)}</span>`
+      ? `<span title="Источник: ${r.src}, оценок: ${(r.n || 0).toLocaleString("ru")}">${r.src} ${r.v.toFixed(1)}</span>`
       : `<span class="mute">рейтинг не найден</span>`;
   }
   function availLine(f) {
@@ -138,15 +148,17 @@
 
   function applyTmdbUI() {
     const on = S.tmdb;
-    $("#f-rating").disabled = !on;
-    $("#f-rating").title = on ? "" : "Рейтинг доступен после подключения TMDB";
-    for (const v of ["pop", "rating"]) $(`#f-sort option[value="${v}"]`).disabled = !on;
-    if (!on && ["pop", "rating"].includes(S.f.sort)) { S.f.sort = "default"; $("#f-sort").value = "default"; }
-    if (!on) S.f.rating = "";
+    const rated = hasRatings();
+    $("#f-rating").disabled = !rated;
+    $("#f-rating").title = rated ? "" : "Рейтинг появится, когда в каталог загружены оценки";
+    $('#f-sort option[value="pop"]').disabled = !on;
+    $('#f-sort option[value="rating"]').disabled = !rated;
+    if (!on && S.f.sort === "pop") { S.f.sort = "default"; $("#f-sort").value = "default"; }
+    if (!rated) { S.f.rating = ""; if (S.f.sort === "rating") { S.f.sort = "default"; $("#f-sort").value = "default"; } }
 
     const note = $("#demo-note");
     if (S.error) note.innerHTML = `${esc(S.error)} <button class="link" type="button" data-act="open-settings">Источник данных</button>`;
-    else if (!on) note.innerHTML = `${Object.keys(S.posters).length ? "Постеры — TMDB." : "Демо-режим: постеры не показываются."} Рейтинги и сервисы просмотра появятся после подключения TMDB. <button class="link" type="button" data-act="open-settings">Подключить</button>`;
+    else if (!on) note.innerHTML = `${Object.keys(S.posters).length ? "Постеры и рейтинги: OMDb (IMDb)." : "Демо-режим: постеры и рейтинги не загружены."} Сервисы просмотра появятся после подключения TMDB. <button class="link" type="button" data-act="open-settings">Подключить</button>`;
     else if (S.progress) note.textContent = `Загружаем данные TMDB… ${S.progress[0]} из ${S.progress[1]}`;
     else note.textContent = "";
     note.hidden = !note.textContent && !note.innerHTML;
@@ -298,8 +310,8 @@
   function renderRate(f) {
     const r = rating(f);
     $("#fm-rate").innerHTML = r
-      ? `<b>${r.v.toFixed(1)}</b> / 10 · источник: TMDB (${r.n.toLocaleString("ru")} оценок)`
-      : `<span class="mute">Рейтинг не найден${S.tmdb ? "" : " — подключи TMDB, чтобы увидеть оценку"}</span>`;
+      ? `<b>${r.v.toFixed(1)}</b> / 10 · источник: ${r.src === "IMDb" ? "IMDb (через OMDb)" : "TMDB"} (${(r.n || 0).toLocaleString("ru")} оценок)`
+      : `<span class="mute">Рейтинг не найден</span>`;
   }
   function syncFilmButtons(id) {
     const fav = S.fav.has(id), later = S.later.has(id);
@@ -567,7 +579,7 @@
   $("#film-dialog").addEventListener("close", () => document.documentElement.classList.remove("lock"));
 
   /* ---------- старт ---------- */
-  fetch("assets/posters.json").then((r) => (r.ok ? r.json() : {})).then((j) => { S.posters = j || {}; scheduleRender(); }).catch(() => {});
+  fetch("assets/posters.json").then((r) => (r.ok ? r.json() : {})).then((j) => { S.posters = (j && j.films) || {}; scheduleRender(); }).catch(() => {});
   fillSelects();
   applyTmdbUI();
   refreshAll();
