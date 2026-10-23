@@ -22,10 +22,12 @@ const HINT = {
   "city-of-god": "tt0317248", "cinema-paradiso": "tt0095765", se7en: "tt0114369", "children-of-men": "tt0206634",
   "ghost-in-the-shell": "tt0113568", "chungking-express": "tt0109424", "perfect-blue": "tt0156887",
   "virgin-suicides": "tt0159097", nostalghia: "tt0086022",
+  "seven-samurai": "tt0047478", "spirited-away": "tt0245429", "8-1-2": "tt0056801", mirror: "tt0072443",
+  "letyat-zhuravli": "tt0050634", brat: "tt0118767",
 };
 
 // Название в OMDb может отличаться от обычного (Se7en -> Seven): допустимые варианты для сверки.
-const ALIAS = { se7en: ["seven"], nostalghia: ["nostalgia"] };
+const ALIAS = { se7en: ["seven"], nostalghia: ["nostalgia"], mirror: ["the mirror"], "8-1-2": ["8 1 2", "8½"] };
 const titleOk = (f, got) => {
   const g = norm(got);
   return [f.tmdbQuery || f.en, f.en, ...(ALIAS[f.id] || [])].filter(Boolean).map(norm).some((t) => t && (g === t || g.includes(t) || t.includes(g)));
@@ -46,8 +48,8 @@ const prevFile = fileURLToPath(new URL("assets/posters.json", root));
 const prev = existsSync(prevFile) ? JSON.parse(readFileSync(prevFile, "utf8")).films || {} : {};
 
 async function findId(f) {
-  if (prev[f.id] && prev[f.id].imdb) return prev[f.id].imdb;
   if (HINT[f.id]) return HINT[f.id];
+  if (prev[f.id] && prev[f.id].imdb) return prev[f.id].imdb;
   const title = f.tmdbQuery || f.en;
   const j = await api({ s: title, y: String(f.year), type: "movie" });
   let list = (j.Search || []).filter((r) => norm(r.Title) === norm(title));
@@ -65,7 +67,7 @@ const missing = [];
 for (const f of films) {
   const id = await findId(f);
   const j = id ? await api({ i: id }) : null;
-  const tol = HINT[f.id] || prev[f.id] ? 3 : 1; // у id из подсказок год в OMDb бывает прокатным, а не премьерным
+  const tol = HINT[f.id] ? 5 : prev[f.id] ? 3 : 1; // OMDb нередко ставит год мирового проката // у id из подсказок год в OMDb бывает прокатным, а не премьерным
   if (!j || j.Response === "False" || j.Type !== "movie" || Math.abs(parseInt(j.Year) - f.year) > tol || !titleOk(f, j.Title)) {
     missing.push(f.id); console.log("MISS", f.id, j && j.Title ? `(получено: ${j.Title}, ${j.Year})` : ""); continue;
   }

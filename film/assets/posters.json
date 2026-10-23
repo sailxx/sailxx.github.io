@@ -1,6 +1,6 @@
 {
  "source": "OMDb (IMDb)",
- "updated": "2026-10-22",
+ "updated": "2026-10-23",
  "films": {
   "blade-runner": {
    "imdb": "tt0083658",
@@ -516,6 +516,534 @@
     "Casey Affleck",
     "Rooney Mara",
     "McColm Cephas Jr."
+   ]
+  },
+  "pulp-fiction": {
+   "imdb": "tt0110912",
+   "poster": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+   "rating": 8.8,
+   "votes": 2473737,
+   "actors": [
+    "John Travolta",
+    "Uma Thurman",
+    "Samuel L. Jackson"
+   ]
+  },
+  "godfather": {
+   "imdb": "tt0068646",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_QL75_UY562_CR8,0,380,562_.jpg",
+   "rating": 9.2,
+   "votes": 2262742,
+   "actors": [
+    "Marlon Brando",
+    "Al Pacino",
+    "James Caan"
+   ]
+  },
+  "2001-space-odyssey": {
+   "imdb": "tt0062622",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNjU0NDFkMTQtZWY5OS00MmZhLTg3Y2QtZmJhMzMzMWYyYjc2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8.3,
+   "votes": 794375,
+   "actors": [
+    "Keir Dullea",
+    "Gary Lockwood",
+    "William Sylvester"
+   ]
+  },
+  "clockwork-orange": {
+   "imdb": "tt0066921",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8.2,
+   "votes": 946682,
+   "actors": [
+    "Malcolm McDowell",
+    "Patrick Magee",
+    "Michael Bates"
+   ]
+  },
+  "the-shining": {
+   "imdb": "tt0081505",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNmM5ZThhY2ItOGRjOS00NzZiLWEwYTItNDgyMjFkOTgxMmRiXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
+   "rating": 8.4,
+   "votes": 1246582,
+   "actors": [
+    "Jack Nicholson",
+    "Shelley Duvall",
+    "Danny Lloyd"
+   ]
+  },
+  "apocalypse-now": {
+   "imdb": "tt0078788",
+   "poster": "https://m.media-amazon.com/images/M/MV5BZDhiMTljYjYtODc1Yy00MmEwLTg2OTYtYmE1YTRmNDE4MmEwXkEyXkFqcGc@._V1_QL75_UX380_CR0,11,380,562_.jpg",
+   "rating": 8.4,
+   "votes": 779599,
+   "actors": [
+    "Martin Sheen",
+    "Marlon Brando",
+    "Robert Duvall"
+   ]
+  },
+  "blue-velvet": {
+   "imdb": "tt0090756",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNzkwZGUyYjQtM2QyOC00MTBjLWE0NGYtMTZmOGM5MjI0Mzg0XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "rating": 7.7,
+   "votes": 249825,
+   "actors": [
+    "Isabella Rossellini",
+    "Kyle MacLachlan",
+    "Dennis Hopper"
+   ]
+  },
+  "eraserhead": {
+   "imdb": "tt0074486",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNGYxNzZkYzAtMDExMS00MzE1LTg5ZGItMTgzMzJhZWMyNTBjXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "rating": 7.2,
+   "votes": 146036,
+   "actors": [
+    "Jack Nance",
+    "Charlotte Stewart",
+    "Allen Joseph"
+   ]
+  },
+  "seven-samurai": {
+   "imdb": "tt0047478",
+   "poster": "https://m.media-amazon.com/images/M/MV5BZjliMWExOTMtZDQ3ZS00NWU3LWIyN2EtMjllNzk3ZTNlYzg4XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "rating": 8.6,
+   "votes": 406581,
+   "actors": [
+    "Toshiro Mifune",
+    "Takashi Shimura",
+    "Keiko Tsushima"
+   ]
+  },
+  "rashomon": {
+   "imdb": "tt0042876",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMTk1MDU5MjQ5NF5BMl5BanBnXkFtZTgwMDM2OTE4MzE@._V1_QL75_UY562_CR8,0,380,562_.jpg",
+   "rating": 8.1,
+   "votes": 199133,
+   "actors": [
+    "Toshiro Mifune",
+    "Machiko Kyô",
+    "Masayuki Mori"
+   ]
+  },
+  "tokyo-story": {
+   "imdb": "tt0046438",
+   "poster": "https://m.media-amazon.com/images/M/MV5BODdkNzcxZjItMDU2Yy00Y2JlLWFkYTQtNzIwM2Q4MWU5MTU2XkEyXkFqcGc@._V1_QL75_UY562_CR5,0,380,562_.jpg",
+   "rating": 8.1,
+   "votes": 79032,
+   "actors": [
+    "Chishu Ryu",
+    "Chieko Higashiyama",
+    "So Yamamura"
+   ]
+  },
+  "spirited-away": {
+   "imdb": "tt0245429",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8.6,
+   "votes": 988028,
+   "actors": [
+    "Miyu Irino",
+    "Rumi Hiiragi",
+    "Mari Natsuki"
+   ]
+  },
+  "princess-mononoke": {
+   "imdb": "tt0119698",
+   "poster": "https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "rating": 8.3,
+   "votes": 492213,
+   "actors": [
+    "Yôji Matsuda",
+    "Yuriko Ishida",
+    "Yûko Tanaka"
+   ]
+  },
+  "your-name": {
+   "imdb": "tt5311514",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8.4,
+   "votes": 406946,
+   "actors": [
+    "Ryûnosuke Kamiki",
+    "Mone Kamishiraishi",
+    "Ryo Narita"
+   ]
+  },
+  "oldboy": {
+   "imdb": "tt0364569",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMTAwNzNjYWItZmI0Ni00ZTcyLWIwNWMtZjlmNGMxZTEyYTJmXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "rating": 8.3,
+   "votes": 734705,
+   "actors": [
+    "Choi Min-sik",
+    "Yoo Ji-tae",
+    "Kang Hye-jeong"
+   ]
+  },
+  "parasite": {
+   "imdb": "tt6751668",
+   "poster": "https://m.media-amazon.com/images/M/MV5BYjk1Y2U4MjQtY2ZiNS00OWQyLWI3MmYtZWUwNmRjYWRiNWNhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8.5,
+   "votes": 1200817,
+   "actors": [
+    "Song Kang-ho",
+    "Lee Sun-kyun",
+    "Cho Yeo-jeong"
+   ]
+  },
+  "pans-labyrinth": {
+   "imdb": "tt0457430",
+   "poster": "https://m.media-amazon.com/images/M/MV5BOTc1NTAxMWItMWFlNy00MmU2LTkwMTMtNzMwOTg5OTQ5YTFiXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "rating": 8.2,
+   "votes": 754343,
+   "actors": [
+    "Ivana Baquero",
+    "Ariadna Gil",
+    "Sergi López"
+   ]
+  },
+  "seventh-seal": {
+   "imdb": "tt0050976",
+   "poster": "https://m.media-amazon.com/images/M/MV5BZDlmYTkzOWUtODQ0MS00MmM4LWE3ZjMtYTEwNGUwMmJkYzIxXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+   "rating": 8.1,
+   "votes": 218162,
+   "actors": [
+    "Max von Sydow",
+    "Gunnar Björnstrand",
+    "Bengt Ekerot"
+   ]
+  },
+  "8-1-2": {
+   "imdb": "tt0056801",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNmI4YWJlYzAtNGU5MS00NTljLThhN2QtNzMwMWM4NTA0ODNlXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
+   "rating": 8,
+   "votes": 133980,
+   "actors": [
+    "Marcello Mastroianni",
+    "Anouk Aimée",
+    "Claudia Cardinale"
+   ]
+  },
+  "la-dolce-vita": {
+   "imdb": "tt0053779",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMTkxMjQ4NzU5N15BMl5BanBnXkFtZTgwMTkwODkzMTE@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "rating": 8,
+   "votes": 86757,
+   "actors": [
+    "Marcello Mastroianni",
+    "Anita Ekberg",
+    "Anouk Aimée"
+   ]
+  },
+  "breathless": {
+   "imdb": "tt0053472",
+   "poster": "https://m.media-amazon.com/images/M/MV5BZGI5MWNjYmEtNzUxZC00YTI3LWE5MzctZTdhYjJkMGMxYzI3XkEyXkFqcGc@._V1_QL75_UY562_CR14,0,380,562_.jpg",
+   "rating": 7.6,
+   "votes": 96692,
+   "actors": [
+    "Jean-Paul Belmondo",
+    "Jean Seberg",
+    "Jean-Luc Godard"
+   ]
+  },
+  "400-blows": {
+   "imdb": "tt0053198",
+   "poster": "https://m.media-amazon.com/images/M/MV5BOTU3YTM0YzQtMmFlOS00OTIxLWFmZjctMDJkOGQxNTVhODM3XkEyXkFqcGc@._V1_QL75_UY562_CR22,0,380,562_.jpg",
+   "rating": 8,
+   "votes": 135699,
+   "actors": [
+    "Jean-Pierre Léaud",
+    "Albert Rémy",
+    "Claire Maurier"
+   ]
+  },
+  "wings-of-desire": {
+   "imdb": "tt0093191",
+   "poster": "https://m.media-amazon.com/images/M/MV5BYTUwY2EyMDktMGI0Ny00MDNlLWE0ODMtZWIwOGNhNmY1OWIwXkEyXkFqcGc@._V1_QL75_UX380_CR0,15,380,562_.jpg",
+   "rating": 7.9,
+   "votes": 85038,
+   "actors": [
+    "Bruno Ganz",
+    "Solveig Dommartin",
+    "Otto Sander"
+   ]
+  },
+  "run-lola-run": {
+   "imdb": "tt0130827",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMzA0NDdiNDgtNjI4Ny00OTc0LTg3NGMtZDBlNmI1ZGUxYTg2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 7.6,
+   "votes": 218588,
+   "actors": [
+    "Franka Potente",
+    "Moritz Bleibtreu",
+    "Herbert Knaup"
+   ]
+  },
+  "memento": {
+   "imdb": "tt0209144",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMGQ3Y2Q4NjktN2E4Ny00Y2Q2LTliZDUtZTNiNjRhY2I0NGIyXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "rating": 8.4,
+   "votes": 1462185,
+   "actors": [
+    "Guy Pearce",
+    "Carrie-Anne Moss",
+    "Joe Pantoliano"
+   ]
+  },
+  "inception": {
+   "imdb": "tt1375666",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8.8,
+   "votes": 2877173,
+   "actors": [
+    "Leonardo DiCaprio",
+    "Joseph Gordon-Levitt",
+    "Elliot Page"
+   ]
+  },
+  "requiem-for-a-dream": {
+   "imdb": "tt0180093",
+   "poster": "https://m.media-amazon.com/images/M/MV5BN2ZlMjIzZjctYzA2My00ZWYyLWI4ZjctMGI2NWYyNzFiZjAwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "rating": 8.3,
+   "votes": 986851,
+   "actors": [
+    "Ellen Burstyn",
+    "Jared Leto",
+    "Jennifer Connelly"
+   ]
+  },
+  "black-swan": {
+   "imdb": "tt0947798",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNzY2NzI4OTE5MF5BMl5BanBnXkFtZTcwMjMyNDY4Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8,
+   "votes": 899056,
+   "actors": [
+    "Natalie Portman",
+    "Mila Kunis",
+    "Vincent Cassel"
+   ]
+  },
+  "whiplash": {
+   "imdb": "tt2582802",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMDFjOWFkYzktYzhhMC00NmYyLTkwY2EtYjViMDhmNzg0OGFkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 8.5,
+   "votes": 1185509,
+   "actors": [
+    "Miles Teller",
+    "J.K. Simmons",
+    "Melissa Benoist"
+   ]
+  },
+  "la-la-land": {
+   "imdb": "tt3783958",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMDllYjliOTUtMDJjZC00ODIzLWJmNGMtOWI2NzQxMjA2NzdlXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "rating": 8,
+   "votes": 780882,
+   "actors": [
+    "Ryan Gosling",
+    "Emma Stone",
+    "Rosemarie DeWitt"
+   ]
+  },
+  "moonlight": {
+   "imdb": "tt4975722",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 7.4,
+   "votes": 356522,
+   "actors": [
+    "Mahershala Ali",
+    "Naomie Harris",
+    "Trevante Rhodes"
+   ]
+  },
+  "portrait-of-a-lady-on-fire": {
+   "imdb": "tt8613070",
+   "poster": "https://m.media-amazon.com/images/M/MV5BZjJlYWJlYmMtNjMyMS00ZDgxLTlmNjAtOTJhMzBiZWM5N2VmXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "rating": 8,
+   "votes": 130653,
+   "actors": [
+    "Noémie Merlant",
+    "Adèle Haenel",
+    "Luàna Bajrami"
+   ]
+  },
+  "call-me-by-your-name": {
+   "imdb": "tt5726616",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 7.8,
+   "votes": 365293,
+   "actors": [
+    "Timothée Chalamet",
+    "Armie Hammer",
+    "Michael Stuhlbarg"
+   ]
+  },
+  "paterson": {
+   "imdb": "tt5247022",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMTUzODA4Nzk0OF5BMl5BanBnXkFtZTgwNzE1MDIwMDI@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "rating": 7.3,
+   "votes": 96712,
+   "actors": [
+    "Adam Driver",
+    "Golshifteh Farahani",
+    "Nellie"
+   ]
+  },
+  "fargo": {
+   "imdb": "tt0116282",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNjg4MWE0MjEtODFhNy00MjA5LTg5ODktMzgwNWFmZTAwNjBlXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "rating": 8.1,
+   "votes": 799298,
+   "actors": [
+    "William H. Macy",
+    "Frances McDormand",
+    "Steve Buscemi"
+   ]
+  },
+  "big-lebowski": {
+   "imdb": "tt0118715",
+   "poster": "https://m.media-amazon.com/images/M/MV5BY2E3OWQ5OWYtYTRkMC00NjVjLWIzZDQtNmRmM2ZiYTIyYmYxXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "rating": 8.1,
+   "votes": 925805,
+   "actors": [
+    "Jeff Bridges",
+    "John Goodman",
+    "Julianne Moore"
+   ]
+  },
+  "tree-of-life": {
+   "imdb": "tt0478304",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMTMwNjQ0NjMzN15BMl5BanBnXkFtZTcwNjMxMTkyNA@@._V1_QL75_UY562_CR2,0,380,562_.jpg",
+   "rating": 6.8,
+   "votes": 193651,
+   "actors": [
+    "Brad Pitt",
+    "Sean Penn",
+    "Jessica Chastain"
+   ]
+  },
+  "mirror": {
+   "imdb": "tt0072443",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNjRhNzYxODAtOTFmMS00N2MxLWE0NGMtM2VkZGY5MTYwYTZlXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "rating": 7.9,
+   "votes": 58506,
+   "actors": [
+    "Margarita Terekhova",
+    "Filipp Yankovskiy",
+    "Ignat Daniltsev"
+   ]
+  },
+  "come-and-see": {
+   "imdb": "tt0091251",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNDlkZmVkZDAtZGFmMS00OWIzLWJkY2YtNWE5NjNhNjhiZGE3XkEyXkFqcGc@._V1_QL75_UX380_CR0,10,380,562_.jpg",
+   "rating": 8.3,
+   "votes": 127084,
+   "actors": [
+    "Aleksey Kravchenko",
+    "Olga Mironova",
+    "Liubomiras Laucevicius"
+   ]
+  },
+  "brat": {
+   "imdb": "tt0118767",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNjdmMzAxNjEtNjVmOS00ZmRiLWFlYWYtMzdiZGU5OGZiNmJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
+   "rating": 7.7,
+   "votes": 29570,
+   "actors": [
+    "Sergey Bodrov",
+    "Viktor Sukhorukov",
+    "Svetlana Pismichenko"
+   ]
+  },
+  "vozvrashchenie": {
+   "imdb": "tt0376968",
+   "poster": "https://m.media-amazon.com/images/M/MV5BZDNjNGVjZDctYzAwYi00ZWRhLWFhMmItNGZjZjAzNmE2MTIwXkEyXkFqcGc@._V1_SX300.jpg",
+   "rating": 7.9,
+   "votes": 48111,
+   "actors": [
+    "Vladimir Garin",
+    "Ivan Dobronravov",
+    "Konstantin Lavronenko"
+   ]
+  },
+  "letyat-zhuravli": {
+   "imdb": "tt0050634",
+   "poster": "https://m.media-amazon.com/images/M/MV5BYjVmNTllYjUtYTc2MS00OTZhLTllMWEtOWYzMGQ2YmYzMzgyXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "rating": 8.3,
+   "votes": 23151,
+   "actors": [
+    "Tatyana Samoylova",
+    "Aleksey Batalov",
+    "Vasiliy Merkurev"
+   ]
+  },
+  "collateral": {
+   "imdb": "tt0369339",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMjE3NjM5OTMxMV5BMl5BanBnXkFtZTcwOTIzMTQyMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "rating": 7.5,
+   "votes": 475198,
+   "actors": [
+    "Tom Cruise",
+    "Jamie Foxx",
+    "Jada Pinkett Smith"
+   ]
+  },
+  "nightcrawler": {
+   "imdb": "tt2872718",
+   "poster": "https://m.media-amazon.com/images/M/MV5BYjMwMmI5MWQtOTU4OS00OTAyLTg0OTYtNmQ5YzExZTQ3ZWJhXkEyXkFqcGc@._V1_QL75_UY562_CR5,0,380,562_.jpg",
+   "rating": 7.8,
+   "votes": 683715,
+   "actors": [
+    "Jake Gyllenhaal",
+    "Rene Russo",
+    "Bill Paxton"
+   ]
+  },
+  "annihilation": {
+   "imdb": "tt2798920",
+   "poster": "https://m.media-amazon.com/images/M/MV5BMTk2Mjc2NzYxNl5BMl5BanBnXkFtZTgwMTA2OTA1NDM@._V1_QL75_UX380_CR0,15,380,562_.jpg",
+   "rating": 6.8,
+   "votes": 399232,
+   "actors": [
+    "Natalie Portman",
+    "Jennifer Jason Leigh",
+    "Tessa Thompson"
+   ]
+  },
+  "alien": {
+   "imdb": "tt0078748",
+   "poster": "https://m.media-amazon.com/images/M/MV5BN2NhMDk2MmEtZDQzOC00MmY5LThhYzAtMDdjZGFjOGZjMjdjXkEyXkFqcGc@._V1_QL75_UX380_CR0,6,380,562_.jpg",
+   "rating": 8.4,
+   "votes": 1079153,
+   "actors": [
+    "Sigourney Weaver",
+    "Tom Skerritt",
+    "John Hurt"
+   ]
+  },
+  "the-thing": {
+   "imdb": "tt0084787",
+   "poster": "https://m.media-amazon.com/images/M/MV5BYTA3NDU5MWEtNTk4Yy00ZDNkLThmZTQtMjU3ZGVhYzAyMzU4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "rating": 8.2,
+   "votes": 537503,
+   "actors": [
+    "Kurt Russell",
+    "Wilford Brimley",
+    "Keith David"
+   ]
+  },
+  "lost-highway": {
+   "imdb": "tt0116922",
+   "poster": "https://m.media-amazon.com/images/M/MV5BNjcyNmM2ODktYzk0Mi00Njk0LTljZGMtNGZhMzI4NmY1NzA1XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "rating": 7.6,
+   "votes": 173798,
+   "actors": [
+    "Bill Pullman",
+    "Patricia Arquette",
+    "John Roselius"
    ]
   }
  }

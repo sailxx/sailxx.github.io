@@ -298,14 +298,9 @@ dialog::backdrop{background:var(--veil);-webkit-backdrop-filter:blur(10px);backd
 .js-anim .split.instant .w>span{transition:none}
 .js-anim .sec-head{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .8s cubic-bezier(.16,.84,.24,1)}
 .js-anim .sec-head.in{opacity:1;transform:none}
-.js-anim .card{opacity:0;transform:translateY(22px)}
-.js-anim .card.seen{opacity:1;transform:none;transition:opacity .7s ease calc(var(--i,0)*70ms),transform .8s cubic-bezier(.16,.84,.24,1) calc(var(--i,0)*70ms)}
-.js-anim .card .poster-wrap{clip-path:inset(0 0 100% 0 round var(--rp))}
-.js-anim .card.seen .poster-wrap{clip-path:inset(0 0 0 0 round var(--rp));transition:clip-path 1s cubic-bezier(.7,0,.15,1) calc(var(--i,0)*70ms + 150ms),transform .5s cubic-bezier(.16,.84,.24,1),box-shadow .4s}
-.js-anim .card .poster-img{transform:scale(1.14)}
-.js-anim .card.seen .poster-img{transform:none;transition:transform 1.3s cubic-bezier(.16,.84,.24,1) calc(var(--i,0)*70ms + 150ms)}
-.js-anim .card .meta,.js-anim .card .desc,.js-anim .card .reason,.js-anim .card .card-title{opacity:0;transform:translateY(8px)}
-.js-anim .card.seen .meta,.js-anim .card.seen .desc,.js-anim .card.seen .reason,.js-anim .card.seen .card-title{opacity:1;transform:none;transition:opacity .6s ease,transform .7s cubic-bezier(.16,.84,.24,1);transition-delay:calc(var(--i,0)*70ms + 450ms)}
+/* карточки: мгновенно, лёгкое «проявление» с минимальной лесенкой */
+.js-anim .card{opacity:0;transform:scale(.97) translateY(6px)}
+.js-anim .card.seen{opacity:1;transform:none;transition:opacity .12s ease-out calc(var(--i,0)*5ms),transform .2s cubic-bezier(.2,.9,.3,1) calc(var(--i,0)*5ms)}
 .qbtn.pop,.actions .btn.pop{animation:pop .55s cubic-bezier(.2,1.6,.4,1)}
 @keyframes pop{0%{transform:scale(1)}35%{transform:scale(1.35)}100%{transform:scale(1)}}
 .film-dialog[open]{animation:dlg .55s cubic-bezier(.16,.84,.24,1)}
