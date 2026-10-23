@@ -30,6 +30,40 @@
   applyTheme(root.dataset.theme || "light", false);
   if (mq) mq.addEventListener("change", (e) => { let saved = null; try { saved = localStorage.getItem("film:theme"); } catch { /* ignore */ } if (!saved) applyTheme(e.matches ? "dark" : "light", false); });
 
+  /* ---------- движение ---------- */
+  const REDUCED = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const FINE = window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const ANIM = !REDUCED;
+  if (ANIM) root.classList.add("js-anim");
+  let quiet = false; // фоновые перерисовки (оценки, избранное) не должны проигрывать анимацию заново
+
+  const io = ANIM && "IntersectionObserver" in window
+    ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("seen"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: 0.05 })
+    : null;
+  /** Карточки появляются по очереди, постер «раскрывается шторкой». skip — сколько первых карточек не анимировать. */
+  function reveal(rootEl, animate = true, skip = 0) {
+    $$(".card", rootEl).forEach((c, i) => {
+      if (!io || !animate || i < skip) { c.classList.add("seen"); return; }
+      c.style.setProperty("--i", (i - skip) % 6);
+      io.observe(c);
+    });
+  }
+  /** Заголовок по словам: каждое слово выезжает из-под маски. */
+  function splitWords(el, instant) {
+    if (!el || el.dataset.split) return;
+    el.dataset.split = "1";
+    const text = el.textContent.trim();
+    el.setAttribute("aria-label", text);
+    el.classList.add("split");
+    el.innerHTML = text.split(/\s+/).map((w, i) => `<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" ");
+    if (!ANIM || instant) { el.classList.add("in", "instant"); return; }
+    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("in")));
+  }
+  const revealOnScroll = ANIM && "IntersectionObserver" in window
+    ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); revealOnScroll.unobserve(e.target); } }), { threshold: 0.15 })
+    : null;
+  function watchBlock(el) { if (revealOnScroll) revealOnScroll.observe(el); else el.classList.add("in"); }
+
   /* ---------- состояние ---------- */
   const guessRegion = () => {
     const m = (navigator.language || "").match(/-([A-Za-z]{2})$/);
@@ -212,7 +246,7 @@
     return list.sort(sorts[f.sort]);
   }
 
-  function renderLibrary() {
+  function renderLibrary(skip = 0) {
     const list = filtered();
     const grid = $("#grid");
     $("#count-line").textContent = list.length ? `Фильмов: ${list.length}` : "";
@@ -221,6 +255,7 @@
     } else {
       grid.innerHTML = list.slice(0, S.shown).map((f) => card(f)).join("");
     }
+    reveal(grid, !quiet, skip);
     $("#more").hidden = list.length <= S.shown;
     $("#more").textContent = `Показать ещё (${Math.min(PAGE, list.length - S.shown)})`;
   }
@@ -240,13 +275,17 @@
     $("#fav-grid").innerHTML = list.length
       ? list.map((f) => card(f)).join("")
       : `<div class="empty big"><p class="empty-h">${S.tab === "fav" ? "Здесь пока пусто" : "Список пуст"}</p><p>${S.tab === "fav" ? "Нажми ♡ на любой карточке, чтобы сохранить фильм." : "Нажми + на карточке — фильм ждёт тебя на потом."}</p><p><a class="btn btn-ghost" href="#/library">Открыть библиотеку</a></p></div>`;
+    reveal($("#fav-grid"), !quiet);
   }
 
   function toggle(kind, id) {
     const set = kind === "fav" ? S.fav : S.later;
     set.has(id) ? set.delete(id) : set.add(id);
     saveLists();
+    quiet = true;
     refreshAll();
+    quiet = false;
+    $$(`[data-act="${kind}"][data-id="${id}"]`).forEach((b) => { if (b.getAttribute("aria-pressed") === "true") b.classList.add("pop"); });
     const d = $("#film-dialog");
     if (d.open && d.dataset.id === id) syncFilmButtons(id);
   }
@@ -282,6 +321,8 @@
         <button class="btn btn-ghost" type="button" data-act="edit-vibe">Изменить запрос</button>
         ${pool.length > VIBE_N ? `<button class="btn" type="button" data-act="more-vibe">Другая подборка</button>` : ""}
       </div>`;
+    splitWords($("h2", box), quiet);
+    reveal(box, !quiet);
   }
 
   /* ---------- модальное окно фильма ---------- */
@@ -445,7 +486,7 @@
   let raf = 0;
   function scheduleRender() {
     if (raf) return;
-    raf = requestAnimationFrame(() => { raf = 0; renderLibrary(); renderVibe(); if (S.view === "fav") renderFav(); applyTmdbUI(); });
+    raf = requestAnimationFrame(() => { raf = 0; quiet = true; renderLibrary(); renderVibe(); if (S.view === "fav") renderFav(); quiet = false; applyTmdbUI(); });
   }
 
   /* ---------- TMDB: загрузка и внешний поиск ---------- */
@@ -499,6 +540,7 @@
           return f;
         });
         $("#ext-grid").innerHTML = list.map((f) => card(f)).join("");
+        reveal($("#ext-grid"), true);
         box.hidden = !list.length;
       } catch { if (seq === extSeq) box.hidden = true; }
     }, 450);
@@ -524,7 +566,15 @@
     if (t.matches("[data-nav], [data-brand]")) { if (location.hash === t.getAttribute("href")) { ev.preventDefault(); route(); } return; }
     switch (t.dataset.act) {
       case "fav": case "later": toggle(t.dataset.act, t.dataset.id); break;
-      case "theme": applyTheme(root.dataset.theme === "dark" ? "light" : "dark", true); break;
+      case "theme": {
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        const r = t.getBoundingClientRect();
+        root.style.setProperty("--tx", r.left + r.width / 2 + "px");
+        root.style.setProperty("--ty", r.top + r.height / 2 + "px");
+        if (ANIM && document.startViewTransition) document.startViewTransition(() => applyTheme(next, true));
+        else applyTheme(next, true);
+        break;
+      }
       case "close-film": closeFilm(); break;
       case "focus-search":
         if (S.view !== "home") { history.replaceState(null, "", "#/"); route(); }
@@ -559,7 +609,7 @@
 
   const bind = (sel, key) => $(sel).addEventListener("input", (ev) => { S.f[key] = ev.target.value; S.shown = PAGE; renderLibrary(); if (key === "q") extSearch(); });
   bind("#f-q", "q"); bind("#f-genre", "genre"); bind("#f-period", "period"); bind("#f-country", "country"); bind("#f-rating", "rating"); bind("#f-sort", "sort");
-  $("#more").addEventListener("click", () => { S.shown += PAGE; renderLibrary(); });
+  $("#more").addEventListener("click", () => { const before = Math.min(S.shown, filtered().length); S.shown += PAGE; renderLibrary(before); });
   $("#filters-toggle").addEventListener("click", (ev) => {
     const open = $("#filters").classList.toggle("open");
     ev.currentTarget.setAttribute("aria-expanded", String(open));
@@ -602,12 +652,94 @@
   // «Назад» на закрытой модалке не должен ломать состояние
   $("#film-dialog").addEventListener("close", () => document.documentElement.classList.remove("lock"));
 
+  /* ---------- живые детали ---------- */
+  // Свет проектора в плашке и наклон постера за курсором — только для мыши.
+  if (FINE && ANIM) {
+    let fr = 0, last = null;
+    document.addEventListener("pointermove", (ev) => {
+      last = ev;
+      if (fr) return;
+      fr = requestAnimationFrame(() => {
+        fr = 0;
+        const box = ev.target.closest && ev.target.closest(".vibe-box");
+        if (box) { const r = box.getBoundingClientRect(); box.style.setProperty("--mx", ev.clientX - r.left + "px"); box.style.setProperty("--my", ev.clientY - r.top + "px"); }
+        const w = ev.target.closest && ev.target.closest(".poster-wrap");
+        $$(".poster-wrap.tilt").forEach((x) => { if (x !== w) { x.classList.remove("tilt"); x.style.removeProperty("--rx"); x.style.removeProperty("--ry"); } });
+        if (w) {
+          const r = w.getBoundingClientRect();
+          const px = (ev.clientX - r.left) / r.width, py = (ev.clientY - r.top) / r.height;
+          w.classList.add("tilt");
+          w.style.setProperty("--ry", ((px - 0.5) * 9).toFixed(2) + "deg");
+          w.style.setProperty("--rx", ((0.5 - py) * 9).toFixed(2) + "deg");
+          w.style.setProperty("--sx", (px * 100).toFixed(1) + "%");
+          w.style.setProperty("--sy", (py * 100).toFixed(1) + "%");
+        }
+      });
+    }, { passive: true });
+    document.addEventListener("pointerleave", () => $$(".poster-wrap.tilt").forEach((x) => x.classList.remove("tilt")));
+  }
+
+  // Подсказка в поле вайба «печатается» сама, пока поле пусто и не в фокусе.
+  (function typedPlaceholder() {
+    const input = $("#vibe-input");
+    const base = input.placeholder;
+    if (!ANIM) return;
+    const lines = [
+      "хочу фильм с вайбом будущего, ночного города и одиночества...",
+      "атмосфера ночного Токио...",
+      "мрачное, философское и психологическое кино...",
+      "что-то похожее на сон...",
+      "хочу почувствовать себя главным героем...",
+      "фильм с вайбом свободы и приключений...",
+    ];
+    let li = 0, ci = 0, dir = 1, timer = 0, running = false;
+    const idle = () => document.activeElement === input || input.value !== "" || document.hidden;
+    function tick() {
+      timer = 0;
+      if (idle()) { running = false; input.placeholder = base; return; }
+      const line = lines[li];
+      ci += dir;
+      input.placeholder = "Например: " + line.slice(0, ci) + (ci < line.length || dir < 0 ? "▍" : "");
+      let wait = dir > 0 ? 55 + Math.random() * 45 : 22;
+      if (dir > 0 && ci >= line.length) { dir = -1; wait = 2200; }
+      else if (dir < 0 && ci <= 0) { dir = 1; li = (li + 1) % lines.length; wait = 450; }
+      timer = setTimeout(tick, wait);
+      running = true;
+    }
+    const start = () => { if (!timer && !idle()) { ci = 0; dir = 1; tick(); } };
+    input.addEventListener("focus", () => { clearTimeout(timer); timer = 0; running = false; input.placeholder = base; });
+    input.addEventListener("blur", () => setTimeout(start, 600));
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) start(); });
+    setTimeout(start, 1800);
+  })();
+
+  // Тонкая жёлтая линия прогресса прокрутки под шапкой.
+  (function progress() {
+    const bar = $("#progress");
+    if (!bar) return;
+    let pr = 0;
+    const upd = () => { pr = 0; const h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`; };
+    addEventListener("scroll", () => { if (!pr) pr = requestAnimationFrame(upd); }, { passive: true });
+    upd();
+  })();
+
   /* ---------- старт ---------- */
-  fetch("assets/posters.json").then((r) => (r.ok ? r.json() : {})).then((j) => { S.posters = (j && j.films) || {}; scheduleRender(); }).catch(() => {});
   fillSelects();
   applyTmdbUI();
-  refreshAll();
-  route();
-  initial = false;
-  loadTmdb();
+  splitWords($("#vibe-h"));
+  $$(".sec-head").forEach(watchBlock);
+  // Данные постеров ждём недолго, чтобы первая отрисовка сразу показала их, а не заглушки.
+  const postersReady = Promise.race([
+    fetch("assets/posters.json").then((r) => (r.ok ? r.json() : {})).then((j) => { S.posters = (j && j.films) || {}; }).catch(() => {}),
+    new Promise((r) => setTimeout(r, 900)),
+  ]);
+  postersReady.then(() => {
+    applyTmdbUI();
+    refreshAll();
+    route();
+    initial = false;
+    loadTmdb();
+    // если файл пришёл позже таймаута — перерисуем без анимации
+    if (!Object.keys(S.posters).length) fetch("assets/posters.json").then((r) => (r.ok ? r.json() : {})).then((j) => { S.posters = (j && j.films) || {}; scheduleRender(); }).catch(() => {});
+  });
 })();
