@@ -781,6 +781,7 @@
   window.I18N.applyStatic();
   updateLangBtn();
   applyTheme(root.dataset.theme, false);
+  if (/Mac|iPhone|iPad/.test(navigator.platform || "")) $("#vibe-kbd").textContent = "⌘ ↵";
   fillSelects();
   applyTmdbUI();
   splitWords($("#vibe-h"));
