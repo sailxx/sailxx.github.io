@@ -62,13 +62,14 @@
     });
   }
   /** Заголовок по словам: каждое слово выезжает из-под маски. */
-  function splitWords(el, instant) {
+  function splitWords(el, instant, hl) {
     if (!el || el.dataset.split) return;
     el.dataset.split = "1";
     const text = el.textContent.trim();
     el.setAttribute("aria-label", text);
     el.classList.add("split");
-    el.innerHTML = text.split(/\s+/).map((w, i) => `<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" ");
+    const words = text.split(/\s+/);
+    el.innerHTML = words.map((w, i) => `<span class="w${hl && i === words.length - 1 ? " hl" : ""}" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" ");
     if (!ANIM || instant) { el.classList.add("in", "instant"); return; }
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("in")));
   }
