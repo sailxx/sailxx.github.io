@@ -783,7 +783,7 @@
   applyTheme(root.dataset.theme, false);
   fillSelects();
   applyTmdbUI();
-  splitWords($("#vibe-h"), false, true);
+  splitWords($("#vibe-h"));
   $$(".sec-head").forEach(watchBlock);
   // Данные постеров ждём недолго, чтобы первая отрисовка сразу показала их, а не заглушки.
   const postersReady = Promise.race([
