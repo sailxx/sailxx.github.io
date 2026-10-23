@@ -14,17 +14,30 @@
 
   /* ---------- бренд: одно место — config.js ---------- */
   $$("[data-brand]").forEach((el) => (el.textContent = CFG.projectName));
-  document.title = CFG.projectName + " — библиотека фильмов и подбор по вайбу";
+  const T = window.T;
+  const LANG = () => window.I18N.lang;
+  const numLocale = () => (LANG() === "en" ? "en-US" : "ru-RU");
+  const setTitle = () => { document.title = CFG.projectName + " — " + T("библиотека фильмов и подбор по вайбу"); };
+  setTitle();
+
+  /* Локализованное представление фильма каталога (данные хранятся по-русски, английская версия — в data.en.js). */
+  function lf(f) {
+    if (LANG() !== "en" || !window.FILMS_EN || !window.FILMS_EN[f.id]) return f;
+    const e = window.FILMS_EN[f.id];
+    return { ...f, ru: e.title, desc: e.desc, why: e.why, who: e.who, vibes: e.vibes, dir: e.dir,
+      genres: f.genres.map((g) => window.GENRES_EN[g] || g), countries: f.countries.map((c) => window.COUNTRIES_EN[c] || c) };
+  }
 
   /* ---------- тема ---------- */
   const root = document.documentElement;
   const mq = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : null;
+  let themeTimer = 0;
   function applyTheme(t, save) {
     root.dataset.theme = t;
     const meta = $('meta[name="theme-color"]');
     if (meta) meta.content = t === "dark" ? "#0a0a0a" : "#fafaf8";
     const b = $(".theme-btn");
-    if (b) { const l = t === "dark" ? "Включить светлую тему" : "Включить тёмную тему"; b.setAttribute("aria-label", l); b.title = l; }
+    if (b) { const l = t === "dark" ? T("Включить светлую тему") : T("Включить тёмную тему"); b.setAttribute("aria-label", l); b.title = l; }
     if (save) { try { localStorage.setItem("film:theme", t); } catch { /* ignore */ } }
   }
   applyTheme(root.dataset.theme || "light", false);
@@ -117,15 +130,15 @@
   function posterHTML(f, sizes) {
     const p = posterSrc(f);
     if (p) {
-      return `<img class="poster-img" src="${esc(p.src)}"${p.srcset ? ` srcset="${p.srcset}" sizes="${sizes}"` : ""} width="342" height="513" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="Постер: ${esc(f.ru)}">`;
+      return `<img class="poster-img" src="${esc(p.src)}"${p.srcset ? ` srcset="${p.srcset}" sizes="${sizes}"` : ""} width="342" height="513" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="${T("Постер")}: ${esc(f.ru)}">`;
     }
     return `<span class="ph" aria-hidden="true"><span class="ph-t">${esc(f.ru)}</span><span class="ph-y">${f.year || ""}</span></span>`;
   }
   function ratingHTML(f) {
     const r = rating(f);
     return r
-      ? `<span class="rt" title="Источник: ${r.src}, оценок: ${(r.n || 0).toLocaleString("ru")}">★ ${r.v.toFixed(1)}</span> <span class="src">${r.src}</span>`
-      : `<span class="mute">рейтинг не найден</span>`;
+      ? `<span class="rt" title="${esc(T("Источник: {src}, оценок: {n}", { src: r.src, n: (r.n || 0).toLocaleString(numLocale()) }))}">★ ${r.v.toFixed(1)}</span> <span class="src">${r.src}</span>`
+      : `<span class="mute">${T("рейтинг не найден")}</span>`;
   }
   function availLine(f) {
     const e = S.enrich[f.id];
@@ -133,76 +146,81 @@
     const p = window.Tmdb.peekProviders(e.tmdbId);
     const r = p && p[S.region];
     if (!r) return "";
-    const names = r.flatrate.length ? ["Подписка", r.flatrate] : r.free.length ? ["Бесплатно", r.free] : null;
+    const names = r.flatrate.length ? [T("Подписка"), r.flatrate] : r.free.length ? [T("Бесплатно"), r.free] : null;
     return names ? `<p class="avail">${names[0]}: ${esc(names[1].slice(0, 2).join(", "))}</p>` : "";
   }
   function castLine(f, opt) {
     if (opt.noCast || !S.f.q.trim()) return "";
     const m = matchedActors(f);
-    return m.length ? `<p class="cast">В ролях: ${m.slice(0, 3).map((a) => esc(ruName(a))).join(", ")}</p>` : "";
+    return m.length ? `<p class="cast">${T("В ролях")}: ${m.slice(0, 3).map((a) => esc(personName(a))).join(", ")}</p>` : "";
   }
   function card(f, opt = {}) {
+    f = lf(f);
     const fav = S.fav.has(f.id), later = S.later.has(f.id);
     let reason = "";
     if (opt.hits) {
       const tags = opt.hits.length
         ? opt.hits.slice(0, 3).map((h) => `<b class="${h.w >= 3 ? "strong" : ""}">${esc(h.label)}</b>`).join(" · ")
-        : "общая атмосфера";
-      reason = `<div class="reason"><p class="reason-k">Совпало: ${tags}</p><p>${esc(f.why)}</p></div>`;
+        : T("общая атмосфера");
+      reason = `<div class="reason"><p class="reason-k">${T("Совпало")}: ${tags}</p><p>${esc(f.why)}</p></div>`;
     }
     return `<article class="card" data-id="${esc(f.id)}">
       <div class="poster-wrap">
-        <a class="poster" href="#/film/${esc(f.id)}" aria-label="${esc(f.ru)} — подробнее">${posterHTML(f, "(min-width:1100px) 17vw, (min-width:720px) 28vw, 46vw")}</a>
+        <a class="poster" href="#/film/${esc(f.id)}" aria-label="${esc(T("{title} — подробнее", { title: f.ru }))}">${posterHTML(f, "(min-width:1100px) 17vw, (min-width:720px) 28vw, 46vw")}</a>
         <div class="quick">
-          <button type="button" class="qbtn" data-act="fav" data-id="${esc(f.id)}" aria-pressed="${fav}" aria-label="${fav ? "Убрать из избранного" : "В избранное"}: ${esc(f.ru)}" title="${fav ? "Убрать из избранного" : "В избранное"}">${fav ? "♥" : "♡"}</button>
-          <button type="button" class="qbtn" data-act="later" data-id="${esc(f.id)}" aria-pressed="${later}" aria-label="${later ? "Убрать из «Посмотреть позже»" : "Посмотреть позже"}: ${esc(f.ru)}" title="${later ? "Убрать из «Посмотреть позже»" : "Посмотреть позже"}">${later ? "✓" : "+"}</button>
+          <button type="button" class="qbtn" data-act="fav" data-id="${esc(f.id)}" aria-pressed="${fav}" aria-label="${fav ? T("Убрать из избранного") : T("В избранное")}: ${esc(f.ru)}" title="${fav ? T("Убрать из избранного") : T("В избранное")}">${fav ? "♥" : "♡"}</button>
+          <button type="button" class="qbtn" data-act="later" data-id="${esc(f.id)}" aria-pressed="${later}" aria-label="${later ? T("Убрать из «Посмотреть позже»") : T("Посмотреть позже")}: ${esc(f.ru)}" title="${later ? T("Убрать из «Посмотреть позже»") : T("Посмотреть позже")}">${later ? "✓" : "+"}</button>
         </div>
       </div>
       <h3 class="card-title"><a href="#/film/${esc(f.id)}">${esc(f.ru)}</a></h3>
-      <p class="meta">${f.year || "год не найден"} · ${ratingHTML(f)}</p>
-      ${castLine(f, opt)}<p class="desc">${esc(f.desc) || '<span class="mute">Описание не найдено</span>'}</p>
+      <p class="meta">${f.year || T("год не найден")} · ${ratingHTML(f)}</p>
+      ${castLine(f, opt)}<p class="desc">${esc(f.desc) || '<span class="mute">${T("Описание не найдено")}</span>'}</p>
       ${availLine(f)}${reason}
     </article>`;
   }
   const emptyDesc = (t) => `<p class="empty">${t}</p>`;
 
   /* ---------- фильтры ---------- */
-  const PERIODS = [
-    ["", "Любой период"], ["old", "до 1970"], ["70-80", "1970–1989"], ["90", "1990–1999"], ["00", "2000–2009"], ["10", "2010 и позже"],
+  const PERIODS = () => [
+    ["", T("Любой период")], ["old", T("до 1970")], ["70-80", "1970–1989"], ["90", "1990–1999"], ["00", "2000–2009"], ["10", T("2010 и позже")],
   ];
   const inPeriod = (y, p) => !p || (p === "old" ? y < 1970 : p === "70-80" ? y >= 1970 && y < 1990 : p === "90" ? y >= 1990 && y < 2000 : p === "00" ? y >= 2000 && y < 2010 : y >= 2010);
-  const CATS = [["cult", "Культовые"], ["underrated", "Недооценённые"], ["evening", "На вечер"], ["phil", "Философские"], ["scifi", "Научная фантастика"]];
+  const CATS = () => [["cult", T("Культовые")], ["underrated", T("Недооценённые")], ["evening", T("На вечер")], ["phil", T("Философские")], ["scifi", T("Научная фантастика")]];
 
   function fillSelects() {
-    const genres = [...new Set(FILMS.flatMap((f) => f.genres))].sort((a, b) => a.localeCompare(b, "ru"));
-    const countries = [...new Set(FILMS.flatMap((f) => f.countries))].sort((a, b) => a.localeCompare(b, "ru"));
-    const opts = (arr, all) => `<option value="">${all}</option>` + arr.map((x) => `<option>${esc(x)}</option>`).join("");
-    $("#f-genre").innerHTML = opts(genres, "Все жанры");
-    $("#f-country").innerHTML = opts(countries, "Все страны");
-    $("#f-period").innerHTML = PERIODS.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
-    $("#f-rating").innerHTML = `<option value="">Любой</option><option value="6">от 6</option><option value="7">от 7</option><option value="8">от 8</option>`;
-    $("#cats").innerHTML = `<li><button type="button" data-cat="" aria-pressed="true">Все</button></li>` +
-      CATS.map(([k, l]) => `<li><button type="button" data-cat="${k}" aria-pressed="false">${l}</button></li>`).join("");
+    const en = LANG() === "en";
+    const tr = (map, x) => (en && map[x]) || x;
+    const genres = [...new Set(FILMS.flatMap((f) => f.genres))].sort((a, b) => tr(window.GENRES_EN, a).localeCompare(tr(window.GENRES_EN, b), numLocale()));
+    const countries = [...new Set(FILMS.flatMap((f) => f.countries))].sort((a, b) => tr(window.COUNTRIES_EN, a).localeCompare(tr(window.COUNTRIES_EN, b), numLocale()));
+    const opts = (arr, all, map) => `<option value="">${all}</option>` + arr.map((x) => `<option value="${esc(x)}">${esc(tr(map, x))}</option>`).join("");
+    const keep = { genre: S.f.genre, country: S.f.country, period: S.f.period, rating: S.f.rating };
+    $("#f-genre").innerHTML = opts(genres, T("Все жанры"), window.GENRES_EN);
+    $("#f-country").innerHTML = opts(countries, T("Все страны"), window.COUNTRIES_EN);
+    $("#f-period").innerHTML = PERIODS().map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
+    $("#f-rating").innerHTML = `<option value="">${T("Любой")}</option>` + [6, 7, 8].map((n) => `<option value="${n}">${T("от {n}", { n })}</option>`).join("");
+    $("#f-genre").value = keep.genre; $("#f-country").value = keep.country; $("#f-period").value = keep.period; $("#f-rating").value = keep.rating;
+    $("#cats").innerHTML = `<li><button type="button" data-cat="" aria-pressed="${S.f.cat === ""}">${T("Все")}</button></li>` +
+      CATS().map(([k, l]) => `<li><button type="button" data-cat="${k}" aria-pressed="${S.f.cat === k}">${l}</button></li>`).join("");
   }
 
   function applyTmdbUI() {
     const on = S.tmdb;
     const rated = hasRatings();
     $("#f-rating").disabled = !rated;
-    $("#f-rating").title = rated ? "" : "Рейтинг появится, когда в каталог загружены оценки";
+    $("#f-rating").title = rated ? "" : T("Рейтинг появится, когда в каталог загружены оценки");
     $('#f-sort option[value="pop"]').disabled = !on;
     $('#f-sort option[value="rating"]').disabled = !rated;
     if (!on && S.f.sort === "pop") { S.f.sort = "default"; $("#f-sort").value = "default"; }
     if (!rated) { S.f.rating = ""; if (S.f.sort === "rating") { S.f.sort = "default"; $("#f-sort").value = "default"; } }
 
     const note = $("#demo-note");
-    if (S.error) note.innerHTML = `${esc(S.error)} <button class="link" type="button" data-act="open-settings">Источник данных</button>`;
-    else if (!on) note.innerHTML = `${Object.keys(S.posters).length ? "Постеры и рейтинги: OMDb (IMDb)." : "Постеры и рейтинги не загружены."} Сервисы просмотра появятся после подключения TMDB. <button class="link" type="button" data-act="open-settings">Подключить</button>`;
-    else if (S.progress) note.textContent = `Загружаем данные TMDB… ${S.progress[0]} из ${S.progress[1]}`;
+    if (S.error) note.innerHTML = `${esc(S.error)} <button class="link" type="button" data-act="open-settings">${T("Источник данных")}</button>`;
+    else if (!on) note.innerHTML = `${Object.keys(S.posters).length ? T("Постеры и рейтинги: OMDb (IMDb).") : T("Постеры и рейтинги не загружены.")} ${T("Сервисы просмотра появятся после подключения TMDB.")} <button class="link" type="button" data-act="open-settings">${T("Подключить")}</button>`;
+    else if (S.progress) note.textContent = T("Загружаем данные TMDB… {a} из {b}", { a: S.progress[0], b: S.progress[1] });
     else note.textContent = "";
     note.hidden = !note.textContent && !note.innerHTML;
 
-    $("#foot-status").textContent = on ? "Данные: OMDb (постеры, рейтинги IMDb), TMDB (описания, доступность просмотра)." : "Данные: OMDb (постеры, рейтинги IMDb). Доступность просмотра появится после подключения TMDB.";
+    $("#foot-status").textContent = on ? T("Данные: OMDb (постеры, рейтинги IMDb), TMDB (описания, доступность просмотра).") : T("Данные: OMDb (постеры, рейтинги IMDb). Доступность просмотра появится после подключения TMDB.");
   }
 
   /* Поиск: нормализация убирает различия э/е, й/и, ё/е, удвоенные буквы и диакритику (Керри = Кэрри = Carrey). */
@@ -210,10 +228,14 @@
     .replace(/э/g, "е").replace(/[ъь]/g, "").replace(/(.)\1/g, "$1").replace(/[^a-zа-я0-9]+/g, " ").trim();
   const actorsOf = (m) => (S.posters[m.id] && S.posters[m.id].actors) || [];
   const ruName = (a) => (window.PEOPLE_RU && window.PEOPLE_RU[a]) || a;
+  const personName = (a) => (LANG() === "ru" ? ruName(a) : a);
   const hayCache = new Map();
   function haystack(m) {
     const key = m.id + ":" + actorsOf(m).length;
-    if (!hayCache.has(key)) hayCache.set(key, nrm([m.ru, m.en, m.dir, ...actorsOf(m), ...actorsOf(m).map(ruName)].join(" ")));
+    if (!hayCache.has(key)) {
+      const en = (window.FILMS_EN && window.FILMS_EN[m.id]) || {};
+      hayCache.set(key, nrm([m.ru, m.en, m.dir, en.title, en.dir, ...actorsOf(m), ...actorsOf(m).map(ruName)].join(" ")));
+    }
     return hayCache.get(key);
   }
   const queryTokens = () => nrm(S.f.q).split(" ").filter(Boolean);
@@ -249,15 +271,15 @@
   function renderLibrary(skip = 0) {
     const list = filtered();
     const grid = $("#grid");
-    $("#count-line").textContent = list.length ? `Фильмов: ${list.length}` : "";
+    $("#count-line").textContent = list.length ? T("Фильмов: {n}", { n: list.length }) : "";
     if (!list.length) {
-      grid.innerHTML = emptyDesc("Ничего не найдено. Измени запрос или сбрось фильтры.") + `<p class="empty-act"><button class="btn btn-ghost" type="button" data-act="reset">Сбросить фильтры</button></p>`;
+      grid.innerHTML = emptyDesc(T("Ничего не найдено. Измени запрос или сбрось фильтры.")) + `<p class="empty-act"><button class="btn btn-ghost" type="button" data-act="reset">${T("Сбросить фильтры")}</button></p>`;
     } else {
       grid.innerHTML = list.slice(0, S.shown).map((f) => card(f)).join("");
     }
     reveal(grid, !quiet, skip);
     $("#more").hidden = list.length <= S.shown;
-    $("#more").textContent = `Показать ещё (${Math.min(PAGE, list.length - S.shown)})`;
+    $("#more").textContent = T("Показать ещё ({n})", { n: Math.max(0, Math.min(PAGE, list.length - S.shown)) });
   }
 
   /* ---------- избранное ---------- */
@@ -274,7 +296,7 @@
     $$("[data-tab]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === S.tab)));
     $("#fav-grid").innerHTML = list.length
       ? list.map((f) => card(f)).join("")
-      : `<div class="empty big"><p class="empty-h">${S.tab === "fav" ? "Здесь пока пусто" : "Список пуст"}</p><p>${S.tab === "fav" ? "Нажми ♡ на любой карточке, чтобы сохранить фильм." : "Нажми + на карточке — фильм ждёт тебя на потом."}</p><p><a class="btn btn-ghost" href="#/library">Открыть библиотеку</a></p></div>`;
+      : `<div class="empty big"><p class="empty-h">${S.tab === "fav" ? T("Здесь пока пусто") : T("Список пуст")}</p><p>${S.tab === "fav" ? T("Нажми ♡ на любой карточке, чтобы сохранить фильм.") : T("Нажми + на карточке — фильм ждёт тебя на потом.")}</p><p><a class="btn btn-ghost" href="#/library">${T("Открыть библиотеку")}</a></p></div>`;
     reveal($("#fav-grid"), !quiet);
   }
 
@@ -308,90 +330,90 @@
     const set = [];
     for (let i = 0; i < Math.min(VIBE_N, pool.length); i++) set.push(pool[(offset + i) % pool.length]);
     const recognized = r.concepts.length
-      ? `Распознано: ${r.concepts.map((c) => esc(c.label)).join(", ")}.`
-      : "Знакомых настроений в запросе не найдено.";
+      ? T("Распознано: {list}.", { list: r.concepts.map((c) => esc(c.label)).join(", ") })
+      : T("Знакомых настроений в запросе не найдено.");
     box.innerHTML = `<div class="vibe-head">
-        <p class="eyebrow">Подборка по запросу «${esc(q.length > 80 ? q.slice(0, 80) + "…" : q)}»</p>
+        <p class="eyebrow">${T("Подборка по запросу «{q}»", { q: esc(q.length > 80 ? q.slice(0, 80) + "…" : q) })}</p>
         <h2>${esc(r.title)}</h2>
         <p class="lead dark">${esc(r.description)}</p>
-        <p class="logic">${recognized} Подбор — локальный: запрос сопоставляется с жанрами, темами, тоном и местом действия каждого фильма каталога. Это не нейросеть.</p>
+        <p class="logic">${recognized} ${T("Подбор — локальный: запрос сопоставляется с жанрами, темами, тоном и местом действия каждого фильма каталога. Это не нейросеть.")}</p>
       </div>
       <div class="grid vibe-grid">${set.map((x) => card(x.film, { hits: x.hits, noCast: true })).join("")}</div>
       <div class="vibe-actions">
-        <button class="btn btn-ghost" type="button" data-act="edit-vibe">Изменить запрос</button>
-        ${pool.length > VIBE_N ? `<button class="btn" type="button" data-act="more-vibe">Другая подборка</button>` : ""}
+        <button class="btn btn-ghost" type="button" data-act="edit-vibe">${T("Изменить запрос")}</button>
+        ${pool.length > VIBE_N ? `<button class="btn" type="button" data-act="more-vibe">${T("Другая подборка")}</button>` : ""}
       </div>`;
     splitWords($("h2", box), quiet);
     reveal(box, !quiet);
   }
 
   /* ---------- модальное окно фильма ---------- */
-  const regionName = (c) => { try { return new Intl.DisplayNames(["ru"], { type: "region" }).of(c) || c; } catch { return c; } };
+  const regionName = (c) => { try { return new Intl.DisplayNames([LANG()], { type: "region" }).of(c) || c; } catch { return c; } };
   const REGIONS = ["RU", "UA", "BY", "KZ", "GE", "AM", "US", "CA", "GB", "DE", "FR", "ES", "IT", "PL", "TR", "IL", "AU", "JP", "BR", "MX"];
 
   let modalPushed = false;
   function openFilm(id) {
-    const f = byId(id);
+    const raw = byId(id);
     const d = $("#film-dialog");
-    if (!f) { closeFilm(true); return; }
+    if (!raw) { closeFilm(true); return; }
+    const f = lf(raw);
     d.dataset.id = id;
     const e = S.enrich[id];
-    const similar = FILMS.includes(f) ? window.Vibe.similar(f, FILMS, 6) : [];
-    const meta = [f.dir, f.runtime ? f.runtime + " мин" : null].filter(Boolean);
+    const similar = FILMS.includes(raw) ? window.Vibe.similar(raw, FILMS, 6).map(lf) : [];
     d.innerHTML = `<div class="film">
-      <button class="close" type="button" data-act="close-film" aria-label="Закрыть">×</button>
+      <button class="close" type="button" data-act="close-film" aria-label="${T("Закрыть")}">×</button>
       <div class="film-poster"><div class="poster-static">${posterHTML(f, "(min-width:720px) 320px, 70vw")}</div></div>
       <div class="film-body">
-        <p class="eyebrow" id="fm-year">${f.year || "Год не найден"}</p>
+        <p class="eyebrow" id="fm-year">${f.year || T("Год не найден")}</p>
         <h2 id="film-title">${esc(f.ru)}</h2>
         <p class="orig" id="fm-orig">${f.en && f.en !== f.ru ? esc(f.en) : ""}</p>
-        <p class="facts" id="fm-facts">${[f.dir ? "Режиссёр: " + esc(f.dir) : "Режиссёр: не найден", f.runtime ? f.runtime + " мин" : "Длительность: не найдена"].join(" · ")}</p>
+        <p class="facts" id="fm-facts">${[f.dir ? T("Режиссёр") + ": " + esc(f.dir) : T("Режиссёр: не найден"), f.runtime ? T("{n} мин", { n: f.runtime }) : T("Длительность: не найдена")].join(" · ")}</p>
         <p class="facts" id="fm-genres">${(f.genres || []).map(esc).join(" · ")}${f.countries && f.countries.length ? " · " + f.countries.map(esc).join(", ") : ""}</p>
-        ${actorsOf(f).length ? `<p class="facts">В ролях: ${actorsOf(f).map((a) => esc(ruName(a))).join(", ")}</p>` : ""}
+        ${actorsOf(f).length ? `<p class="facts">${T("В ролях")}: ${actorsOf(f).map((a) => esc(personName(a))).join(", ")}</p>` : ""}
         <p class="rate" id="fm-rate"></p>
         <div class="actions" id="fm-actions"></div>
 
-        <h3>Описание</h3>
-        <p id="fm-desc">${esc(f.desc) || "Описание не найдено."}</p>
+        <h3>${T("Описание")}</h3>
+        <p id="fm-desc">${esc(f.desc) || T("Описание не найдено.")}</p>
 
-        ${f.why ? `<h3>Почему стоит посмотреть</h3><p>${esc(f.why)}</p>` : ""}
-        ${f.vibes ? `<h3>Вайб фильма</h3><ul class="tags tags-dark">${f.vibes.map((t) => `<li><button type="button" data-vibe="${esc(t)}">${esc(t)}</button></li>`).join("")}</ul>` : ""}
-        ${f.who ? `<h3>Кому понравится</h3><p>${esc(f.who)}</p>` : ""}
+        ${f.why ? `<h3>${T("Почему стоит посмотреть")}</h3><p>${esc(f.why)}</p>` : ""}
+        ${f.vibes ? `<h3>${T("Вайб фильма")}</h3><ul class="tags tags-dark">${f.vibes.map((t) => `<li><button type="button" data-vibe="${esc(t)}">${esc(t)}</button></li>`).join("")}</ul>` : ""}
+        ${f.who ? `<h3>${T("Кому понравится")}</h3><p>${esc(f.who)}</p>` : ""}
 
-        <h3>Где посмотреть</h3>
+        <h3>${T("Где посмотреть")}</h3>
         <div class="watch" id="fm-watch"></div>
 
-        ${similar.length ? `<h3>Похожие фильмы</h3><ul class="similar">${similar.map((s) => `<li><a href="#/film/${esc(s.id)}" data-similar>${`<span class="sim-p">${posterHTML(s, "120px")}</span>`}<span class="sim-t">${esc(s.ru)}</span><span class="sim-y">${s.year}</span></a></li>`).join("")}</ul>` : ""}
+        ${similar.length ? `<h3>${T("Похожие фильмы")}</h3><ul class="similar">${similar.map((s) => `<li><a href="#/film/${esc(s.id)}" data-similar>${`<span class="sim-p">${posterHTML(s, "120px")}</span>`}<span class="sim-t">${esc(s.ru)}</span><span class="sim-y">${s.year}</span></a></li>`).join("")}</ul>` : ""}
       </div>
     </div>`;
     syncFilmButtons(id);
-    renderRate(f);
+    renderRate(raw);
     if (!d.open) d.showModal();
     d.scrollTop = 0;
     const body = $(".film", d); if (body) body.scrollTop = 0;
     document.documentElement.classList.add("lock");
-    loadFilmData(f, d);
+    loadFilmData(raw, d);
   }
   function renderRate(f) {
     const r = rating(f);
     $("#fm-rate").innerHTML = r
-      ? `<b class="rt big">★ ${r.v.toFixed(1)}</b> / 10 · источник: ${r.src === "IMDb" ? "IMDb (через OMDb)" : "TMDB"} (${(r.n || 0).toLocaleString("ru")} оценок)`
-      : `<span class="mute">Рейтинг не найден</span>`;
+      ? `<b class="rt big">★ ${r.v.toFixed(1)}</b> / 10 · ${T("источник")}: ${r.src === "IMDb" ? T("IMDb (через OMDb)") : "TMDB"} (${T("оценок: {n}", { n: (r.n || 0).toLocaleString(numLocale()) })})`
+      : `<span class="mute">${T("Рейтинг не найден")}</span>`;
   }
   function syncFilmButtons(id) {
     const fav = S.fav.has(id), later = S.later.has(id);
-    $("#fm-actions").innerHTML = `<button class="btn ${fav ? "" : "btn-ghost"}" type="button" data-act="fav" data-id="${esc(id)}" aria-pressed="${fav}">${fav ? "♥ В избранном" : "♡ В избранное"}</button>
-      <button class="btn ${later ? "" : "btn-ghost"}" type="button" data-act="later" data-id="${esc(id)}" aria-pressed="${later}">${later ? "✓ Посмотреть позже" : "+ Посмотреть позже"}</button>`;
+    $("#fm-actions").innerHTML = `<button class="btn ${fav ? "" : "btn-ghost"}" type="button" data-act="fav" data-id="${esc(id)}" aria-pressed="${fav}">${fav ? "♥ " + T("В избранном") : "♡ " + T("В избранное")}</button>
+      <button class="btn ${later ? "" : "btn-ghost"}" type="button" data-act="later" data-id="${esc(id)}" aria-pressed="${later}">${later ? "✓ " : "+ "}${T("Посмотреть позже")}</button>`;
   }
 
   async function loadFilmData(f, d) {
     const watch = $("#fm-watch");
     const stale = () => d.dataset.id !== f.id;
     if (!S.tmdb) {
-      watch.innerHTML = `<p class="mute">Информация о доступности сейчас не найдена.</p><p class="mute small">Сервисы просмотра приходят из TMDB (JustWatch). <button class="link" type="button" data-act="open-settings">Подключить TMDB</button></p>`;
+      watch.innerHTML = `<p class="mute">${T("Информация о доступности сейчас не найдена.")}</p><p class="mute small">${T("Сервисы просмотра приходят из TMDB (JustWatch).")} <button class="link" type="button" data-act="open-settings">${T("Подключить TMDB")}</button></p>`;
       return;
     }
-    watch.innerHTML = `<p class="mute">Загружаем…</p>`;
+    watch.innerHTML = `<p class="mute">${T("Загружаем…")}</p>`;
     try {
       let e = S.enrich[f.id];
       if (!e && FILMS.includes(f)) {
@@ -400,12 +422,12 @@
       }
       if (!e && f.tmdbId) e = { tmdbId: f.tmdbId };
       if (stale()) return;
-      if (!e) { watch.innerHTML = `<p class="mute">Информация о доступности сейчас не найдена.</p>`; return; }
+      if (!e) { watch.innerHTML = `<p class="mute">${T("Информация о доступности сейчас не найдена.")}</p>`; return; }
       const [det, prov] = await Promise.all([window.Tmdb.details(e.tmdbId).catch(() => null), window.Tmdb.providers(e.tmdbId).catch(() => null)]);
       if (stale()) return;
       if (det) {
         if (det.overview) $("#fm-desc").textContent = det.overview;
-        if (!f.dir && det.director.length) $("#fm-facts").textContent = `Режиссёр: ${det.director.join(", ")}` + (det.runtime ? ` · ${det.runtime} мин` : "");
+        if (!f.dir && det.director.length) $("#fm-facts").textContent = `${T("Режиссёр")}: ${det.director.join(", ")}` + (det.runtime ? ` · ${T("{n} мин", { n: det.runtime })}` : "");
         if (!f.genres && det.genres.length) $("#fm-genres").textContent = det.genres.join(" · ");
         if (det.original && det.original !== f.ru && !$("#fm-orig").textContent) $("#fm-orig").textContent = det.original;
         if (!FILMS.includes(f)) { S.enrich[f.id] = { ...e, rating: det.rating, votes: det.votes }; }
@@ -413,23 +435,23 @@
         renderRate(f);
       }
       if (prov) renderWatch(prov, e);
-      else watch.innerHTML = `<p class="mute">Информация о доступности сейчас не найдена.</p><p class="mute small">Не удалось связаться с TMDB.</p>`;
+      else watch.innerHTML = `<p class="mute">${T("Информация о доступности сейчас не найдена.")}</p><p class="mute small">${T("Не удалось связаться с TMDB.")}</p>`;
       scheduleRender();
     } catch (err) {
-      if (!stale()) watch.innerHTML = `<p class="mute">Информация о доступности сейчас не найдена.</p><p class="mute small">${err.status === 401 ? "Ключ TMDB не принят." : "Не удалось связаться с TMDB."}</p>`;
+      if (!stale()) watch.innerHTML = `<p class="mute">${T("Информация о доступности сейчас не найдена.")}</p><p class="mute small">${err.status === 401 ? T("Ключ TMDB не принят.") : T("Не удалось связаться с TMDB.")}</p>`;
     }
   }
   function renderWatch(prov, e) {
     const watch = $("#fm-watch");
     const regions = [...new Set([S.region, ...REGIONS])];
-    const sel = `<label class="region">Регион <select id="region-sel">${regions.map((c) => `<option value="${c}"${c === S.region ? " selected" : ""}>${esc(regionName(c))}</option>`).join("")}</select></label>`;
+    const sel = `<label class="region">${T("Регион")} <select id="region-sel">${regions.map((c) => `<option value="${c}"${c === S.region ? " selected" : ""}>${esc(regionName(c))}</option>`).join("")}</select></label>`;
     const r = prov[S.region];
-    const groups = r ? [["Подписка", r.flatrate], ["Бесплатно", r.free], ["Аренда", r.rent], ["Покупка", r.buy]].filter(([, a]) => a.length) : [];
+    const groups = r ? [[T("Подписка"), r.flatrate], [T("Бесплатно"), r.free], [T("Аренда"), r.rent], [T("Покупка"), r.buy]].filter(([, a]) => a.length) : [];
     let body;
-    if (!groups.length) body = `<p class="mute">Информация о доступности сейчас не найдена.</p><p class="mute small">Регион: ${esc(regionName(S.region))}. Попробуй выбрать другой.</p>`;
+    if (!groups.length) body = `<p class="mute">${T("Информация о доступности сейчас не найдена.")}</p><p class="mute small">${T("Регион")}: ${esc(regionName(S.region))}. ${T("Попробуй выбрать другой.")}</p>`;
     else {
       body = groups.map(([t, a]) => `<div class="wgroup"><p class="wk">${t}</p><ul>${a.map((n) => `<li>${r.link ? `<a href="${esc(r.link)}" target="_blank" rel="noopener noreferrer">${esc(n)}</a>` : esc(n)}</li>`).join("")}</ul></div>`).join("") +
-        `<p class="mute small">Регион: ${esc(regionName(S.region))}. Ссылки ведут на страницу фильма на TMDB, где собраны варианты просмотра. Данные: JustWatch через TMDB.</p>`;
+        `<p class="mute small">${T("Регион")}: ${esc(regionName(S.region))}. ${T("Ссылки ведут на страницу фильма на TMDB, где собраны варианты просмотра. Данные: JustWatch через TMDB.")}</p>`;
     }
     watch.innerHTML = sel + body;
     watch.dataset.tmdb = e.tmdbId;
@@ -511,8 +533,8 @@
     S.progress = null;
     if (fatal) {
       S.error = fatal.status === 401 || fatal.status === 403
-        ? "Ключ TMDB не принят — показан демо-режим."
-        : "Не удалось загрузить данные TMDB — показаны только данные каталога.";
+        ? T("Ключ TMDB не принят — показан демо-режим.")
+        : T("Не удалось загрузить данные TMDB — показаны только данные каталога.");
       if (fatal.status === 401 || fatal.status === 403) S.tmdb = false;
     }
     scheduleRender();
@@ -546,6 +568,35 @@
     }, 450);
   }
 
+  /* ---------- язык ---------- */
+  function updateLangBtn() {
+    const b = $("#lang-btn");
+    if (!b) return;
+    const en = LANG() === "en";
+    b.textContent = en ? "RU" : "EN";
+    b.setAttribute("aria-label", en ? "Русский" : "English");
+    b.title = en ? "Русский" : "English";
+  }
+  function setLang(l) {
+    window.I18N.set(l);
+    document.documentElement.lang = l;
+    window.I18N.applyStatic();
+    setTitle();
+    hayCache.clear();
+    applyTheme(root.dataset.theme, false);
+    updateLangBtn();
+    fillSelects();
+    applyTmdbUI();
+    if (S.vibe) S.vibe.r = window.Vibe.search(S.vibe.q, FILMS);
+    quiet = true;
+    refreshAll();
+    quiet = false;
+    const d = $("#film-dialog");
+    if (d.open) openFilm(d.dataset.id);
+    extSearch();
+    if (window.restartPlaceholder) window.restartPlaceholder();
+  }
+
   /* ---------- события ---------- */
   document.addEventListener("click", (ev) => {
     const t = ev.target.closest("[data-act], [data-cat], [data-tab], [data-vibe], a[data-similar], #vibe-tags button, [data-nav], [data-brand]");
@@ -566,13 +617,12 @@
     if (t.matches("[data-nav], [data-brand]")) { if (location.hash === t.getAttribute("href")) { ev.preventDefault(); route(); } return; }
     switch (t.dataset.act) {
       case "fav": case "later": toggle(t.dataset.act, t.dataset.id); break;
+      case "lang": setLang(LANG() === "ru" ? "en" : "ru"); break;
       case "theme": {
+        // меняем тему сразу и синхронно; плавность даёт CSS-переход цветов
         const next = root.dataset.theme === "dark" ? "light" : "dark";
-        const r = t.getBoundingClientRect();
-        root.style.setProperty("--tx", r.left + r.width / 2 + "px");
-        root.style.setProperty("--ty", r.top + r.height / 2 + "px");
-        if (ANIM && document.startViewTransition) document.startViewTransition(() => applyTheme(next, true));
-        else applyTheme(next, true);
+        if (ANIM) { root.classList.add("theme-anim"); clearTimeout(themeTimer); themeTimer = setTimeout(() => root.classList.remove("theme-anim"), 650); }
+        applyTheme(next, true);
         break;
       }
       case "close-film": closeFilm(); break;
@@ -590,7 +640,7 @@
   document.addEventListener("error", (ev) => {
     const img = ev.target;
     if (img.tagName !== "IMG" || !img.classList.contains("poster-img")) return;
-    const alt = (img.alt || "").replace("Постер: ", "");
+    const alt = (img.alt || "").replace(T("Постер") + ": ", "");
     img.replaceWith(Object.assign(document.createElement("span"), { className: "ph", innerHTML: `<span class="ph-t">${esc(alt)}</span>` }));
   }, true);
 
@@ -627,7 +677,7 @@
     const d = $("#settings-dialog");
     $("#key-input").value = "";
     $("#set-error").textContent = "";
-    $("#set-status").textContent = CFG.tmdbProxy ? "Сейчас: TMDB через прокси." : window.Tmdb.enabled() ? "Сейчас: TMDB подключён." : "Сейчас: TMDB не подключён.";
+    $("#set-status").textContent = CFG.tmdbProxy ? T("Сейчас: TMDB через прокси.") : window.Tmdb.enabled() ? T("Сейчас: TMDB подключён.") : T("Сейчас: TMDB не подключён.");
     if (!d.open) d.showModal();
     $("#key-input").focus();
   }
@@ -636,14 +686,14 @@
   $("#settings-form").addEventListener("submit", async (ev) => {
     ev.preventDefault();
     const k = $("#key-input").value.trim();
-    if (!k) { $("#set-error").textContent = "Вставь ключ TMDB."; return; }
-    const btn = $("#key-save"); btn.disabled = true; btn.textContent = "Проверяем…";
+    if (!k) { $("#set-error").textContent = T("Вставь ключ TMDB."); return; }
+    const btn = $("#key-save"); btn.disabled = true; btn.textContent = T("Проверяем…");
     window.Tmdb.setKey(k);
     try { await window.Tmdb.ping(); location.reload(); }
     catch (err) {
       window.Tmdb.clearKey();
-      $("#set-error").textContent = err.status === 401 ? "Ключ не принят TMDB. Проверь, что скопирован целиком." : "Не удалось связаться с TMDB. Проверь соединение и попробуй ещё раз.";
-      btn.disabled = false; btn.textContent = "Подключить";
+      $("#set-error").textContent = err.status === 401 ? T("Ключ не принят TMDB. Проверь, что скопирован целиком.") : T("Не удалось связаться с TMDB. Проверь соединение и попробуй ещё раз.");
+      btn.disabled = false; btn.textContent = T("Подключить");
     }
   });
   $("#settings-dialog").addEventListener("click", (ev) => { if (ev.target.id === "settings-dialog") ev.target.close(); });
@@ -682,34 +732,36 @@
   // Подсказка в поле вайба «печатается» сама, пока поле пусто и не в фокусе.
   (function typedPlaceholder() {
     const input = $("#vibe-input");
-    const base = input.placeholder;
+    const baseRu = input.getAttribute("data-ru-placeholder") || input.placeholder;
+    const base = () => T(baseRu);
     if (!ANIM) return;
-    const lines = [
-      "хочу фильм с вайбом будущего, ночного города и одиночества...",
-      "атмосфера ночного Токио...",
-      "мрачное, философское и психологическое кино...",
-      "что-то похожее на сон...",
-      "хочу почувствовать себя главным героем...",
-      "фильм с вайбом свободы и приключений...",
+    const lines = () => [
+      T("хочу фильм с вайбом будущего, ночного города и одиночества..."),
+      T("атмосфера ночного Токио..."),
+      T("мрачное, философское и психологическое кино..."),
+      T("что-то похожее на сон..."),
+      T("хочу почувствовать себя главным героем..."),
+      T("фильм с вайбом свободы и приключений..."),
     ];
     let li = 0, ci = 0, dir = 1, timer = 0, running = false;
     const idle = () => document.activeElement === input || input.value !== "" || document.hidden;
     function tick() {
       timer = 0;
-      if (idle()) { running = false; input.placeholder = base; return; }
-      const line = lines[li];
+      if (idle()) { running = false; input.placeholder = base(); return; }
+      const line = lines()[li];
       ci += dir;
-      input.placeholder = "Например: " + line.slice(0, ci) + (ci < line.length || dir < 0 ? "▍" : "");
+      input.placeholder = T("Например: ") + line.slice(0, ci) + (ci < line.length || dir < 0 ? "▍" : "");
       let wait = dir > 0 ? 55 + Math.random() * 45 : 22;
       if (dir > 0 && ci >= line.length) { dir = -1; wait = 2200; }
-      else if (dir < 0 && ci <= 0) { dir = 1; li = (li + 1) % lines.length; wait = 450; }
+      else if (dir < 0 && ci <= 0) { dir = 1; li = (li + 1) % lines().length; wait = 450; }
       timer = setTimeout(tick, wait);
       running = true;
     }
     const start = () => { if (!timer && !idle()) { ci = 0; dir = 1; tick(); } };
-    input.addEventListener("focus", () => { clearTimeout(timer); timer = 0; running = false; input.placeholder = base; });
+    input.addEventListener("focus", () => { clearTimeout(timer); timer = 0; running = false; input.placeholder = base(); });
     input.addEventListener("blur", () => setTimeout(start, 600));
     document.addEventListener("visibilitychange", () => { if (!document.hidden) start(); });
+    window.restartPlaceholder = () => { clearTimeout(timer); timer = 0; li = 0; input.placeholder = base(); setTimeout(start, 800); };
     setTimeout(start, 1800);
   })();
 
@@ -724,6 +776,10 @@
   })();
 
   /* ---------- старт ---------- */
+  document.documentElement.lang = LANG();
+  window.I18N.applyStatic();
+  updateLangBtn();
+  applyTheme(root.dataset.theme, false);
   fillSelects();
   applyTmdbUI();
   splitWords($("#vibe-h"));
