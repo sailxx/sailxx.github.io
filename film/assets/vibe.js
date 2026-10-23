@@ -4,12 +4,18 @@
   const norm = (s) => String(s).toLowerCase().replace(/ё/g, "е");
   const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-  const rules = Object.entries(window.CONCEPTS).map(([id, c]) => ({
-    id,
-    label: c.label,
-    desc: c.desc,
-    res: c.syn.map((s) => new RegExp("(^|[^а-яa-z0-9])" + esc(norm(s)))),
-  }));
+  const T = window.T;
+  const isEn = () => window.I18N && window.I18N.lang === "en";
+  // Запрос распознаётся на обоих языках независимо от языка интерфейса; подписи — на языке интерфейса.
+  const rules = Object.entries(window.CONCEPTS).map(([id, c]) => {
+    const e = (window.CONCEPTS_EN && window.CONCEPTS_EN[id]) || { syn: [] };
+    return {
+      id,
+      ru: c,
+      en: e,
+      res: [...c.syn, ...e.syn].map((s) => new RegExp("(^|[^а-яa-z0-9])" + esc(norm(s)))),
+    };
+  });
 
   const vecs = {};
   function vec(film) {
@@ -28,7 +34,7 @@
     for (const r of rules) {
       let hits = 0;
       for (const re of r.res) if (re.test(q)) hits++;
-      if (hits) found.push({ id: r.id, label: r.label, desc: r.desc, strength: 1 + Math.min(hits - 1, 2) * 0.5 });
+      if (hits) { const src = isEn() && r.en.label ? r.en : r.ru; found.push({ id: r.id, label: src.label, desc: src.desc, strength: 1 + Math.min(hits - 1, 2) * 0.5 }); }
     }
     return found;
   }
@@ -36,7 +42,8 @@
   function textScore(film, q) {
     const words = norm(q).split(/[^а-яa-z0-9]+/).filter((w) => w.length >= 5).map((w) => w.slice(0, 5));
     if (!words.length) return 0;
-    const hay = norm([film.ru, film.en, film.desc, film.vibes.join(" ")].join(" "));
+    const fe = (window.FILMS_EN && window.FILMS_EN[film.id]) || {};
+    const hay = norm([film.ru, film.en, film.desc, film.vibes.join(" "), fe.title, fe.desc, (fe.vibes || []).join(" ")].join(" "));
     let s = 0;
     for (const w of words) if (hay.includes(w)) s += 0.5;
     return s;
@@ -73,18 +80,18 @@
 
     const top = concepts.slice().sort((a, b) => b.strength - a.strength).slice(0, 3);
     const title = abstract
-      ? "Фильмы с выраженной атмосферой"
+      ? T("Фильмы с выраженной атмосферой")
       : concepts.length
         ? top.map((c) => c.label).join(" · ")
-        : "Близкие по тексту";
+        : T("Близкие по тексту");
     let description;
     if (abstract) {
-      description = "В запросе нет знакомых нам настроений, поэтому показываем картины с самой выраженной атмосферой — задумчивые, снотворные и философские. Добавь слова вроде «одиночество», «неон», «ностальгия», «дорога» — подборка станет точнее.";
+      description = T("В запросе нет знакомых нам настроений, поэтому показываем картины с самой выраженной атмосферой — задумчивые, снотворные и философские. Добавь слова вроде «одиночество», «неон», «ностальгия», «дорога» — подборка станет точнее.");
     } else if (concepts.length) {
       const d = top.slice(0, 2).map((c) => c.desc);
-      description = "Здесь — " + d[0] + (d[1] ? ", а ещё " + d[1] : "") + ".";
+      description = d[1] ? T("Здесь — {a}, а ещё {b}.", { a: d[0], b: d[1] }) : T("Здесь — {a}.", { a: d[0] });
     } else {
-      description = "Прямых совпадений по настроению нет — подобрали фильмы по словам из запроса.";
+      description = T("Прямых совпадений по настроению нет — подобрали фильмы по словам из запроса.");
     }
     return { concepts, title, description, abstract, results: list.slice(0, 24) };
   }

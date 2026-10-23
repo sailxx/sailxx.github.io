@@ -42,6 +42,8 @@
     return res.json();
   }
 
+  const lang = () => (window.I18N && window.I18N.lang === "en" ? "en" : "ru");
+  const loc = () => (lang() === "en" ? "en-US" : "ru-RU");
   const year = (d) => (d ? +String(d).slice(0, 4) : null);
   const pick = (r) => ({
     tmdbId: r.id,
@@ -73,10 +75,10 @@
   const peekResolve = (film) => { const h = cacheGet("r:" + film.id, 7 * 24 * H); return h && !h.none ? h : null; };
 
   async function details(tmdbId) {
-    const ck = "d:" + tmdbId;
+    const ck = "d:" + lang() + ":" + tmdbId;
     const hit = cacheGet(ck, 3 * 24 * H);
     if (hit) return hit;
-    const d = await get("/movie/" + tmdbId, { language: "ru-RU", append_to_response: "credits" });
+    const d = await get("/movie/" + tmdbId, { language: loc(), append_to_response: "credits" });
     const out = {
       overview: d.overview || "",
       tagline: d.tagline || "",
@@ -117,17 +119,17 @@
   const peekProviders = (tmdbId) => cacheGet("p:" + tmdbId, 12 * H);
 
   async function genres() {
-    const hit = cacheGet("g", 30 * 24 * H);
+    const hit = cacheGet("g:" + lang(), 30 * 24 * H);
     if (hit) return hit;
-    const d = await get("/genre/movie/list", { language: "ru" });
+    const d = await get("/genre/movie/list", { language: lang() });
     const m = {};
     (d.genres || []).forEach((g) => (m[g.id] = g.name));
-    cacheSet("g", m);
+    cacheSet("g:" + lang(), m);
     return m;
   }
 
   async function searchMovies(q) {
-    const d = await get("/search/movie", { query: q, language: "ru-RU", include_adult: "false" });
+    const d = await get("/search/movie", { query: q, language: loc(), include_adult: "false" });
     return (d.results || []).map(pick);
   }
 
