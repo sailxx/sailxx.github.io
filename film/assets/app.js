@@ -1,7 +1,7 @@
 (() => {
   const CFG = window.FILM_CONFIG;
   const FILMS = window.FILMS;
-  const PAGE = 12;
+  const PAGE = 20;
   const VIBE_N = 6;
 
   const $ = (s, r = document) => r.querySelector(s);
@@ -51,13 +51,13 @@
   let quiet = false; // фоновые перерисовки (оценки, избранное) не должны проигрывать анимацию заново
 
   const io = ANIM && "IntersectionObserver" in window
-    ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("seen"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: 0.05 })
+    ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("seen"); io.unobserve(e.target); } }), { rootMargin: "0px 0px 30% 0px", threshold: 0 })
     : null;
   /** Карточки появляются по очереди, постер «раскрывается шторкой». skip — сколько первых карточек не анимировать. */
   function reveal(rootEl, animate = true, skip = 0) {
     $$(".card", rootEl).forEach((c, i) => {
       if (!io || !animate || i < skip) { c.classList.add("seen"); return; }
-      c.style.setProperty("--i", (i - skip) % 6);
+      c.style.setProperty("--i", Math.min(i - skip, 10));
       io.observe(c);
     });
   }
@@ -128,10 +128,10 @@
   }
 
   /* ---------- карточка ---------- */
-  function posterHTML(f, sizes) {
+  function posterHTML(f, sizes, eager) {
     const p = posterSrc(f);
     if (p) {
-      return `<img class="poster-img" src="${esc(p.src)}"${p.srcset ? ` srcset="${p.srcset}" sizes="${sizes}"` : ""} width="342" height="513" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="${T("Постер")}: ${esc(f.ru)}">`;
+      return `<img class="poster-img" src="${esc(p.src)}"${p.srcset ? ` srcset="${p.srcset}" sizes="${sizes}"` : ""} width="342" height="513" loading="${eager ? "eager" : "lazy"}"${eager ? ' fetchpriority="high"' : ""} decoding="async" referrerpolicy="no-referrer" alt="${T("Постер")}: ${esc(f.ru)}">`;
     }
     return `<span class="ph" aria-hidden="true"><span class="ph-t">${esc(f.ru)}</span><span class="ph-y">${f.year || ""}</span></span>`;
   }
@@ -167,7 +167,7 @@
     }
     return `<article class="card" data-id="${esc(f.id)}">
       <div class="poster-wrap">
-        <a class="poster" href="#/film/${esc(f.id)}" aria-label="${esc(T("{title} — подробнее", { title: f.ru }))}">${posterHTML(f, "(min-width:1100px) 17vw, (min-width:720px) 28vw, 46vw")}</a>
+        <a class="poster" href="#/film/${esc(f.id)}" aria-label="${esc(T("{title} — подробнее", { title: f.ru }))}">${posterHTML(f, "(min-width:1100px) 17vw, (min-width:720px) 28vw, 46vw", opt.eager)}</a>
         <div class="quick">
           <button type="button" class="qbtn" data-act="fav" data-id="${esc(f.id)}" aria-pressed="${fav}" aria-label="${fav ? T("Убрать из избранного") : T("В избранное")}: ${esc(f.ru)}" title="${fav ? T("Убрать из избранного") : T("В избранное")}">${fav ? "♥" : "♡"}</button>
           <button type="button" class="qbtn" data-act="later" data-id="${esc(f.id)}" aria-pressed="${later}" aria-label="${later ? T("Убрать из «Посмотреть позже»") : T("Посмотреть позже")}: ${esc(f.ru)}" title="${later ? T("Убрать из «Посмотреть позже»") : T("Посмотреть позже")}">${later ? "✓" : "+"}</button>
@@ -276,7 +276,7 @@
     if (!list.length) {
       grid.innerHTML = emptyDesc(T("Ничего не найдено. Измени запрос или сбрось фильтры.")) + `<p class="empty-act"><button class="btn btn-ghost" type="button" data-act="reset">${T("Сбросить фильтры")}</button></p>`;
     } else {
-      grid.innerHTML = list.slice(0, S.shown).map((f) => card(f)).join("");
+      grid.innerHTML = list.slice(0, S.shown).map((f, i) => card(f, { eager: i < 10 })).join("");
     }
     reveal(grid, !quiet, skip);
     $("#more").hidden = list.length <= S.shown;

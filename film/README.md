@@ -5,7 +5,7 @@
 Фильмы под твой вайб.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-sailxx.github.io%2Ffilm-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=fafaf8&logoColor=white)](https://sailxx.github.io/film/)
-![Films](https://img.shields.io/badge/films-47-0a0a0a?style=flat-square)
+![Films](https://img.shields.io/badge/films-95-0a0a0a?style=flat-square)
 ![No build](https://img.shields.io/badge/build-none-0a0a0a?style=flat-square)
 ![Themes](https://img.shields.io/badge/theme-light%20%2F%20dark-0a0a0a?style=flat-square)
 
