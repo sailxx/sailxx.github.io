@@ -46,7 +46,7 @@ button{cursor:pointer}
 .small{font-size:13px}
 
 /* ---------- стекло ---------- */
-.top-row,.vibe-box,.btn-ghost,.tags button,.chips button,.tabs,.field select,.field input,.vibe-form textarea,.qbtn,.film-dialog,.settings-dialog,.icon-btn:hover,.close,.filters-toggle{
+.top-row,.vibe-box,.btn-ghost,.tags button,.chips button,.tabs,.field select,.field input,.vibe-form .bar,.qbtn,.film-dialog,.settings-dialog,.icon-btn:hover,.close,.filters-toggle{
   -webkit-backdrop-filter:blur(var(--blur)) saturate(180%);backdrop-filter:blur(var(--blur)) saturate(180%)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   :root{--glass:rgba(255,255,255,.92);--glass-strong:rgba(255,255,255,.96);--field:rgba(255,255,255,.95)}
@@ -112,16 +112,19 @@ h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;c
 .vibe-box>*{position:relative;z-index:1}
 .vibe-box::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .6s;background:radial-gradient(480px circle at var(--mx,70%) var(--my,30%),var(--spot),transparent 62%)}
 .vibe-box:hover::before{opacity:1}
-.vibe-form{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:stretch;margin-top:6px}
-.vibe-form textarea{width:100%;caret-color:var(--accent);background:var(--plate-field);border:1px solid var(--glass-line);border-radius:22px;font-size:clamp(1.05rem,2vw,1.4rem);line-height:1.35;padding:18px 22px;resize:vertical;min-height:88px;transition:border-color .3s,box-shadow .3s,background .3s}
-.vibe-form textarea::placeholder{color:var(--mute)}
-.vibe-form textarea:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 28%,transparent)}
-.vibe-form .btn{min-height:56px;white-space:nowrap;align-self:end;padding:0 30px}
+.vibe-form{margin-top:6px}
+.vibe-form .bar{display:flex;align-items:center;gap:10px;background:var(--plate-field);border:1px solid var(--glass-edge);border-radius:99px;padding:8px 8px 8px 26px;box-shadow:var(--glass-shadow);transition:border-color .3s,box-shadow .3s}
+.vibe-form .bar:focus-within{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 28%,transparent)}
+.vibe-form input{flex:1;min-width:0;border:0;background:none;outline:0;font-size:clamp(1.02rem,1.8vw,1.3rem);padding:13px 0;caret-color:var(--accent);text-overflow:ellipsis}
+.vibe-form input::placeholder{color:var(--mute);text-overflow:ellipsis}
+.vibe-form kbd{font:500 12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:3px 8px;white-space:nowrap}
+.vibe-form .btn{min-height:54px;white-space:nowrap;padding:0 30px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags button{background:var(--glass);border:1px solid var(--glass-edge);border-radius:99px;padding:0 16px;min-height:40px;font-size:14px;color:var(--ink2);box-shadow:var(--glass-shadow);transition:transform .3s cubic-bezier(.16,.84,.24,1),background .25s,color .25s}
 .tags button:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--accent) 24%,var(--glass-strong));border-color:var(--accent);color:var(--ink)}
 .tags button:active{transform:scale(.96)}
-@media (max-width:720px){.vibe-form{grid-template-columns:1fr}.vibe-form .btn{width:100%;align-self:stretch}.vibe-form textarea{min-height:112px}}
+@media (max-width:720px){.vibe-form kbd{display:none}}
+@media (max-width:560px){.vibe-form .bar{flex-wrap:wrap;border-radius:28px;padding:8px}.vibe-form input{flex-basis:100%;padding:12px 14px}.vibe-form .btn{width:100%}}
 
 .vibe-results:not(:empty){padding:clamp(32px,5vw,64px) 0 0;animation:rise .6s cubic-bezier(.16,.84,.24,1)}
 .vibe-head{display:grid;gap:12px;margin-bottom:28px}

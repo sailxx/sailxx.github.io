@@ -56,8 +56,11 @@
         <p class="lead" data-i18n>Опиши атмосферу, настроение или мир, в который хочешь погрузиться. Мы подберём фильмы под твой вайб.</p>
         <form id="vibe-form" class="vibe-form">
           <label class="sr" for="vibe-input" data-i18n>Опиши свой вайб</label>
-          <textarea id="vibe-input" rows="2" maxlength="400" data-i18n-attr="placeholder" placeholder="Например: хочу фильм с вайбом будущего, ночного города и одиночества..."></textarea>
-          <button class="btn btn-primary" type="submit" data-i18n>Найти мой вайб →</button>
+          <div class="bar">
+            <input id="vibe-input" type="text" maxlength="400" autocomplete="off" data-i18n-attr="placeholder" placeholder="Например: хочу фильм с вайбом будущего, ночного города и одиночества...">
+            <kbd id="vibe-kbd" aria-hidden="true">Ctrl ↵</kbd>
+            <button class="btn btn-primary" type="submit" data-i18n>Найти мой вайб →</button>
+          </div>
         </form>
         <ul class="tags" id="vibe-tags" aria-label="Примеры запросов" data-i18n-attr="aria-label">
           <li><button type="button" data-i18n>Будущее</button></li>
