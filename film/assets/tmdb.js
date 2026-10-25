@@ -52,9 +52,9 @@
     votes: r.vote_count || 0,
     pop: r.popularity || 0,
     overview: r.overview || "",
-    title: r.title || "",
-    original: r.original_title || "",
-    year: year(r.release_date),
+    title: r.title || r.name || "",
+    original: r.original_title || r.original_name || "",
+    year: year(r.release_date || r.first_air_date),
     genreIds: r.genre_ids || [],
   });
 
@@ -63,32 +63,34 @@
     const ck = "r:" + film.id;
     const hit = cacheGet(ck, 7 * 24 * H);
     if (hit) return hit.none ? null : hit;
-    const data = await get("/search/movie", { query: film.tmdbQuery || film.en, language: "ru-RU", include_adult: "false" });
+    const tv = film.kind === "series";
+    const data = await get(tv ? "/search/tv" : "/search/movie", { query: film.tmdbQuery || film.en, language: "ru-RU", include_adult: "false" });
     const list = data.results || [];
-    const exact = list.find((r) => year(r.release_date) === film.year);
-    const near = list.find((r) => Math.abs((year(r.release_date) || 0) - film.year) <= 1);
+    const yr = (r) => year(r.release_date || r.first_air_date);
+    const exact = list.find((r) => yr(r) === film.year);
+    const near = list.find((r) => Math.abs((yr(r) || 0) - film.year) <= 1);
     const r = exact || near;
-    const out = r ? pick(r) : { none: true };
+    const out = r ? { ...pick(r), tv } : { none: true };
     cacheSet(ck, out);
     return r ? out : null;
   }
   const peekResolve = (film) => { const h = cacheGet("r:" + film.id, 7 * 24 * H); return h && !h.none ? h : null; };
 
-  async function details(tmdbId) {
-    const ck = "d:" + lang() + ":" + tmdbId;
+  async function details(tmdbId, tv) {
+    const ck = "d:" + lang() + ":" + (tv ? "tv" : "") + tmdbId;
     const hit = cacheGet(ck, 3 * 24 * H);
     if (hit) return hit;
-    const d = await get("/movie/" + tmdbId, { language: loc(), append_to_response: "credits" });
+    const d = await get((tv ? "/tv/" : "/movie/") + tmdbId, { language: loc(), append_to_response: "credits" });
     const out = {
       overview: d.overview || "",
       tagline: d.tagline || "",
-      runtime: d.runtime || null,
-      title: d.title || "",
-      original: d.original_title || "",
-      year: year(d.release_date),
+      runtime: d.runtime || (d.episode_run_time && d.episode_run_time[0]) || null,
+      title: d.title || d.name || "",
+      original: d.original_title || d.original_name || "",
+      year: year(d.release_date || d.first_air_date),
       genres: (d.genres || []).map((g) => g.name),
       countries: (d.production_countries || []).map((c) => c.name),
-      director: ((d.credits && d.credits.crew) || []).filter((c) => c.job === "Director").map((c) => c.name),
+      director: tv ? (d.created_by || []).map((c) => c.name) : ((d.credits && d.credits.crew) || []).filter((c) => c.job === "Director").map((c) => c.name),
       rating: d.vote_count > 0 ? d.vote_average : null,
       votes: d.vote_count || 0,
       poster: d.poster_path || null,
@@ -97,11 +99,11 @@
     return out;
   }
 
-  async function providers(tmdbId) {
-    const ck = "p:" + tmdbId;
+  async function providers(tmdbId, tv) {
+    const ck = "p:" + (tv ? "tv" : "") + tmdbId;
     const hit = cacheGet(ck, 12 * H);
     if (hit) return hit;
-    const d = await get("/movie/" + tmdbId + "/watch/providers");
+    const d = await get((tv ? "/tv/" : "/movie/") + tmdbId + "/watch/providers");
     const res = d.results || {};
     const out = {};
     for (const [region, v] of Object.entries(res)) {
@@ -116,7 +118,7 @@
     cacheSet(ck, out);
     return out;
   }
-  const peekProviders = (tmdbId) => cacheGet("p:" + tmdbId, 12 * H);
+  const peekProviders = (tmdbId, tv) => cacheGet("p:" + (tv ? "tv" : "") + tmdbId, 12 * H);
 
   async function genres() {
     const hit = cacheGet("g:" + lang(), 30 * 24 * H);
