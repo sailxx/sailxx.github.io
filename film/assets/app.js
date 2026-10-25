@@ -470,6 +470,16 @@
     }
   }
 
+  /* ---------- обновления ---------- */
+  function renderUpdates() {
+    const en = LANG() === "en";
+    const fmt = new Intl.DateTimeFormat(en ? "en-GB" : "ru-RU", { day: "numeric", month: "long", year: "numeric" });
+    $("#upd-list").innerHTML = (window.UPDATES || []).map((u) => {
+      const t = en ? u.en : u.ru;
+      return `<li class="upd"><time datetime="${esc(u.date)}">${esc(fmt.format(new Date(u.date + "T00:00:00")))}</time><div><h3>${esc(t.title)}</h3><ul>${t.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></div></li>`;
+    }).join("");
+  }
+
   /* ---------- маршрутизация ---------- */
   let initial = true;
   function route() {
@@ -484,15 +494,17 @@
     }
     if ($("#film-dialog").open) { $("#film-dialog").close(); document.documentElement.classList.remove("lock"); }
     modalPushed = false;
-    const view = h === "#/favorites" ? "fav" : "home";
+    const view = h === "#/favorites" ? "fav" : h === "#/updates" ? "updates" : "home";
     const changed = view !== S.view;
     S.view = view;
     $("#view-home").hidden = view !== "home";
     $("#view-fav").hidden = view !== "fav";
+    $("#view-updates").hidden = view !== "updates";
     $$("[data-nav]").forEach((a) => a.removeAttribute("aria-current"));
-    const cur = view === "fav" ? "favorites" : h === "#/library" ? "library" : h === "#/vibe" ? "vibe" : null;
+    const cur = view === "fav" ? "favorites" : view === "updates" ? "updates" : h === "#/library" ? "library" : h === "#/vibe" ? "vibe" : null;
     if (cur) $(`[data-nav="${cur}"]`).setAttribute("aria-current", "page");
     if (view === "fav") renderFav();
+    if (view === "updates") renderUpdates();
     if (changed || h === "#/library" || h === "#/vibe" || h === "#/") {
       const target = h === "#/library" ? $("#library") : h === "#/vibe" ? $("#vibe") : null;
       if (target) target.scrollIntoView({ behavior: "smooth" });
@@ -582,6 +594,7 @@
     window.I18N.set(l);
     document.documentElement.lang = l;
     window.I18N.applyStatic();
+    if (S.view === "updates") renderUpdates();
     setTitle();
     hayCache.clear();
     applyTheme(root.dataset.theme, false);

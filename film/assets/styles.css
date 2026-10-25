@@ -221,6 +221,13 @@ h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;c
 .ext-h{margin:72px 0 24px;padding-top:24px;border-top:1px solid var(--line)}
 
 /* сегментированный переключатель */
+.updates{padding-top:clamp(44px,7vw,96px);padding-bottom:clamp(48px,8vw,112px)}
+.upd-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;max-width:760px}
+.upd{display:grid;grid-template-columns:150px 1fr;gap:6px 24px;padding:22px 24px;border-radius:20px;background:var(--glass);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.upd time{color:var(--mute);font-size:14px;padding-top:3px}
+.upd h3{margin:0 0 8px;font-size:18px}
+.upd ul{margin:0;padding-left:18px;color:var(--ink2);display:grid;gap:6px}
+@media (max-width:640px){.upd{grid-template-columns:1fr}}
 .tabs{display:inline-flex;gap:2px;padding:4px;border-radius:99px;background:var(--glass);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow);margin-bottom:32px;flex-wrap:wrap;max-width:100%}
 .tabs button{background:none;border:0;padding:0 18px;min-height:40px;color:var(--mute);border-radius:99px;transition:background .25s,color .25s}
 .tabs button[aria-selected=true]{color:var(--ink);background:var(--seg-on);box-shadow:var(--seg-shadow)}
