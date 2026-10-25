@@ -15,6 +15,8 @@
     "Библиотека": "Library",
     "По вайбу": "By vibe",
     "Избранное": "Favourites",
+    "Обновления": "Updates",
+    "Что нового в NERD CINEMA.": "What's new in NERD CINEMA.",
     "Переключить тему": "Toggle theme",
     "Включить светлую тему": "Switch to light theme",
     "Включить тёмную тему": "Switch to dark theme",

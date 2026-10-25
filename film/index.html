@@ -33,6 +33,7 @@
     <nav class="nav" aria-label="Основная навигация" data-i18n-attr="aria-label">
       <a href="#/library" data-nav="library" data-i18n>Библиотека</a>
       <a href="#/vibe" data-nav="vibe" data-i18n>По вайбу</a>
+      <a href="#/updates" data-nav="updates" data-i18n>Обновления</a>
       <a href="#/favorites" data-nav="favorites"><span data-i18n>Избранное</span><span class="count" id="nav-count" hidden></span></a>
     </nav>
     <div class="tools">
@@ -134,6 +135,13 @@
     </div>
     <div class="grid" id="fav-grid" role="tabpanel"></div>
   </section>
+  <section class="wrap updates" id="view-updates" hidden aria-labelledby="upd-h">
+    <header class="sec-head">
+      <h2 id="upd-h" data-i18n>Обновления</h2>
+      <p class="sub" data-i18n>Что нового в NERD CINEMA.</p>
+    </header>
+    <ol class="upd-list" id="upd-list"></ol>
+  </section>
 </main>
 
 <footer class="foot">
@@ -167,6 +175,7 @@
 <script src="assets/config.js"></script>
 <script src="assets/data.js"></script>
 <script src="assets/data.en.js"></script>
+<script src="assets/updates.js"></script>
 <script src="assets/data.more.js"></script>
 <script src="assets/data.series.js"></script>
 <script src="assets/data.anime.js"></script>
