@@ -144,7 +144,7 @@
   function availLine(f) {
     const e = S.enrich[f.id];
     if (!e || !S.tmdb) return "";
-    const p = window.Tmdb.peekProviders(e.tmdbId);
+    const p = window.Tmdb.peekProviders(e.tmdbId, e.tv);
     const r = p && p[S.region];
     if (!r) return "";
     const names = r.flatrate.length ? [T("Подписка"), r.flatrate] : r.free.length ? [T("Бесплатно"), r.free] : null;
@@ -424,7 +424,7 @@
       if (!e && f.tmdbId) e = { tmdbId: f.tmdbId };
       if (stale()) return;
       if (!e) { watch.innerHTML = `<p class="mute">${T("Информация о доступности сейчас не найдена.")}</p>`; return; }
-      const [det, prov] = await Promise.all([window.Tmdb.details(e.tmdbId).catch(() => null), window.Tmdb.providers(e.tmdbId).catch(() => null)]);
+      const [det, prov] = await Promise.all([window.Tmdb.details(e.tmdbId, e.tv).catch(() => null), window.Tmdb.providers(e.tmdbId, e.tv).catch(() => null)]);
       if (stale()) return;
       if (det) {
         if (det.overview) $("#fm-desc").textContent = det.overview;

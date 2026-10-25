@@ -51,10 +51,10 @@ async function findId(f) {
   if (HINT[f.id]) return HINT[f.id];
   if (prev[f.id] && prev[f.id].imdb) return prev[f.id].imdb;
   const title = f.tmdbQuery || f.en;
-  const j = await api({ s: title, y: String(f.year), type: "movie" });
+  const j = await api({ s: title, y: String(f.year), type: f.kind === "series" ? "series" : "movie" });
   let list = (j.Search || []).filter((r) => norm(r.Title) === norm(title));
   if (!list.length) {
-    const j2 = await api({ s: title, type: "movie" });
+    const j2 = await api({ s: title, type: f.kind === "series" ? "series" : "movie" });
     list = (j2.Search || []).filter((r) => norm(r.Title) === norm(title) && Math.abs(parseInt(r.Year) - f.year) <= 1);
   }
   list.sort((a, b) => Math.abs(parseInt(a.Year) - f.year) - Math.abs(parseInt(b.Year) - f.year));
@@ -68,7 +68,7 @@ for (const f of films) {
   const id = await findId(f);
   const j = id ? await api({ i: id }) : null;
   const tol = HINT[f.id] ? 5 : prev[f.id] ? 3 : 1; // OMDb нередко ставит год мирового проката // у id из подсказок год в OMDb бывает прокатным, а не премьерным
-  if (!j || j.Response === "False" || j.Type !== "movie" || Math.abs(parseInt(j.Year) - f.year) > tol || !titleOk(f, j.Title)) {
+  if (!j || j.Response === "False" || j.Type !== (f.kind === "series" ? "series" : "movie") || Math.abs(parseInt(j.Year) - f.year) > tol || !titleOk(f, j.Title)) {
     missing.push(f.id); console.log("MISS", f.id, j && j.Title ? `(получено: ${j.Title}, ${j.Year})` : ""); continue;
   }
   const poster = j.Poster && j.Poster !== "N/A" ? j.Poster : null;
