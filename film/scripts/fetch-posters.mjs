@@ -12,7 +12,9 @@ if (!key) { console.error("Нужна переменная OMDB_KEY"); process.e
 
 const root = new URL("../", import.meta.url);
 const ctx = { window: {} };
-vm.runInNewContext(readFileSync(new URL("assets/data.js", root), "utf8"), ctx);
+ctx.window.window = ctx.window;
+vm.createContext(ctx);
+for (const f of ["data.js", "data.en.js", "data.more.js", "data.series.js", "data.anime.js"]) vm.runInContext(readFileSync(new URL("assets/" + f, root), "utf8"), ctx);
 const films = ctx.window.FILMS;
 
 const norm = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "");
@@ -24,10 +26,16 @@ const HINT = {
   "virgin-suicides": "tt0159097", nostalghia: "tt0086022",
   "seven-samurai": "tt0047478", "spirited-away": "tt0245429", "8-1-2": "tt0056801", mirror: "tt0072443",
   "letyat-zhuravli": "tt0050634", brat: "tt0118767",
+  "the-hunt": "tt2106476", "money-heist": "tt6468322", "the-office-us": "tt0386676", "my-neighbor-totoro": "tt0096283", nausicaa: "tt0087544",
+  "castle-in-the-sky": "tt0092067", "porco-rosso": "tt0104652", haikyuu: "tt3398540", frieren: "tt22248376", mushishi: "tt0807832",
+  "gurren-lagann": "tt1139797", "demon-slayer": "tt9335498",
 };
 
 // Название в OMDb может отличаться от обычного (Se7en -> Seven): допустимые варианты для сверки.
-const ALIAS = { se7en: ["seven"], nostalghia: ["nostalgia"], mirror: ["the mirror"], "8-1-2": ["8 1 2", "8½"] };
+const ALIAS = { se7en: ["seven"], nostalghia: ["nostalgia"], mirror: ["the mirror"], "8-1-2": ["8 1 2", "8½"],
+  "the-hunt": ["jagten", "the hunt"], "money-heist": ["money heist"], "the-office-us": ["the office"], "my-neighbor-totoro": ["tonari no totoro"],
+  nausicaa: ["kaze no tani no naushika", "nausicaa of the valley of the wind"], "castle-in-the-sky": ["tenku no shiro rapyuta", "laputa castle in the sky"],
+  "porco-rosso": ["kurenai no buta"], haikyuu: ["haikyu"], frieren: ["sousou no frieren", "frieren beyond journeys end"] };
 const titleOk = (f, got) => {
   const g = norm(got);
   return [f.tmdbQuery || f.en, f.en, ...(ALIAS[f.id] || [])].filter(Boolean).map(norm).some((t) => t && (g === t || g.includes(t) || t.includes(g)));
