@@ -480,6 +480,16 @@
     }).join("");
   }
 
+  const bugForm = $("#bug-form");
+  if (bugForm) bugForm.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const text = $("#bug-text").value.trim();
+    if (!text) return;
+    const body = text + "\n\n---\n" + location.href.split("#")[0] + (location.hash ? " " + location.hash : "") + "\n" + navigator.userAgent + "\nlang: " + LANG();
+    const url = "https://github.com/sailxx/sailxx.github.io/issues/new?title=" + encodeURIComponent("[film] " + text.slice(0, 60)) + "&labels=film&body=" + encodeURIComponent(body);
+    window.open(url, "_blank", "noopener");
+  });
+
   /* ---------- маршрутизация ---------- */
   let initial = true;
   function route() {
