@@ -228,6 +228,12 @@ h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;c
 .upd h3{margin:0 0 8px;font-size:18px}
 .upd ul{margin:0;padding-left:18px;color:var(--ink2);display:grid;gap:6px}
 @media (max-width:640px){.upd{grid-template-columns:1fr}}
+.contact{max-width:760px;margin-top:44px;display:grid;gap:14px}
+.contact h3{margin:0;font-size:22px}
+.contact p{margin:0;color:var(--ink2)}
+.bug-form{display:grid;gap:12px;justify-items:start}
+.bug-form textarea{width:100%;padding:14px 16px;border-radius:18px;background:var(--glass);border:1px solid var(--glass-edge);color:var(--ink);resize:vertical;min-height:110px}
+.contact-links a{color:var(--ink)}
 .tabs{display:inline-flex;gap:2px;padding:4px;border-radius:99px;background:var(--glass);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow);margin-bottom:32px;flex-wrap:wrap;max-width:100%}
 .tabs button{background:none;border:0;padding:0 18px;min-height:40px;color:var(--mute);border-radius:99px;transition:background .25s,color .25s}
 .tabs button[aria-selected=true]{color:var(--ink);background:var(--seg-on);box-shadow:var(--seg-shadow)}
