@@ -228,7 +228,7 @@ h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;c
 .upd h3{margin:0 0 8px;font-size:18px}
 .upd ul{margin:0;padding-left:18px;color:var(--ink2);display:grid;gap:6px}
 @media (max-width:640px){.upd{grid-template-columns:1fr}}
-.contact{max-width:760px;margin-top:44px;display:grid;gap:14px}
+.contact{max-width:760px;margin-bottom:44px;display:grid;gap:14px}
 .contact h3{margin:0;font-size:22px}
 .contact p{margin:0;color:var(--ink2)}
 .bug-form{display:grid;gap:12px;justify-items:start}
