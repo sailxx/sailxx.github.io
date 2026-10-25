@@ -36,3 +36,5 @@
 
 Название меняется в одном месте: `assets/config.js` (`projectName`).(`projectName`).
 Постеры и рейтинги: `OMDB_KEY=… node scripts/fetch-posters.mjs`. Без ключа TMDB нет сервисов просмотра.
+
+Без внешних сервисов: постеры лежат в `assets/posters/`, рейтинги — в `assets/posters.json`. Новые тайтлы: `OMDB_KEY=… node scripts/fetch-posters.mjs`, затем `node scripts/localize-posters.mjs` (скачивает постеры в репозиторий) и `node scripts/update-ratings.mjs` (свежие рейтинги из открытых данных IMDb, без ключа).

@@ -1,12 +1,12 @@
 {
- "source": "OMDb (IMDb)",
+ "source": "IMDb non-commercial datasets",
  "updated": "2026-10-25",
  "films": {
   "blade-runner": {
    "imdb": "tt0083658",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOWQ4YTBmNTQtMDYxMC00NGFjLTkwOGQtNzdhNmY1Nzc1MzUxXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/blade-runner.jpg",
    "rating": 8.1,
-   "votes": 893169,
+   "votes": 894896,
    "actors": [
     "Harrison Ford",
     "Rutger Hauer",
@@ -15,9 +15,9 @@
   },
   "arrival": {
    "imdb": "tt2543164",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_QL75_UX380_CR0,16,380,562_.jpg",
+   "poster": "assets/posters/arrival.jpg",
    "rating": 7.9,
-   "votes": 882127,
+   "votes": 884346,
    "actors": [
     "Amy Adams",
     "Jeremy Renner",
@@ -26,9 +26,9 @@
   },
   "fight-club": {
    "imdb": "tt0137523",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/fight-club.jpg",
    "rating": 8.8,
-   "votes": 2669989,
+   "votes": 2676627,
    "actors": [
     "Brad Pitt",
     "Edward Norton",
@@ -37,9 +37,9 @@
   },
   "her": {
    "imdb": "tt1798709",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/her.jpg",
    "rating": 7.9,
-   "votes": 735364,
+   "votes": 736465,
    "actors": [
     "Joaquin Phoenix",
     "Amy Adams",
@@ -48,9 +48,9 @@
   },
   "donnie-darko": {
    "imdb": "tt0246578",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMWE3NTYzZmEtM2U5MS00MDZhLTk2ZTQtZTgzNjg0ZGQ5ZjM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/donnie-darko.jpg",
    "rating": 8,
-   "votes": 922075,
+   "votes": 923696,
    "actors": [
     "Jake Gyllenhaal",
     "Jena Malone",
@@ -59,9 +59,9 @@
   },
   "stalker": {
    "imdb": "tt0079944",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDIzMDRiYjgtM2U1Yy00MjlhLTliODMtM2E5NDI5Njc3YmZkXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/stalker.jpg",
    "rating": 8,
-   "votes": 158399,
+   "votes": 158731,
    "actors": [
     "Alisa Freyndlikh",
     "Aleksandr Kaydanovskiy",
@@ -70,9 +70,9 @@
   },
   "birdman": {
    "imdb": "tt2562232",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/birdman.jpg",
    "rating": 7.7,
-   "votes": 704581,
+   "votes": 705490,
    "actors": [
     "Michael Keaton",
     "Zach Galifianakis",
@@ -81,9 +81,9 @@
   },
   "eternal-sunshine": {
    "imdb": "tt0338013",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/eternal-sunshine.jpg",
    "rating": 8.3,
-   "votes": 1198489,
+   "votes": 1200539,
    "actors": [
     "Jim Carrey",
     "Kate Winslet",
@@ -92,9 +92,9 @@
   },
   "city-of-god": {
    "imdb": "tt0317248",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjY4NGI5OTUtY2ZlZS00Zjk4LTk5N2MtN2JmYWVjNGNmMGRlXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/city-of-god.jpg",
    "rating": 8.6,
-   "votes": 884133,
+   "votes": 885690,
    "actors": [
     "Alexandre Rodrigues",
     "Leandro Firmino",
@@ -103,9 +103,9 @@
   },
   "lost-in-translation": {
    "imdb": "tt0335266",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTUxMzk0NDg1MV5BMl5BanBnXkFtZTgwNDg0NjkxMDI@._V1_QL75_UX380_CR0,12,380,562_.jpg",
+   "poster": "assets/posters/lost-in-translation.jpg",
    "rating": 7.7,
-   "votes": 535644,
+   "votes": 536283,
    "actors": [
     "Bill Murray",
     "Scarlett Johansson",
@@ -114,9 +114,9 @@
   },
   "ex-machina": {
    "imdb": "tt0470752",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/ex-machina.jpg",
    "rating": 7.7,
-   "votes": 646912,
+   "votes": 647936,
    "actors": [
     "Alicia Vikander",
     "Domhnall Gleeson",
@@ -125,9 +125,9 @@
   },
   "mulholland-drive": {
    "imdb": "tt0166924",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjliY2UwMjQtYjVlNi00NzExLTg1MDMtMjE2OTYwYjI0NTcxXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/mulholland-drive.jpg",
    "rating": 7.9,
-   "votes": 435237,
+   "votes": 436367,
    "actors": [
     "Naomi Watts",
     "Laura Harring",
@@ -136,9 +136,9 @@
   },
   "blade-runner-2049": {
    "imdb": "tt1856101",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/blade-runner-2049.jpg",
    "rating": 8,
-   "votes": 769711,
+   "votes": 773550,
    "actors": [
     "Harrison Ford",
     "Ryan Gosling",
@@ -147,9 +147,9 @@
   },
   "matrix": {
    "imdb": "tt0133093",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/matrix.jpg",
    "rating": 8.7,
-   "votes": 2284373,
+   "votes": 2289341,
    "actors": [
     "Keanu Reeves",
     "Laurence Fishburne",
@@ -158,9 +158,9 @@
   },
   "akira": {
    "imdb": "tt0094625",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzlhZGRmZGEtM2ZjNC00MWRmLTk0MDctYzU1NzAzODIxYzEyXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+   "poster": "assets/posters/akira.jpg",
    "rating": 8,
-   "votes": 232830,
+   "votes": 233414,
    "actors": [
     "Mitsuo Iwata",
     "Nozomu Sasaki",
@@ -169,9 +169,9 @@
   },
   "ghost-in-the-shell": {
    "imdb": "tt0113568",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzljMjA3MTQtMjM1OS00OGJjLWJiYzctZDRiMTk1NWI5YzQ5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/ghost-in-the-shell.jpg",
    "rating": 7.9,
-   "votes": 177519,
+   "votes": 177908,
    "actors": [
     "Atsuko Tanaka",
     "Iemasa Kayumi",
@@ -180,9 +180,9 @@
   },
   "taxi-driver": {
    "imdb": "tt0075314",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDNhMGYwM2UtMTdlZS00MGQ1LWI2YzAtODY5YWI1MjYyNzRmXkEyXkFqcGc@._V1_QL75_UX380_CR0,7,380,562_.jpg",
+   "poster": "assets/posters/taxi-driver.jpg",
    "rating": 8.2,
-   "votes": 1044669,
+   "votes": 1046537,
    "actors": [
     "Robert De Niro",
     "Jodie Foster",
@@ -191,9 +191,9 @@
   },
   "drive": {
    "imdb": "tt0780504",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTFmNTFlOTAtNzEyNi00MWU2LTg3MGEtYjA2NWY3MDliNjlkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/drive.jpg",
    "rating": 7.8,
-   "votes": 775952,
+   "votes": 777202,
    "actors": [
     "Ryan Gosling",
     "Carey Mulligan",
@@ -202,9 +202,9 @@
   },
   "solaris": {
    "imdb": "tt0069293",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTYyMjU4MjItYzZkNy00NmIyLTg1ZGEtYTY5ZTEyM2U2NDM2XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/solaris.jpg",
    "rating": 7.9,
-   "votes": 105426,
+   "votes": 105597,
    "actors": [
     "Natalya Bondarchuk",
     "Donatas Banionis",
@@ -213,9 +213,9 @@
   },
   "in-the-mood-for-love": {
    "imdb": "tt0118694",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2Q4NjllMDgtOTk2Zi00YzM1LWJmOTMtNmRiZDgyZGJmMjQzXkEyXkFqcGc@._V1_QL75_UX380_CR0,3,380,562_.jpg",
+   "poster": "assets/posters/in-the-mood-for-love.jpg",
    "rating": 8,
-   "votes": 192046,
+   "votes": 192505,
    "actors": [
     "Maggie Cheung",
     "Tony Leung Chiu-wai",
@@ -224,9 +224,9 @@
   },
   "chungking-express": {
    "imdb": "tt0109424",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDQ4ZmYxODctZDVlZC00OTcxLWJjOGItZjRlMzk4MDA1Yjg1XkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/chungking-express.jpg",
    "rating": 7.9,
-   "votes": 114344,
+   "votes": 114717,
    "actors": [
     "Brigitte Lin",
     "Takeshi Kaneshiro",
@@ -235,9 +235,9 @@
   },
   "paris-texas": {
    "imdb": "tt0087884",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYWY5YzE4YmUtZWFhMS00YjYxLWI5ZGUtNDEyNmMzNDVjMGEwXkEyXkFqcGc@._V1_QL75_UX380_CR0,12,380,562_.jpg",
+   "poster": "assets/posters/paris-texas.jpg",
    "rating": 8.1,
-   "votes": 145470,
+   "votes": 145947,
    "actors": [
     "Harry Dean Stanton",
     "Nastassja Kinski",
@@ -246,9 +246,9 @@
   },
   "into-the-wild": {
    "imdb": "tt0758758",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNTgwZTJhNWMtNzVjMy00YzQzLWI4MTAtYmJhOGQ5ZmQ3MDM0XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/into-the-wild.jpg",
    "rating": 8,
-   "votes": 700422,
+   "votes": 700967,
    "actors": [
     "Emile Hirsch",
     "Vince Vaughn",
@@ -257,9 +257,9 @@
   },
   "y-tu-mama-tambien": {
    "imdb": "tt0245574",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNTRmZmNlMjktZDRkMi00OGNjLWJkZGUtMDljNDViMGE3MjNhXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/y-tu-mama-tambien.jpg",
    "rating": 7.7,
-   "votes": 143272,
+   "votes": 143515,
    "actors": [
     "Maribel Verdú",
     "Gael García Bernal",
@@ -268,9 +268,9 @@
   },
   "moon": {
    "imdb": "tt1182345",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/moon.jpg",
    "rating": 7.8,
-   "votes": 398994,
+   "votes": 399434,
    "actors": [
     "Sam Rockwell",
     "Kevin Spacey",
@@ -279,9 +279,9 @@
   },
   "under-the-skin": {
    "imdb": "tt4698852",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjdlZmQxZjMtNjNiZi00MDRiLTliNjYtYWY5OWNkMjQwMWE5XkEyXkFqcGc@._V1_SX300.jpg",
-   "rating": 6.6,
-   "votes": 16,
+   "poster": "assets/posters/under-the-skin.jpg",
+   "rating": 6.2,
+   "votes": 24,
    "actors": [
     "Rita Carelli",
     "Mariano Mattos Martins"
@@ -289,9 +289,9 @@
   },
   "perfect-blue": {
    "imdb": "tt0156887",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjkyZjY1OWItNjYyNC00ZjlhLTgwOTAtMGNiYTFmYTNmZDI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/perfect-blue.jpg",
    "rating": 8,
-   "votes": 127828,
+   "votes": 128551,
    "actors": [
     "Junko Iwao",
     "Rica Matsumoto",
@@ -300,9 +300,9 @@
   },
   "paprika": {
    "imdb": "tt0851578",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZGJkYjkyMDUtM2U3ZC00NDM3LWI0MzItZjU5MmYwYjg2YmIwXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/paprika.jpg",
    "rating": 7.7,
-   "votes": 116262,
+   "votes": 116586,
    "actors": [
     "Megumi Hayashibara",
     "Tôru Emori",
@@ -311,9 +311,9 @@
   },
   "mad-max-fury-road": {
    "imdb": "tt1392190",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDRkODJhOTgtOTc1OC00NTgzLTk4NjItNDgxZDY4YjlmNDY2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/mad-max-fury-road.jpg",
    "rating": 8.1,
-   "votes": 1223352,
+   "votes": 1225230,
    "actors": [
     "Tom Hardy",
     "Charlize Theron",
@@ -322,9 +322,9 @@
   },
   "virgin-suicides": {
    "imdb": "tt0159097",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMmNhYTE5MjQtMzI2Ny00MDRhLWE4ZjAtYTg0YjNhNjZmMTVlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/virgin-suicides.jpg",
    "rating": 7.2,
-   "votes": 188840,
+   "votes": 189141,
    "actors": [
     "Kirsten Dunst",
     "Josh Hartnett",
@@ -333,9 +333,9 @@
   },
   "amelie": {
    "imdb": "tt0211915",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTNmYzY0MWQtZGZmNy00Y2Y4LWFmMDQtMTZjYTdiYzEwZGQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/amelie.jpg",
    "rating": 8.2,
-   "votes": 848391,
+   "votes": 849254,
    "actors": [
     "Audrey Tautou",
     "Mathieu Kassovitz",
@@ -344,9 +344,9 @@
   },
   "grand-budapest-hotel": {
    "imdb": "tt2278388",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/grand-budapest-hotel.jpg",
    "rating": 8.1,
-   "votes": 988783,
+   "votes": 990389,
    "actors": [
     "Ralph Fiennes",
     "F. Murray Abraham",
@@ -355,9 +355,9 @@
   },
   "nostalghia": {
    "imdb": "tt0086022",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMWFjMGFhYzEtODZkZS00MDRjLWE2NGEtMWRhODcwMzNiN2I1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/nostalghia.jpg",
    "rating": 7.9,
-   "votes": 33732,
+   "votes": 33805,
    "actors": [
     "Oleg Yankovskiy",
     "Erland Josephson",
@@ -366,9 +366,9 @@
   },
   "cinema-paradiso": {
    "imdb": "tt0095765",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTljNzc4YWEtYTZlMS00ODMyLWIwMTAtNWQxY2VkMDEwYTk5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/cinema-paradiso.jpg",
    "rating": 8.5,
-   "votes": 321617,
+   "votes": 322232,
    "actors": [
     "Philippe Noiret",
     "Enzo Cannavale",
@@ -377,9 +377,9 @@
   },
   "back-to-the-future": {
    "imdb": "tt0088763",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZmM3ZjE0NzctNjBiOC00MDZmLTgzMTUtNGVlOWFlOTNiZDJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,14,380,562_.jpg",
+   "poster": "assets/posters/back-to-the-future.jpg",
    "rating": 8.5,
-   "votes": 1480321,
+   "votes": 1484070,
    "actors": [
     "Michael J. Fox",
     "Christopher Lloyd",
@@ -388,9 +388,9 @@
   },
   "aftersun": {
    "imdb": "tt19770238",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZWU5Y2MyZjQtNGVjYi00ZDRkLTk1MGYtYmNlMzI0MTFmNDU2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/aftersun.jpg",
    "rating": 7.6,
-   "votes": 133967,
+   "votes": 134530,
    "actors": [
     "Paul Mescal",
     "Frankie Corio",
@@ -399,9 +399,9 @@
   },
   "roma": {
    "imdb": "tt6155172",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTU0OTc3ODk4Ml5BMl5BanBnXkFtZTgwMzM4NzI5NjM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/roma.jpg",
    "rating": 7.6,
-   "votes": 179999,
+   "votes": 180214,
    "actors": [
     "Yalitza Aparicio",
     "Marina de Tavira",
@@ -410,9 +410,9 @@
   },
   "enter-the-void": {
    "imdb": "tt1191111",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZmUyYjM1YjUtYTVhZC00YzYwLThiYTMtZjE3ZmZmNzA2NDA4XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/enter-the-void.jpg",
    "rating": 7.2,
-   "votes": 95791,
+   "votes": 95933,
    "actors": [
     "Nathaniel Brown",
     "Paz de la Huerta",
@@ -421,9 +421,9 @@
   },
   "the-lighthouse": {
    "imdb": "tt7984734",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTI4MjFhMjAtNmQxYi00N2IxLWJjMGEtYWY1YmU3OTQ0Zjk3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/the-lighthouse.jpg",
    "rating": 7.3,
-   "votes": 311065,
+   "votes": 312234,
    "actors": [
     "Robert Pattinson",
     "Willem Dafoe",
@@ -432,9 +432,9 @@
   },
   "interstellar": {
    "imdb": "tt0816692",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/interstellar.jpg",
    "rating": 8.7,
-   "votes": 2617722,
+   "votes": 2625141,
    "actors": [
     "Matthew McConaughey",
     "Anne Hathaway",
@@ -443,9 +443,9 @@
   },
   "persona": {
    "imdb": "tt0060827",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTRhNzkzMDktZDNlNi00MDIwLWFiNjAtNTlmYjZjYWZlMTEzXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
+   "poster": "assets/posters/persona.jpg",
    "rating": 8,
-   "votes": 142440,
+   "votes": 142690,
    "actors": [
     "Bibi Andersson",
     "Liv Ullmann",
@@ -454,9 +454,9 @@
   },
   "easy-rider": {
    "imdb": "tt0064276",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTc2MjI2NDc4Ml5BMl5BanBnXkFtZTgwODI4NzU0MTI@._V1_QL75_UX380_CR0,6,380,562_.jpg",
+   "poster": "assets/posters/easy-rider.jpg",
    "rating": 7.2,
-   "votes": 123767,
+   "votes": 123928,
    "actors": [
     "Peter Fonda",
     "Dennis Hopper",
@@ -465,9 +465,9 @@
   },
   "motorcycle-diaries": {
    "imdb": "tt0318462",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTJkMWE5ZWEtYzQ1OS00ZDZkLTkzYTUtMzEzZTI3MjBmM2E1XkEyXkFqcGc@._V1_SX300.jpg",
+   "poster": "assets/posters/motorcycle-diaries.jpg",
    "rating": 7.7,
-   "votes": 105718,
+   "votes": 110197,
    "actors": [
     "Gael García Bernal",
     "Rodrigo de la Serna",
@@ -476,9 +476,9 @@
   },
   "walter-mitty": {
    "imdb": "tt0359950",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODYwNDYxNDk1Nl5BMl5BanBnXkFtZTgwOTAwMTk2MDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/walter-mitty.jpg",
    "rating": 7.3,
-   "votes": 378518,
+   "votes": 379436,
    "actors": [
     "Ben Stiller",
     "Kristen Wiig",
@@ -487,9 +487,9 @@
   },
   "children-of-men": {
    "imdb": "tt0206634",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDNkNmNiYzYtYWY0YS00NWEwLTgwMWUtYjM0M2E4Nzk3MzhmXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/children-of-men.jpg",
    "rating": 7.9,
-   "votes": 572962,
+   "votes": 574068,
    "actors": [
     "Julianne Moore",
     "Clive Owen",
@@ -498,9 +498,9 @@
   },
   "se7en": {
    "imdb": "tt0114369",
-   "poster": "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_QL75_UX380_CR0,16,380,562_.jpg",
+   "poster": "assets/posters/se7en.jpg",
    "rating": 8.6,
-   "votes": 2066262,
+   "votes": 2071589,
    "actors": [
     "Morgan Freeman",
     "Brad Pitt",
@@ -509,9 +509,9 @@
   },
   "a-ghost-story": {
    "imdb": "tt6265828",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMzcyNTc1ODQzMF5BMl5BanBnXkFtZTgwNTgzMzY4MTI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/a-ghost-story.jpg",
    "rating": 6.8,
-   "votes": 87715,
+   "votes": 87892,
    "actors": [
     "Casey Affleck",
     "Rooney Mara",
@@ -520,9 +520,9 @@
   },
   "pulp-fiction": {
    "imdb": "tt0110912",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+   "poster": "assets/posters/pulp-fiction.jpg",
    "rating": 8.8,
-   "votes": 2473737,
+   "votes": 2478831,
    "actors": [
     "John Travolta",
     "Uma Thurman",
@@ -531,9 +531,9 @@
   },
   "godfather": {
    "imdb": "tt0068646",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_QL75_UY562_CR8,0,380,562_.jpg",
+   "poster": "assets/posters/godfather.jpg",
    "rating": 9.2,
-   "votes": 2262742,
+   "votes": 2267861,
    "actors": [
     "Marlon Brando",
     "Al Pacino",
@@ -542,9 +542,9 @@
   },
   "2001-space-odyssey": {
    "imdb": "tt0062622",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjU0NDFkMTQtZWY5OS00MmZhLTg3Y2QtZmJhMzMzMWYyYjc2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/2001-space-odyssey.jpg",
    "rating": 8.3,
-   "votes": 794375,
+   "votes": 795789,
    "actors": [
     "Keir Dullea",
     "Gary Lockwood",
@@ -553,9 +553,9 @@
   },
   "clockwork-orange": {
    "imdb": "tt0066921",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/clockwork-orange.jpg",
    "rating": 8.2,
-   "votes": 946682,
+   "votes": 948218,
    "actors": [
     "Malcolm McDowell",
     "Patrick Magee",
@@ -564,9 +564,9 @@
   },
   "the-shining": {
    "imdb": "tt0081505",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNmM5ZThhY2ItOGRjOS00NzZiLWEwYTItNDgyMjFkOTgxMmRiXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
+   "poster": "assets/posters/the-shining.jpg",
    "rating": 8.4,
-   "votes": 1246582,
+   "votes": 1249950,
    "actors": [
     "Jack Nicholson",
     "Shelley Duvall",
@@ -575,9 +575,9 @@
   },
   "apocalypse-now": {
    "imdb": "tt0078788",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDhiMTljYjYtODc1Yy00MmEwLTg2OTYtYmE1YTRmNDE4MmEwXkEyXkFqcGc@._V1_QL75_UX380_CR0,11,380,562_.jpg",
+   "poster": "assets/posters/apocalypse-now.jpg",
    "rating": 8.4,
-   "votes": 779599,
+   "votes": 780775,
    "actors": [
     "Martin Sheen",
     "Marlon Brando",
@@ -586,9 +586,9 @@
   },
   "blue-velvet": {
    "imdb": "tt0090756",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzkwZGUyYjQtM2QyOC00MTBjLWE0NGYtMTZmOGM5MjI0Mzg0XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/blue-velvet.jpg",
    "rating": 7.7,
-   "votes": 249825,
+   "votes": 250502,
    "actors": [
     "Isabella Rossellini",
     "Kyle MacLachlan",
@@ -597,9 +597,9 @@
   },
   "eraserhead": {
    "imdb": "tt0074486",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGYxNzZkYzAtMDExMS00MzE1LTg5ZGItMTgzMzJhZWMyNTBjXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/eraserhead.jpg",
    "rating": 7.2,
-   "votes": 146036,
+   "votes": 146369,
    "actors": [
     "Jack Nance",
     "Charlotte Stewart",
@@ -608,9 +608,9 @@
   },
   "seven-samurai": {
    "imdb": "tt0047478",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjliMWExOTMtZDQ3ZS00NWU3LWIyN2EtMjllNzk3ZTNlYzg4XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/seven-samurai.jpg",
    "rating": 8.6,
-   "votes": 406581,
+   "votes": 407252,
    "actors": [
     "Toshiro Mifune",
     "Takashi Shimura",
@@ -619,9 +619,9 @@
   },
   "rashomon": {
    "imdb": "tt0042876",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTk1MDU5MjQ5NF5BMl5BanBnXkFtZTgwMDM2OTE4MzE@._V1_QL75_UY562_CR8,0,380,562_.jpg",
+   "poster": "assets/posters/rashomon.jpg",
    "rating": 8.1,
-   "votes": 199133,
+   "votes": 199397,
    "actors": [
     "Toshiro Mifune",
     "Machiko Kyô",
@@ -630,9 +630,9 @@
   },
   "tokyo-story": {
    "imdb": "tt0046438",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODdkNzcxZjItMDU2Yy00Y2JlLWFkYTQtNzIwM2Q4MWU5MTU2XkEyXkFqcGc@._V1_QL75_UY562_CR5,0,380,562_.jpg",
+   "poster": "assets/posters/tokyo-story.jpg",
    "rating": 8.1,
-   "votes": 79032,
+   "votes": 79195,
    "actors": [
     "Chishu Ryu",
     "Chieko Higashiyama",
@@ -641,9 +641,9 @@
   },
   "spirited-away": {
    "imdb": "tt0245429",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/spirited-away.jpg",
    "rating": 8.6,
-   "votes": 988028,
+   "votes": 990932,
    "actors": [
     "Miyu Irino",
     "Rumi Hiiragi",
@@ -652,9 +652,9 @@
   },
   "princess-mononoke": {
    "imdb": "tt0119698",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/princess-mononoke.jpg",
    "rating": 8.3,
-   "votes": 492213,
+   "votes": 493316,
    "actors": [
     "Yôji Matsuda",
     "Yuriko Ishida",
@@ -663,9 +663,9 @@
   },
   "your-name": {
    "imdb": "tt5311514",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/your-name.jpg",
    "rating": 8.4,
-   "votes": 406946,
+   "votes": 408564,
    "actors": [
     "Ryûnosuke Kamiki",
     "Mone Kamishiraishi",
@@ -674,9 +674,9 @@
   },
   "oldboy": {
    "imdb": "tt0364569",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTAwNzNjYWItZmI0Ni00ZTcyLWIwNWMtZjlmNGMxZTEyYTJmXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/oldboy.jpg",
    "rating": 8.3,
-   "votes": 734705,
+   "votes": 736500,
    "actors": [
     "Choi Min-sik",
     "Yoo Ji-tae",
@@ -685,9 +685,9 @@
   },
   "parasite": {
    "imdb": "tt6751668",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjk1Y2U4MjQtY2ZiNS00OWQyLWI3MmYtZWUwNmRjYWRiNWNhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/parasite.jpg",
    "rating": 8.5,
-   "votes": 1200817,
+   "votes": 1204954,
    "actors": [
     "Song Kang-ho",
     "Lee Sun-kyun",
@@ -696,9 +696,9 @@
   },
   "pans-labyrinth": {
    "imdb": "tt0457430",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTc1NTAxMWItMWFlNy00MmU2LTkwMTMtNzMwOTg5OTQ5YTFiXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/pans-labyrinth.jpg",
    "rating": 8.2,
-   "votes": 754343,
+   "votes": 755824,
    "actors": [
     "Ivana Baquero",
     "Ariadna Gil",
@@ -707,9 +707,9 @@
   },
   "seventh-seal": {
    "imdb": "tt0050976",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDlmYTkzOWUtODQ0MS00MmM4LWE3ZjMtYTEwNGUwMmJkYzIxXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+   "poster": "assets/posters/seventh-seal.jpg",
    "rating": 8.1,
-   "votes": 218162,
+   "votes": 218649,
    "actors": [
     "Max von Sydow",
     "Gunnar Björnstrand",
@@ -718,9 +718,9 @@
   },
   "8-1-2": {
    "imdb": "tt0056801",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNmI4YWJlYzAtNGU5MS00NTljLThhN2QtNzMwMWM4NTA0ODNlXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
+   "poster": "assets/posters/8-1-2.jpg",
    "rating": 8,
-   "votes": 133980,
+   "votes": 134154,
    "actors": [
     "Marcello Mastroianni",
     "Anouk Aimée",
@@ -729,9 +729,9 @@
   },
   "la-dolce-vita": {
    "imdb": "tt0053779",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTkxMjQ4NzU5N15BMl5BanBnXkFtZTgwMTkwODkzMTE@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/la-dolce-vita.jpg",
    "rating": 8,
-   "votes": 86757,
+   "votes": 86881,
    "actors": [
     "Marcello Mastroianni",
     "Anita Ekberg",
@@ -740,9 +740,9 @@
   },
   "breathless": {
    "imdb": "tt0053472",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZGI5MWNjYmEtNzUxZC00YTI3LWE5MzctZTdhYjJkMGMxYzI3XkEyXkFqcGc@._V1_QL75_UY562_CR14,0,380,562_.jpg",
+   "poster": "assets/posters/breathless.jpg",
    "rating": 7.6,
-   "votes": 96692,
+   "votes": 96821,
    "actors": [
     "Jean-Paul Belmondo",
     "Jean Seberg",
@@ -751,9 +751,9 @@
   },
   "400-blows": {
    "imdb": "tt0053198",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTU3YTM0YzQtMmFlOS00OTIxLWFmZjctMDJkOGQxNTVhODM3XkEyXkFqcGc@._V1_QL75_UY562_CR22,0,380,562_.jpg",
+   "poster": "assets/posters/400-blows.jpg",
    "rating": 8,
-   "votes": 135699,
+   "votes": 135842,
    "actors": [
     "Jean-Pierre Léaud",
     "Albert Rémy",
@@ -762,9 +762,9 @@
   },
   "wings-of-desire": {
    "imdb": "tt0093191",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTUwY2EyMDktMGI0Ny00MDNlLWE0ODMtZWIwOGNhNmY1OWIwXkEyXkFqcGc@._V1_QL75_UX380_CR0,15,380,562_.jpg",
+   "poster": "assets/posters/wings-of-desire.jpg",
    "rating": 7.9,
-   "votes": 85038,
+   "votes": 85182,
    "actors": [
     "Bruno Ganz",
     "Solveig Dommartin",
@@ -773,9 +773,9 @@
   },
   "run-lola-run": {
    "imdb": "tt0130827",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMzA0NDdiNDgtNjI4Ny00OTc0LTg3NGMtZDBlNmI1ZGUxYTg2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/run-lola-run.jpg",
    "rating": 7.6,
-   "votes": 218588,
+   "votes": 218859,
    "actors": [
     "Franka Potente",
     "Moritz Bleibtreu",
@@ -784,9 +784,9 @@
   },
   "memento": {
    "imdb": "tt0209144",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMGQ3Y2Q4NjktN2E4Ny00Y2Q2LTliZDUtZTNiNjRhY2I0NGIyXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/memento.jpg",
    "rating": 8.4,
-   "votes": 1462185,
+   "votes": 1464563,
    "actors": [
     "Guy Pearce",
     "Carrie-Anne Moss",
@@ -795,9 +795,9 @@
   },
   "inception": {
    "imdb": "tt1375666",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/inception.jpg",
    "rating": 8.8,
-   "votes": 2877173,
+   "votes": 2883157,
    "actors": [
     "Leonardo DiCaprio",
     "Joseph Gordon-Levitt",
@@ -806,9 +806,9 @@
   },
   "requiem-for-a-dream": {
    "imdb": "tt0180093",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2ZlMjIzZjctYzA2My00ZWYyLWI4ZjctMGI2NWYyNzFiZjAwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/requiem-for-a-dream.jpg",
    "rating": 8.3,
-   "votes": 986851,
+   "votes": 988314,
    "actors": [
     "Ellen Burstyn",
     "Jared Leto",
@@ -817,9 +817,9 @@
   },
   "black-swan": {
    "imdb": "tt0947798",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzY2NzI4OTE5MF5BMl5BanBnXkFtZTcwMjMyNDY4Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/black-swan.jpg",
    "rating": 8,
-   "votes": 899056,
+   "votes": 900404,
    "actors": [
     "Natalie Portman",
     "Mila Kunis",
@@ -828,9 +828,9 @@
   },
   "whiplash": {
    "imdb": "tt2582802",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDFjOWFkYzktYzhhMC00NmYyLTkwY2EtYjViMDhmNzg0OGFkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/whiplash.jpg",
    "rating": 8.5,
-   "votes": 1185509,
+   "votes": 1189284,
    "actors": [
     "Miles Teller",
     "J.K. Simmons",
@@ -839,9 +839,9 @@
   },
   "la-la-land": {
    "imdb": "tt3783958",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDllYjliOTUtMDJjZC00ODIzLWJmNGMtOWI2NzQxMjA2NzdlXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/la-la-land.jpg",
    "rating": 8,
-   "votes": 780882,
+   "votes": 782677,
    "actors": [
     "Ryan Gosling",
     "Emma Stone",
@@ -850,9 +850,9 @@
   },
   "moonlight": {
    "imdb": "tt4975722",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/moonlight.jpg",
    "rating": 7.4,
-   "votes": 356522,
+   "votes": 357142,
    "actors": [
     "Mahershala Ali",
     "Naomie Harris",
@@ -861,9 +861,9 @@
   },
   "portrait-of-a-lady-on-fire": {
    "imdb": "tt8613070",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjJlYWJlYmMtNjMyMS00ZDgxLTlmNjAtOTJhMzBiZWM5N2VmXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/portrait-of-a-lady-on-fire.jpg",
    "rating": 8,
-   "votes": 130653,
+   "votes": 130992,
    "actors": [
     "Noémie Merlant",
     "Adèle Haenel",
@@ -872,9 +872,9 @@
   },
   "call-me-by-your-name": {
    "imdb": "tt5726616",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/call-me-by-your-name.jpg",
    "rating": 7.8,
-   "votes": 365293,
+   "votes": 366044,
    "actors": [
     "Timothée Chalamet",
     "Armie Hammer",
@@ -883,9 +883,9 @@
   },
   "paterson": {
    "imdb": "tt5247022",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTUzODA4Nzk0OF5BMl5BanBnXkFtZTgwNzE1MDIwMDI@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/paterson.jpg",
    "rating": 7.3,
-   "votes": 96712,
+   "votes": 96860,
    "actors": [
     "Adam Driver",
     "Golshifteh Farahani",
@@ -894,9 +894,9 @@
   },
   "fargo": {
    "imdb": "tt0116282",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjg4MWE0MjEtODFhNy00MjA5LTg5ODktMzgwNWFmZTAwNjBlXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/fargo.jpg",
    "rating": 8.1,
-   "votes": 799298,
+   "votes": 800798,
    "actors": [
     "William H. Macy",
     "Frances McDormand",
@@ -905,9 +905,9 @@
   },
   "big-lebowski": {
    "imdb": "tt0118715",
-   "poster": "https://m.media-amazon.com/images/M/MV5BY2E3OWQ5OWYtYTRkMC00NjVjLWIzZDQtNmRmM2ZiYTIyYmYxXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/big-lebowski.jpg",
    "rating": 8.1,
-   "votes": 925805,
+   "votes": 926914,
    "actors": [
     "Jeff Bridges",
     "John Goodman",
@@ -916,9 +916,9 @@
   },
   "tree-of-life": {
    "imdb": "tt0478304",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTMwNjQ0NjMzN15BMl5BanBnXkFtZTcwNjMxMTkyNA@@._V1_QL75_UY562_CR2,0,380,562_.jpg",
+   "poster": "assets/posters/tree-of-life.jpg",
    "rating": 6.8,
-   "votes": 193651,
+   "votes": 193818,
    "actors": [
     "Brad Pitt",
     "Sean Penn",
@@ -927,9 +927,9 @@
   },
   "mirror": {
    "imdb": "tt0072443",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjRhNzYxODAtOTFmMS00N2MxLWE0NGMtM2VkZGY5MTYwYTZlXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/mirror.jpg",
    "rating": 7.9,
-   "votes": 58506,
+   "votes": 58750,
    "actors": [
     "Margarita Terekhova",
     "Filipp Yankovskiy",
@@ -938,9 +938,9 @@
   },
   "come-and-see": {
    "imdb": "tt0091251",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDlkZmVkZDAtZGFmMS00OWIzLWJkY2YtNWE5NjNhNjhiZGE3XkEyXkFqcGc@._V1_QL75_UX380_CR0,10,380,562_.jpg",
+   "poster": "assets/posters/come-and-see.jpg",
    "rating": 8.3,
-   "votes": 127084,
+   "votes": 127550,
    "actors": [
     "Aleksey Kravchenko",
     "Olga Mironova",
@@ -949,9 +949,9 @@
   },
   "brat": {
    "imdb": "tt0118767",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjdmMzAxNjEtNjVmOS00ZmRiLWFlYWYtMzdiZGU5OGZiNmJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg",
+   "poster": "assets/posters/brat.jpg",
    "rating": 7.7,
-   "votes": 29570,
+   "votes": 29715,
    "actors": [
     "Sergey Bodrov",
     "Viktor Sukhorukov",
@@ -960,9 +960,9 @@
   },
   "vozvrashchenie": {
    "imdb": "tt0376968",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDNjNGVjZDctYzAwYi00ZWRhLWFhMmItNGZjZjAzNmE2MTIwXkEyXkFqcGc@._V1_SX300.jpg",
+   "poster": "assets/posters/vozvrashchenie.jpg",
    "rating": 7.9,
-   "votes": 48111,
+   "votes": 50056,
    "actors": [
     "Vladimir Garin",
     "Ivan Dobronravov",
@@ -971,9 +971,9 @@
   },
   "letyat-zhuravli": {
    "imdb": "tt0050634",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjVmNTllYjUtYTc2MS00OTZhLTllMWEtOWYzMGQ2YmYzMzgyXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/letyat-zhuravli.jpg",
    "rating": 8.3,
-   "votes": 23151,
+   "votes": 23220,
    "actors": [
     "Tatyana Samoylova",
     "Aleksey Batalov",
@@ -982,9 +982,9 @@
   },
   "collateral": {
    "imdb": "tt0369339",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjE3NjM5OTMxMV5BMl5BanBnXkFtZTcwOTIzMTQyMw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/collateral.jpg",
    "rating": 7.5,
-   "votes": 475198,
+   "votes": 476226,
    "actors": [
     "Tom Cruise",
     "Jamie Foxx",
@@ -993,9 +993,9 @@
   },
   "nightcrawler": {
    "imdb": "tt2872718",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjMwMmI5MWQtOTU4OS00OTAyLTg0OTYtNmQ5YzExZTQ3ZWJhXkEyXkFqcGc@._V1_QL75_UY562_CR5,0,380,562_.jpg",
+   "poster": "assets/posters/nightcrawler.jpg",
    "rating": 7.8,
-   "votes": 683715,
+   "votes": 685487,
    "actors": [
     "Jake Gyllenhaal",
     "Rene Russo",
@@ -1004,9 +1004,9 @@
   },
   "annihilation": {
    "imdb": "tt2798920",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTk2Mjc2NzYxNl5BMl5BanBnXkFtZTgwMTA2OTA1NDM@._V1_QL75_UX380_CR0,15,380,562_.jpg",
+   "poster": "assets/posters/annihilation.jpg",
    "rating": 6.8,
-   "votes": 399232,
+   "votes": 399875,
    "actors": [
     "Natalie Portman",
     "Jennifer Jason Leigh",
@@ -1015,9 +1015,9 @@
   },
   "alien": {
    "imdb": "tt0078748",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2NhMDk2MmEtZDQzOC00MmY5LThhYzAtMDdjZGFjOGZjMjdjXkEyXkFqcGc@._V1_QL75_UX380_CR0,6,380,562_.jpg",
+   "poster": "assets/posters/alien.jpg",
    "rating": 8.4,
-   "votes": 1079153,
+   "votes": 1081110,
    "actors": [
     "Sigourney Weaver",
     "Tom Skerritt",
@@ -1026,9 +1026,9 @@
   },
   "the-thing": {
    "imdb": "tt0084787",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTA3NDU5MWEtNTk4Yy00ZDNkLThmZTQtMjU3ZGVhYzAyMzU4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/the-thing.jpg",
    "rating": 8.2,
-   "votes": 537503,
+   "votes": 539917,
    "actors": [
     "Kurt Russell",
     "Wilford Brimley",
@@ -1037,9 +1037,9 @@
   },
   "lost-highway": {
    "imdb": "tt0116922",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjcyNmM2ODktYzk0Mi00Njk0LTljZGMtNGZhMzI4NmY1NzA1XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/lost-highway.jpg",
    "rating": 7.6,
-   "votes": 173798,
+   "votes": 174175,
    "actors": [
     "Bill Pullman",
     "Patricia Arquette",
@@ -1048,9 +1048,9 @@
   },
   "shawshank-redemption": {
    "imdb": "tt0111161",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/shawshank-redemption.jpg",
    "rating": 9.3,
-   "votes": 3235958,
+   "votes": 3256959,
    "actors": [
     "Tim Robbins",
     "Morgan Freeman",
@@ -1059,9 +1059,9 @@
   },
   "schindlers-list": {
    "imdb": "tt0108052",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/schindlers-list.jpg",
    "rating": 9,
-   "votes": 1607389,
+   "votes": 1610641,
    "actors": [
     "Liam Neeson",
     "Ralph Fiennes",
@@ -1070,9 +1070,9 @@
   },
   "forrest-gump": {
    "imdb": "tt0109830",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_QL75_UY562_CR4,0,380,562_.jpg",
+   "poster": "assets/posters/forrest-gump.jpg",
    "rating": 8.8,
-   "votes": 2542224,
+   "votes": 2547786,
    "actors": [
     "Tom Hanks",
     "Robin Wright",
@@ -1081,9 +1081,9 @@
   },
   "green-mile": {
    "imdb": "tt0120689",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/green-mile.jpg",
    "rating": 8.6,
-   "votes": 1590001,
+   "votes": 1593843,
    "actors": [
     "Tom Hanks",
     "Michael Clarke Duncan",
@@ -1092,9 +1092,9 @@
   },
   "leon": {
    "imdb": "tt0110413",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGRkYTNhOWQtYmI0Ni00MjZhLWJmMzAtMTA2Mjg4NGNiNDU0XkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/leon.jpg",
    "rating": 8.5,
-   "votes": 1368735,
+   "votes": 1370998,
    "actors": [
     "Jean Reno",
     "Gary Oldman",
@@ -1103,9 +1103,9 @@
   },
   "the-prestige": {
    "imdb": "tt0482571",
-   "poster": "https://m.media-amazon.com/images/M/MV5BM2Y0YmM5MWYtZTYzNi00ZjU5LTlmOGYtZDQ4ODQyMjAzNjQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/the-prestige.jpg",
    "rating": 8.5,
-   "votes": 1631947,
+   "votes": 1636590,
    "actors": [
     "Christian Bale",
     "Hugh Jackman",
@@ -1114,9 +1114,9 @@
   },
   "dark-knight": {
    "imdb": "tt0468569",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/dark-knight.jpg",
    "rating": 9.1,
-   "votes": 3236507,
+   "votes": 3243164,
    "actors": [
     "Christian Bale",
     "Heath Ledger",
@@ -1125,9 +1125,9 @@
   },
   "once-upon-a-time-in-hollywood": {
    "imdb": "tt7131622",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMzMzNmViNjYtN2ViNi00NDM3LWFlMmItNDYyMGIzY2EzZjE2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/once-upon-a-time-in-hollywood.jpg",
    "rating": 7.6,
-   "votes": 978676,
+   "votes": 983774,
    "actors": [
     "Leonardo DiCaprio",
     "Brad Pitt",
@@ -1136,9 +1136,9 @@
   },
   "reservoir-dogs": {
    "imdb": "tt0105236",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMmMzYjg4NDctYWY0Mi00OGViLWIzMTMtYWNlZGY5ZDJmYjk3XkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/reservoir-dogs.jpg",
    "rating": 8.2,
-   "votes": 1183846,
+   "votes": 1185463,
    "actors": [
     "Harvey Keitel",
     "Tim Roth",
@@ -1147,9 +1147,9 @@
   },
   "goodfellas": {
    "imdb": "tt0099685",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_QL75_UX380_CR0,3,380,562_.jpg",
+   "poster": "assets/posters/goodfellas.jpg",
    "rating": 8.7,
-   "votes": 1417364,
+   "votes": 1420678,
    "actors": [
     "Robert De Niro",
     "Ray Liotta",
@@ -1158,9 +1158,9 @@
   },
   "wolf-of-wall-street": {
    "imdb": "tt0993846",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/wolf-of-wall-street.jpg",
    "rating": 8.2,
-   "votes": 1830628,
+   "votes": 1834321,
    "actors": [
     "Leonardo DiCaprio",
     "Jonah Hill",
@@ -1169,9 +1169,9 @@
   },
   "shutter-island": {
    "imdb": "tt1130884",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2FjNWExYzEtY2YzOC00YjNlLTllMTQtNmIwM2Q1YzBhOWM1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/shutter-island.jpg",
    "rating": 8.2,
-   "votes": 1689261,
+   "votes": 1693387,
    "actors": [
     "Leonardo DiCaprio",
     "Emily Mortimer",
@@ -1180,9 +1180,9 @@
   },
   "the-departed": {
    "imdb": "tt0407887",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/the-departed.jpg",
    "rating": 8.5,
-   "votes": 1583117,
+   "votes": 1586682,
    "actors": [
     "Leonardo DiCaprio",
     "Matt Damon",
@@ -1191,9 +1191,9 @@
   },
   "silence-of-the-lambs": {
    "imdb": "tt0102926",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDdhOGJhYzctYzYwZC00YmI2LWI0MjctYjg4ODdlMDExYjBlXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/silence-of-the-lambs.jpg",
    "rating": 8.6,
-   "votes": 1755718,
+   "votes": 1761461,
    "actors": [
     "Jodie Foster",
     "Anthony Hopkins",
@@ -1202,9 +1202,9 @@
   },
   "psycho": {
    "imdb": "tt0054215",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjZhMzFiZjItODA3ZC00MmRhLWIzMGYtMmVjOWUwYTA3MTRjXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+   "poster": "assets/posters/psycho.jpg",
    "rating": 8.5,
-   "votes": 796192,
+   "votes": 798116,
    "actors": [
     "Anthony Perkins",
     "Janet Leigh",
@@ -1213,9 +1213,9 @@
   },
   "vertigo": {
    "imdb": "tt0052357",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzEyZTUxMWItMGVhYy00Y2NlLTljYTMtYzBmMzI1YmUyMDBkXkEyXkFqcGc@._V1_QL75_UX380_CR0,13,380,562_.jpg",
+   "poster": "assets/posters/vertigo.jpg",
    "rating": 8.2,
-   "votes": 463709,
+   "votes": 464321,
    "actors": [
     "James Stewart",
     "Kim Novak",
@@ -1224,9 +1224,9 @@
   },
   "rear-window": {
    "imdb": "tt0047396",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODZhOWI1ODgtMzdiOS00YjNkLTgwOGUtYmIyZDg5ZmQwMzQ1XkEyXkFqcGc@._V1_QL75_UY562_CR2,0,380,562_.jpg",
+   "poster": "assets/posters/rear-window.jpg",
    "rating": 8.4,
-   "votes": 575088,
+   "votes": 575996,
    "actors": [
     "James Stewart",
     "Grace Kelly",
@@ -1235,9 +1235,9 @@
   },
   "casablanca": {
    "imdb": "tt0034583",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNWEzN2U1YTYtYTQyMS00NTVkLWE2NGQtZWFlMmM0MDNjMmRiXkEyXkFqcGc@._V1_QL75_UX380_CR0,5,380,562_.jpg",
+   "poster": "assets/posters/casablanca.jpg",
    "rating": 8.5,
-   "votes": 662325,
+   "votes": 663323,
    "actors": [
     "Humphrey Bogart",
     "Ingrid Bergman",
@@ -1246,9 +1246,9 @@
   },
   "citizen-kane": {
    "imdb": "tt0033467",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjk1ZDJlMmUtOWQ0Zi00MDM5LTk1OGYtODczNjFmMGYwZGVkXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/citizen-kane.jpg",
    "rating": 8.2,
-   "votes": 497451,
+   "votes": 498036,
    "actors": [
     "Orson Welles",
     "Joseph Cotten",
@@ -1257,9 +1257,9 @@
   },
   "melancholia": {
    "imdb": "tt1527186",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTk4NjM0MjI3MV5BMl5BanBnXkFtZTcwNjcxMDYzNg@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/melancholia.jpg",
    "rating": 7.1,
-   "votes": 210346,
+   "votes": 210588,
    "actors": [
     "Kirsten Dunst",
     "Charlotte Gainsbourg",
@@ -1268,9 +1268,9 @@
   },
   "dogville": {
    "imdb": "tt0276919",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMThkZDEzYWEtMDZhMC00NWQwLTlmMWYtNTEwYjMzY2UxMDRjXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+   "poster": "assets/posters/dogville.jpg",
    "rating": 8,
-   "votes": 169185,
+   "votes": 169441,
    "actors": [
     "Nicole Kidman",
     "Paul Bettany",
@@ -1279,9 +1279,9 @@
   },
   "dancer-in-the-dark": {
    "imdb": "tt0168629",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDg3NWFlYWEtZjQ3Ny00Y2ZjLWI3ZWYtN2ZmMDA4MThkZTg2XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/dancer-in-the-dark.jpg",
    "rating": 7.9,
-   "votes": 125382,
+   "votes": 125583,
    "actors": [
     "Björk",
     "Catherine Deneuve",
@@ -1290,9 +1290,9 @@
   },
   "the-hunt": {
    "imdb": "tt2106476",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTg2NDg3ODg4NF5BMl5BanBnXkFtZTcwNzk3NTc3Nw@@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/the-hunt.jpg",
    "rating": 8.3,
-   "votes": 419837,
+   "votes": 421246,
    "actors": [
     "Mads Mikkelsen",
     "Thomas Bo Larsen",
@@ -1301,9 +1301,9 @@
   },
   "inglourious-basterds": {
    "imdb": "tt0361748",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODZhMWJlNjYtNDExNC00MTIzLTllM2ItOGQ2NGVjNDQ3MzkzXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/inglourious-basterds.jpg",
    "rating": 8.4,
-   "votes": 1822696,
+   "votes": 1826056,
    "actors": [
     "Brad Pitt",
     "Diane Kruger",
@@ -1312,9 +1312,9 @@
   },
   "dune-2021": {
    "imdb": "tt1160419",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNWIyNmU5MGYtZDZmNi00ZjAwLWJlYjgtZTc0ZGIxMDE4ZGYwXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/dune-2021.jpg",
    "rating": 8,
-   "votes": 1094313,
+   "votes": 1097541,
    "actors": [
     "Timothée Chalamet",
     "Rebecca Ferguson",
@@ -1323,9 +1323,9 @@
   },
   "sicario": {
    "imdb": "tt3397884",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjA5NjM3NTk1M15BMl5BanBnXkFtZTgwMzg1MzU2NjE@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/sicario.jpg",
    "rating": 7.7,
-   "votes": 551652,
+   "votes": 553327,
    "actors": [
     "Emily Blunt",
     "Josh Brolin",
@@ -1334,9 +1334,9 @@
   },
   "prisoners": {
    "imdb": "tt1392214",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/prisoners.jpg",
    "rating": 8.2,
-   "votes": 962336,
+   "votes": 964997,
    "actors": [
     "Hugh Jackman",
     "Jake Gyllenhaal",
@@ -1345,9 +1345,9 @@
   },
   "terminator-2": {
    "imdb": "tt0103064",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGMyMGNkMDUtMjc2Ni00NWFlLTgyODEtZTY2MzBiZTg0OWZiXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+   "poster": "assets/posters/terminator-2.jpg",
    "rating": 8.6,
-   "votes": 1304963,
+   "votes": 1307986,
    "actors": [
     "Arnold Schwarzenegger",
     "Linda Hamilton",
@@ -1356,9 +1356,9 @@
   },
   "aliens": {
    "imdb": "tt0090605",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2ZiMmQ0YWItN2IwZS00Y2NhLWE0NzQtNGNiOGFjN2U4MWNmXkEyXkFqcGc@._V1_QL75_UX380_CR0,15,380,562_.jpg",
+   "poster": "assets/posters/aliens.jpg",
    "rating": 8.4,
-   "votes": 849899,
+   "votes": 851163,
    "actors": [
     "Sigourney Weaver",
     "Michael Biehn",
@@ -1367,9 +1367,9 @@
   },
   "district-9": {
    "imdb": "tt1136608",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTM4OTI1OTM5NF5BMl5BanBnXkFtZTcwMzk5MTU1Mg@@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/district-9.jpg",
    "rating": 7.9,
-   "votes": 758529,
+   "votes": 759403,
    "actors": [
     "Sharlto Copley",
     "David James",
@@ -1378,9 +1378,9 @@
   },
   "social-network": {
    "imdb": "tt1285016",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjlkNTE5ZTUtNGEwNy00MGVhLThmZjMtZjU1NDE5Zjk1NDZkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/social-network.jpg",
    "rating": 7.8,
-   "votes": 831142,
+   "votes": 833532,
    "actors": [
     "Jesse Eisenberg",
     "Andrew Garfield",
@@ -1389,9 +1389,9 @@
   },
   "zodiac": {
    "imdb": "tt0443706",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDFkMTRkZmQtM2I0NC00NjJjLWJlMDctNTNiZWYxYzhjZDZiXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/zodiac.jpg",
    "rating": 7.7,
-   "votes": 692746,
+   "votes": 695137,
    "actors": [
     "Jake Gyllenhaal",
     "Robert Downey Jr.",
@@ -1400,9 +1400,9 @@
   },
   "gone-girl": {
    "imdb": "tt2267998",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/gone-girl.jpg",
    "rating": 8.1,
-   "votes": 1190848,
+   "votes": 1193179,
    "actors": [
     "Ben Affleck",
     "Rosamund Pike",
@@ -1411,9 +1411,9 @@
   },
   "the-game-1997": {
    "imdb": "tt0119174",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGUzNzQwNmMtNzI3Mi00ZDIwLWJlM2ItMTA5N2Q2ZDMxMjJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/the-game-1997.jpg",
    "rating": 7.7,
-   "votes": 478430,
+   "votes": 479465,
    "actors": [
     "Michael Douglas",
     "Deborah Kara Unger",
@@ -1422,9 +1422,9 @@
   },
   "memories-of-murder": {
    "imdb": "tt0353969",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYmRjOWE5NmMtYTdkYS00ODFlLWJiMTMtYzE2NDZlZjlkZDQ0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/memories-of-murder.jpg",
    "rating": 8.1,
-   "votes": 276526,
+   "votes": 277544,
    "actors": [
     "Song Kang-ho",
     "Kim Sang-kyung",
@@ -1433,9 +1433,9 @@
   },
   "get-out": {
    "imdb": "tt5052448",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/get-out.jpg",
    "rating": 7.8,
-   "votes": 840575,
+   "votes": 843317,
    "actors": [
     "Daniel Kaluuya",
     "Allison Williams",
@@ -1444,9 +1444,9 @@
   },
   "fellowship-of-the-ring": {
    "imdb": "tt0120737",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+   "poster": "assets/posters/fellowship-of-the-ring.jpg",
    "rating": 8.9,
-   "votes": 2242919,
+   "votes": 2247612,
    "actors": [
     "Elijah Wood",
     "Ian McKellen",
@@ -1455,9 +1455,9 @@
   },
   "gladiator": {
    "imdb": "tt0172495",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/gladiator.jpg",
    "rating": 8.5,
-   "votes": 1886962,
+   "votes": 1891003,
    "actors": [
     "Russell Crowe",
     "Joaquin Phoenix",
@@ -1466,9 +1466,9 @@
   },
   "the-pianist": {
    "imdb": "tt0253474",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjEwNmEwYjgtNTk3ZC00NjljLTg5ZDctZTY3ZGQwZjRkZmQxXkEyXkFqcGc@._V1_QL75_UY562_CR14,0,380,562_.jpg",
+   "poster": "assets/posters/the-pianist.jpg",
    "rating": 8.5,
-   "votes": 1027685,
+   "votes": 1029723,
    "actors": [
     "Adrien Brody",
     "Thomas Kretschmann",
@@ -1477,9 +1477,9 @@
   },
   "joker-2019": {
    "imdb": "tt7286456",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzY3OWQ5NDktNWQ2OC00ZjdlLThkMmItMDhhNDk3NTFiZGU4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/joker-2019.jpg",
    "rating": 8.3,
-   "votes": 1729763,
+   "votes": 1733188,
    "actors": [
     "Joaquin Phoenix",
     "Robert De Niro",
@@ -1488,9 +1488,9 @@
   },
   "no-country-for-old-men": {
    "imdb": "tt0477348",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjA5Njk3MjM4OV5BMl5BanBnXkFtZTcwMTc5MTE1MQ@@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/no-country-for-old-men.jpg",
    "rating": 8.2,
-   "votes": 1216902,
+   "votes": 1219623,
    "actors": [
     "Tommy Lee Jones",
     "Javier Bardem",
@@ -1499,9 +1499,9 @@
   },
   "fear-and-loathing": {
    "imdb": "tt0120669",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjFkNjdiZjUtNzUzNy00NWM5LWFlNDUtNTRiYmJiZWNiYjkwXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/fear-and-loathing.jpg",
    "rating": 7.4,
-   "votes": 322103,
+   "votes": 322496,
    "actors": [
     "Johnny Depp",
     "Benicio Del Toro",
@@ -1510,9 +1510,9 @@
   },
   "twelve-monkeys": {
    "imdb": "tt0114746",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDQwNDY0M2MtOGFmNy00ZjI5LTkzN2ItMzg5M2IwZTZjY2MyXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg",
+   "poster": "assets/posters/twelve-monkeys.jpg",
    "rating": 8,
-   "votes": 685408,
+   "votes": 686184,
    "actors": [
     "Bruce Willis",
     "Madeleine Stowe",
@@ -1521,9 +1521,9 @@
   },
   "brazil-1985": {
    "imdb": "tt0088846",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjI1MTAzNmYtYzQ3Zi00ZWE0LWJiZmQtY2UwZWU3ZTE4OGQ3XkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+   "poster": "assets/posters/brazil-1985.jpg",
    "rating": 7.8,
-   "votes": 223594,
+   "votes": 223901,
    "actors": [
     "Jonathan Pryce",
     "Kim Greist",
@@ -1532,9 +1532,9 @@
   },
   "moonrise-kingdom": {
    "imdb": "tt1748122",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTEwMTc3NDkzOTJeQTJeQWpwZ15BbWU3MDI4NTAwNzc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/moonrise-kingdom.jpg",
    "rating": 7.7,
-   "votes": 385429,
+   "votes": 385718,
    "actors": [
     "Jared Gilman",
     "Kara Hayward",
@@ -1543,9 +1543,9 @@
   },
   "royal-tenenbaums": {
    "imdb": "tt0265666",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZTc1MzFlMjEtMzkyNC00NDgyLThjMjMtMzQzZGI5YjUyNzU5XkEyXkFqcGc@._V1_QL75_UX380_CR0,25,380,562_.jpg",
+   "poster": "assets/posters/royal-tenenbaums.jpg",
    "rating": 7.6,
-   "votes": 339382,
+   "votes": 339786,
    "actors": [
     "Gene Hackman",
     "Gwyneth Paltrow",
@@ -1554,9 +1554,9 @@
   },
   "500-days-of-summer": {
    "imdb": "tt1022603",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTk5MjM4OTU1OV5BMl5BanBnXkFtZTcwODkzNDIzMw@@._V1_QL75_UX380_CR0,12,380,562_.jpg",
+   "poster": "assets/posters/500-days-of-summer.jpg",
    "rating": 7.6,
-   "votes": 628762,
+   "votes": 629838,
    "actors": [
     "Zooey Deschanel",
     "Joseph Gordon-Levitt",
@@ -1565,9 +1565,9 @@
   },
   "andrei-rublev": {
    "imdb": "tt0060107",
-   "poster": "https://m.media-amazon.com/images/M/MV5BY2I4YzZjZDgtNWQzNC00MDdhLWFiZTItZTAwODY2ZmQzMDQwXkEyXkFqcGc@._V1_QL75_UX380_CR0,9,380,562_.jpg",
+   "poster": "assets/posters/andrei-rublev.jpg",
    "rating": 8,
-   "votes": 61305,
+   "votes": 61405,
    "actors": [
     "Anatoliy Solonitsyn",
     "Ivan Lapikov",
@@ -1576,9 +1576,9 @@
   },
   "sacrifice": {
    "imdb": "tt0091670",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYWQ5ODRjNzktOTI2OC00ZGFhLWE1MGMtYjEyNTNjODA3NmNlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/sacrifice.jpg",
    "rating": 7.8,
-   "votes": 35671,
+   "votes": 35786,
    "actors": [
     "Erland Josephson",
     "Susan Fleetwood",
@@ -1587,9 +1587,9 @@
   },
   "leviathan-2014": {
    "imdb": "tt2802154",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjAwMTY3MTU0Ml5BMl5BanBnXkFtZTgwNzE0ODAwMzE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/leviathan-2014.jpg",
    "rating": 7.6,
-   "votes": 60690,
+   "votes": 60823,
    "actors": [
     "Aleksey Serebryakov",
     "Elena Lyadova",
@@ -1598,9 +1598,9 @@
   },
   "la-haine": {
    "imdb": "tt0113247",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMThlMDA3NDYtZGM2Zi00NmJhLThlYWItZjViZTkzZWU1ZWRiXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+   "poster": "assets/posters/la-haine.jpg",
    "rating": 8.1,
-   "votes": 232489,
+   "votes": 233200,
    "actors": [
     "Vincent Cassel",
     "Hubert Koundé",
@@ -1609,9 +1609,9 @@
   },
   "the-man-who-wasnt-there": {
    "imdb": "tt0243133",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2E4MTZkMjUtNWNjMy00N2VhLThmODUtNDAyMDg0ZTQ3MGUwXkEyXkFqcGc@._V1_QL75_UX380_CR0,3,380,562_.jpg",
+   "poster": "assets/posters/the-man-who-wasnt-there.jpg",
    "rating": 7.5,
-   "votes": 121400,
+   "votes": 121525,
    "actors": [
     "Billy Bob Thornton",
     "Frances McDormand",
@@ -1620,9 +1620,9 @@
   },
   "blue-valentine": {
    "imdb": "tt1120985",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTU4MTQ2MzA1Ml5BMl5BanBnXkFtZTcwODE3NTgwNA@@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/blue-valentine.jpg",
    "rating": 7.3,
-   "votes": 228815,
+   "votes": 229171,
    "actors": [
     "Ryan Gosling",
     "Michelle Williams",
@@ -1631,9 +1631,9 @@
   },
   "lars-and-the-real-girl": {
    "imdb": "tt0805564",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZThiOTA4N2UtNzJiYS00MDI0LWI3OWItYzYxYzU3M2YwM2M4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/lars-and-the-real-girl.jpg",
    "rating": 7.3,
-   "votes": 171280,
+   "votes": 171646,
    "actors": [
     "Ryan Gosling",
     "Emily Mortimer",
@@ -1642,9 +1642,9 @@
   },
   "breaking-bad": {
    "imdb": "tt0903747",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOWE4NTc3YmYtNmU2Mi00ZjhkLWE1MTItZmM1M2U1ODU3YjFlXkEyXkFqcGc@._V1_QL75_UY562_CR2,0,380,562_.jpg",
+   "poster": "assets/posters/breaking-bad.jpg",
    "rating": 9.5,
-   "votes": 2671962,
+   "votes": 2696218,
    "actors": [
     "Bryan Cranston",
     "Aaron Paul",
@@ -1653,9 +1653,9 @@
   },
   "better-call-saul": {
    "imdb": "tt3032476",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTAxOTQ0MjUzMzJeQTJeQWpwZ15BbWU4MDY0NTAxNzMx._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/better-call-saul.jpg",
    "rating": 9,
-   "votes": 862017,
+   "votes": 873193,
    "actors": [
     "Bob Odenkirk",
     "Rhea Seehorn",
@@ -1664,9 +1664,9 @@
   },
   "the-wire": {
    "imdb": "tt0306414",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjIxZTMwZmUtOTUzYS00YmU2LWJhNDAtNzA2NDg0NDA0MjVkXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/the-wire.jpg",
    "rating": 9.3,
-   "votes": 441233,
+   "votes": 442935,
    "actors": [
     "Dominic West",
     "Lance Reddick",
@@ -1675,9 +1675,9 @@
   },
   "the-sopranos": {
    "imdb": "tt0141842",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjYwNWQwOTMtMzYwOS00NTcxLWFhNTYtNGQ4YjdmYTcyNDFkXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/the-sopranos.jpg",
    "rating": 9.2,
-   "votes": 600509,
+   "votes": 603460,
    "actors": [
     "James Gandolfini",
     "Lorraine Bracco",
@@ -1686,9 +1686,9 @@
   },
   "game-of-thrones": {
    "imdb": "tt0944947",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGYxOGJkMjItZjVkZC00OGEzLWExNjktOTZmNGZhZmRlMTk2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/game-of-thrones.jpg",
    "rating": 9.2,
-   "votes": 2671155,
+   "votes": 2677585,
    "actors": [
     "Emilia Clarke",
     "Peter Dinklage",
@@ -1697,9 +1697,9 @@
   },
   "chernobyl-2019": {
    "imdb": "tt7366338",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzU0OTI4YTQtNGQ1ZS00ZjA4LTg3MTMtZjkyZWNjN2RiZDJmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/chernobyl-2019.jpg",
    "rating": 9.3,
-   "votes": 1069369,
+   "votes": 1073101,
    "actors": [
     "Jared Harris",
     "Jessie Buckley",
@@ -1708,9 +1708,9 @@
   },
   "dark-2017": {
    "imdb": "tt5753856",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTUzNjQ2MTY5NV5BMl5BanBnXkFtZTgwOTAzNTQxNDM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/dark-2017.jpg",
    "rating": 8.7,
-   "votes": 564441,
+   "votes": 566427,
    "actors": [
     "Louis Hofmann",
     "Karoline Eichhorn",
@@ -1719,9 +1719,9 @@
   },
   "stranger-things": {
    "imdb": "tt4574334",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/stranger-things.jpg",
    "rating": 8.6,
-   "votes": 1740231,
+   "votes": 1749751,
    "actors": [
     "Millie Bobby Brown",
     "Finn Wolfhard",
@@ -1730,9 +1730,9 @@
   },
   "black-mirror": {
    "imdb": "tt2085059",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODcxMWI2NDMtYTc3NC00OTZjLWFmNmUtM2NmY2I1ODkxYzczXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/black-mirror.jpg",
    "rating": 8.7,
-   "votes": 750977,
+   "votes": 752783,
    "actors": [
     "Anjana Vasan",
     "Cristin Milioti",
@@ -1741,9 +1741,9 @@
   },
   "true-detective": {
    "imdb": "tt2356777",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjgwYzA1NWMtNDYyZi00ZGQyLWI5NTktMDYwZjE2OTIwZWEwXkEyXkFqcGc@._V1_QL75_UY562_CR11,0,380,562_.jpg",
+   "poster": "assets/posters/true-detective.jpg",
    "rating": 8.8,
-   "votes": 774098,
+   "votes": 776761,
    "actors": [
     "Vince Vaughn",
     "Colin Farrell",
@@ -1752,9 +1752,9 @@
   },
   "mr-robot": {
    "imdb": "tt4158110",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTg4NTBiZDAtZTc0YS00NzZlLTg4Y2ItNGQ3M2ZlMDM5MWQzXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/mr-robot.jpg",
    "rating": 8.5,
-   "votes": 475884,
+   "votes": 476802,
    "actors": [
     "Rami Malek",
     "Christian Slater",
@@ -1763,9 +1763,9 @@
   },
   "twin-peaks": {
    "imdb": "tt0098936",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTExNzk2NjcxNTNeQTJeQWpwZ15BbWU4MDcxOTczOTIx._V1_QL75_UY562_CR30,0,380,562_.jpg",
+   "poster": "assets/posters/twin-peaks.jpg",
    "rating": 8.7,
-   "votes": 251516,
+   "votes": 252166,
    "actors": [
     "Kyle MacLachlan",
     "Michael Ontkean",
@@ -1774,9 +1774,9 @@
   },
   "fargo-tv": {
    "imdb": "tt2802850",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjMzMTIzMTUwN15BMl5BanBnXkFtZTgwNjE0NTg0MTE@._V1_QL75_UX380_CR0,3,380,562_.jpg",
+   "poster": "assets/posters/fargo-tv.jpg",
    "rating": 8.8,
-   "votes": 476381,
+   "votes": 477470,
    "actors": [
     "Billy Bob Thornton",
     "Martin Freeman",
@@ -1785,9 +1785,9 @@
   },
   "succession": {
    "imdb": "tt7660850",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTY4YTVkY2QtMjRmOS00YzliLWIxOWQtMTdkOTVkN2UzODNmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/succession.jpg",
    "rating": 8.8,
-   "votes": 369529,
+   "votes": 371349,
    "actors": [
     "Nicholas Braun",
     "Brian Cox",
@@ -1796,9 +1796,9 @@
   },
   "the-bear": {
    "imdb": "tt14452776",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjk2NWI5OTctODcwYy00NGRmLWFmN2YtOTZiNzFiYjVlODBkXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/the-bear.jpg",
    "rating": 8.5,
-   "votes": 327658,
+   "votes": 329058,
    "actors": [
     "Jeremy Allen White",
     "Ebon Moss-Bachrach",
@@ -1807,9 +1807,9 @@
   },
   "severance": {
    "imdb": "tt11280740",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDI5YzJhODQtMzQyNy00YWNmLWIxMjUtNDBjNjA5YWRjMzExXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/severance.jpg",
    "rating": 8.6,
-   "votes": 410618,
+   "votes": 413137,
    "actors": [
     "Adam Scott",
     "Britt Lower",
@@ -1818,9 +1818,9 @@
   },
   "westworld": {
    "imdb": "tt0475784",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjM2MTA5NjIwNV5BMl5BanBnXkFtZTgwNjI2OTMxNTM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/westworld.jpg",
    "rating": 8.4,
-   "votes": 561963,
+   "votes": 562582,
    "actors": [
     "Evan Rachel Wood",
     "Jeffrey Wright",
@@ -1829,9 +1829,9 @@
   },
   "peaky-blinders": {
    "imdb": "tt2442560",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOGM0NGY3ZmItOGE2ZC00OWIxLTk0N2EtZWY4Yzg3ZDlhNGI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/peaky-blinders.jpg",
    "rating": 8.7,
-   "votes": 795530,
+   "votes": 797242,
    "actors": [
     "Cillian Murphy",
     "Paul Anderson",
@@ -1840,9 +1840,9 @@
   },
   "sherlock-bbc": {
    "imdb": "tt1475582",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjRhZDdjMDYtMTg5Yy00NGI4LWI3ZDgtYjNkNDc4MzJkNDRjXkEyXkFqcGc@._V1_QL75_UY562_CR22,0,380,562_.jpg",
+   "poster": "assets/posters/sherlock-bbc.jpg",
    "rating": 9,
-   "votes": 1102281,
+   "votes": 1103912,
    "actors": [
     "Benedict Cumberbatch",
     "Martin Freeman",
@@ -1851,9 +1851,9 @@
   },
   "hannibal-tv": {
    "imdb": "tt2243973",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjBmYjdiMzItNTEwNi00YTI2LTg4YjctOTRjNDYxNTUxNGQ1XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/hannibal-tv.jpg",
    "rating": 8.5,
-   "votes": 314913,
+   "votes": 315695,
    "actors": [
     "Hugh Dancy",
     "Mads Mikkelsen",
@@ -1862,9 +1862,9 @@
   },
   "mindhunter": {
    "imdb": "tt5290382",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTk4NDA4MGMtNjliOC00MjExLWI1YzctOTc4NWIxM2I1YjM5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/mindhunter.jpg",
    "rating": 8.6,
-   "votes": 407457,
+   "votes": 408651,
    "actors": [
     "Jonathan Groff",
     "Holt McCallany",
@@ -1873,9 +1873,9 @@
   },
   "ozark": {
    "imdb": "tt5071412",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDk1ZTdjOWItNTJmYS00MGIzLThmY2ItZWNiOGY5MzJlNTA5XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/ozark.jpg",
    "rating": 8.4,
-   "votes": 400563,
+   "votes": 401684,
    "actors": [
     "Jason Bateman",
     "Laura Linney",
@@ -1884,9 +1884,9 @@
   },
   "fleabag": {
    "imdb": "tt5687612",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjA4MzU5NzQxNV5BMl5BanBnXkFtZTgwOTg3MDA5NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/fleabag.jpg",
    "rating": 8.7,
-   "votes": 254393,
+   "votes": 255380,
    "actors": [
     "Phoebe Waller-Bridge",
     "Sian Clifford",
@@ -1895,9 +1895,9 @@
   },
   "band-of-brothers": {
    "imdb": "tt0185906",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjdlNGJlYjQtMDU2Mi00ZjA1LWEwYzgtYzlmNDM5MmE1ZGUwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/band-of-brothers.jpg",
    "rating": 9.4,
-   "votes": 608176,
+   "votes": 610732,
    "actors": [
     "Scott Grimes",
     "Damian Lewis",
@@ -1906,9 +1906,9 @@
   },
   "six-feet-under": {
    "imdb": "tt0248654",
-   "poster": "https://m.media-amazon.com/images/M/MV5BY2Q0YTQ4NGItMDc2YS00M2VhLTg1ZmUtNDVkMWM1MWJlNjc0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/six-feet-under.jpg",
    "rating": 8.7,
-   "votes": 171092,
+   "votes": 171515,
    "actors": [
     "Peter Krause",
     "Michael C. Hall",
@@ -1917,9 +1917,9 @@
   },
   "mad-men": {
    "imdb": "tt0804503",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTNjNjc5OWQtYjMxNC00MzEwLWIxM2UtNjU3NzhkNjZmNGI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/mad-men.jpg",
    "rating": 8.7,
-   "votes": 295188,
+   "votes": 295863,
    "actors": [
     "Jon Hamm",
     "Elisabeth Moss",
@@ -1928,9 +1928,9 @@
   },
   "lost-tv": {
    "imdb": "tt0411008",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/lost-tv.jpg",
    "rating": 8.3,
-   "votes": 683573,
+   "votes": 684995,
    "actors": [
     "Naveen Andrews",
     "Matthew Fox",
@@ -1939,9 +1939,9 @@
   },
   "the-leftovers": {
    "imdb": "tt2699128",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODAwNjJkZDctOWM5Ny00ODY0LWJjZDItMTE3YWUxMWJkMGJkXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/the-leftovers.jpg",
    "rating": 8.3,
-   "votes": 134944,
+   "votes": 135463,
    "actors": [
     "Justin Theroux",
     "Amy Brenneman",
@@ -1950,9 +1950,9 @@
   },
   "station-eleven": {
    "imdb": "tt10574236",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNWJhMTg4NTItYzNhYy00ZDViLTk0NTAtOGMyZTE4YWUxZmM3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/station-eleven.jpg",
    "rating": 7.5,
-   "votes": 44653,
+   "votes": 44978,
    "actors": [
     "Mackenzie Davis",
     "Himesh Patel",
@@ -1961,9 +1961,9 @@
   },
   "love-death-robots": {
    "imdb": "tt9561862",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDY3OTZiYzktN2U5My00MzRhLWJiZjItZjNlZmM3OGViZmFiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/love-death-robots.jpg",
    "rating": 8.4,
-   "votes": 232665,
+   "votes": 233572,
    "actors": [
     "Fred Tatasciore",
     "Scott Whyte",
@@ -1972,9 +1972,9 @@
   },
   "arcane": {
    "imdb": "tt11126994",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/arcane.jpg",
    "rating": 9,
-   "votes": 458667,
+   "votes": 460260,
    "actors": [
     "Kevin Alejandro",
     "Hailee Steinfeld",
@@ -1983,9 +1983,9 @@
   },
   "bojack-horseman": {
    "imdb": "tt3398228",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZmMwMDlkNTEtMmQzZS00ODQ0LWJlZmItOTgwYWMwZGM4MzFiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/bojack-horseman.jpg",
    "rating": 8.8,
-   "votes": 239831,
+   "votes": 240581,
    "actors": [
     "Will Arnett",
     "Amy Sedaris",
@@ -1994,9 +1994,9 @@
   },
   "rick-and-morty": {
    "imdb": "tt2861424",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/rick-and-morty.jpg",
    "rating": 9,
-   "votes": 715158,
+   "votes": 717091,
    "actors": [
     "Chris Parnell",
     "Spencer Grammer",
@@ -2005,9 +2005,9 @@
   },
   "squid-game": {
    "imdb": "tt10919420",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDcxYjg1OTctYmUxZi00ZjhjLWIwNTMtNmI2M2Y4OTU1YWU2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/squid-game.jpg",
    "rating": 7.9,
-   "votes": 779176,
+   "votes": 781247,
    "actors": [
     "Lee Jung-jae",
     "Wi Ha-joon",
@@ -2016,9 +2016,9 @@
   },
   "money-heist": {
    "imdb": "tt6468322",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODdiNWI5ZjgtY2RhZi00ODlmLTkyNDEtMzIyMTEyZDE2ZjNjXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/money-heist.jpg",
    "rating": 8.2,
-   "votes": 621045,
+   "votes": 622460,
    "actors": [
     "Úrsula Corberó",
     "Álvaro Morte",
@@ -2027,9 +2027,9 @@
   },
   "last-of-us": {
    "imdb": "tt3581920",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYWI3ODJlMzktY2U5NC00ZjdlLWE1MGItNWQxZDk3NWNjN2RhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/last-of-us.jpg",
    "rating": 8.4,
-   "votes": 749733,
+   "votes": 754720,
    "actors": [
     "Bella Ramsey",
     "Pedro Pascal",
@@ -2038,9 +2038,9 @@
   },
   "fallout-tv": {
    "imdb": "tt12637874",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzE1MTZmY2ItMTgxNi00OGU5LTk4NTItMmY2ODFhYzhjZjRkXkEyXkFqcGc@._V1_QL75_UX380_CR0,57,380,562_.jpg",
+   "poster": "assets/posters/fallout-tv.jpg",
    "rating": 8.3,
-   "votes": 405147,
+   "votes": 406379,
    "actors": [
     "Ella Purnell",
     "Aaron Moten",
@@ -2049,9 +2049,9 @@
   },
   "silo": {
    "imdb": "tt14688458",
-   "poster": "https://m.media-amazon.com/images/M/MV5BN2E5ODJmOTUtYTk0NS00NmFiLTk0MTgtZDRlNzE1YmExMjk4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/silo.jpg",
    "rating": 8.1,
-   "votes": 247661,
+   "votes": 251688,
    "actors": [
     "Rebecca Ferguson",
     "Shane McRae",
@@ -2060,9 +2060,9 @@
   },
   "slow-horses": {
    "imdb": "tt5875444",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMmM2NDhmYjktNTIzZC00YjIwLWE1ZmUtNzM1MTNiMTU2NjdjXkEyXkFqcGc@._V1_QL75_UY562_CR35,0,380,562_.jpg",
+   "poster": "assets/posters/slow-horses.jpg",
    "rating": 8.4,
-   "votes": 162097,
+   "votes": 166248,
    "actors": [
     "Gary Oldman",
     "Jack Lowden",
@@ -2071,9 +2071,9 @@
   },
   "shogun-2024": {
    "imdb": "tt2788316",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZmJkMDRjYzEtMWI3Ny00OWE3LWJlNTItMGQ1MTQzMzc3NDY5XkEyXkFqcGc@._V1_QL75_UY562_CR35,0,380,562_.jpg",
+   "poster": "assets/posters/shogun-2024.jpg",
    "rating": 8.6,
-   "votes": 253648,
+   "votes": 254616,
    "actors": [
     "Cosmo Jarvis",
     "Hiroyuki Sanada",
@@ -2082,9 +2082,9 @@
   },
   "adolescence-2025": {
    "imdb": "tt31806037",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGY1YjBiNzMtYWZhNC00OWViLWE0MzItNjc4YzczOGNiM2I0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/adolescence-2025.jpg",
    "rating": 8.1,
-   "votes": 318380,
+   "votes": 319812,
    "actors": [
     "Stephen Graham",
     "Owen Cooper",
@@ -2093,9 +2093,9 @@
   },
   "the-office-us": {
    "imdb": "tt0386676",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjQwYzBlYzUtZjhhOS00ZDQ0LWE0NzAtYTk4MjgzZTNkZWEzXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/the-office-us.jpg",
    "rating": 9,
-   "votes": 854105,
+   "votes": 856763,
    "actors": [
     "Steve Carell",
     "Jenna Fischer",
@@ -2104,9 +2104,9 @@
   },
   "house-md": {
    "imdb": "tt0412142",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjgxYjAwNmMtYTAwZC00YmQxLWJlOTMtMWM0NGJmNDE0YmI2XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/house-md.jpg",
    "rating": 8.7,
-   "votes": 602002,
+   "votes": 602916,
    "actors": [
     "Hugh Laurie",
     "Omar Epps",
@@ -2115,9 +2115,9 @@
   },
   "dexter": {
    "imdb": "tt0773262",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNTE5ZGI2N2UtYmFiMi00ZGIxLWI1ZTMtYWJkZDYxNDZiOTQwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/dexter.jpg",
    "rating": 8.6,
-   "votes": 958305,
+   "votes": 960992,
    "actors": [
     "Michael C. Hall",
     "Jennifer Carpenter",
@@ -2126,9 +2126,9 @@
   },
   "vikings": {
    "imdb": "tt2306299",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTFmZmExYTEtYmE0Mi00MzRmLWE4ZDYtOThiNzNlOTIyODljXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/vikings.jpg",
    "rating": 8.5,
-   "votes": 651364,
+   "votes": 652401,
    "actors": [
     "Katheryn Winnick",
     "Gustaf Skarsgård",
@@ -2137,9 +2137,9 @@
   },
   "the-expanse": {
    "imdb": "tt3230854",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzUyYmI3MjctY2Q2MC00NmFjLTgwZGUtNWQzZWNlYmVjNzE2XkEyXkFqcGc@._V1_QL75_UX380_CR0,5,380,562_.jpg",
+   "poster": "assets/posters/the-expanse.jpg",
    "rating": 8.5,
-   "votes": 195432,
+   "votes": 195884,
    "actors": [
     "Steven Strait",
     "Dominique Tipper",
@@ -2148,9 +2148,9 @@
   },
   "battlestar-galactica": {
    "imdb": "tt0407362",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNmMzYzdmNWMtM2ZmMi00Y2E2LWI5ZTMtYWJlNmJiMDgyYWRiXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/battlestar-galactica.jpg",
    "rating": 8.7,
-   "votes": 188810,
+   "votes": 189085,
    "actors": [
     "Edward James Olmos",
     "Mary McDonnell",
@@ -2159,9 +2159,9 @@
   },
   "alice-in-borderland": {
    "imdb": "tt10795658",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYmMzODA4M2MtMjBmNC00YjFhLTg4NzgtODgyNzE4NWQxMThmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/alice-in-borderland.jpg",
    "rating": 7.8,
-   "votes": 153174,
+   "votes": 153693,
    "actors": [
     "Kento Yamazaki",
     "Tao Tsuchiya",
@@ -2170,9 +2170,9 @@
   },
   "normal-people": {
    "imdb": "tt9059760",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYWUzNjQ2YmYtNWI3Yi00NzNmLWJjYWYtMDFiM2RjYjNjZWZmXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/normal-people.jpg",
    "rating": 8.4,
-   "votes": 119404,
+   "votes": 120003,
    "actors": [
     "Paul Mescal",
     "Daisy Edgar-Jones",
@@ -2181,9 +2181,9 @@
   },
   "euphoria": {
    "imdb": "tt8772296",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjVlN2M2N2MtOWViZC00MzIxLTlhZWEtMTIwNDIwMzE3ZWJiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/euphoria.jpg",
    "rating": 8.1,
-   "votes": 326186,
+   "votes": 327225,
    "actors": [
     "Zendaya",
     "Hunter Schafer",
@@ -2192,9 +2192,9 @@
   },
   "atlanta-tv": {
    "imdb": "tt4288182",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDAzMDdkZmEtN2QxMi00NGQ2LTg3MTEtYTBlMmNmYmJjOTc1XkEyXkFqcGc@._V1_QL75_UY562_CR35,0,380,562_.jpg",
+   "poster": "assets/posters/atlanta-tv.jpg",
    "rating": 8.6,
-   "votes": 100360,
+   "votes": 100593,
    "actors": [
     "Donald Glover",
     "Brian Tyree Henry",
@@ -2203,9 +2203,9 @@
   },
   "queens-gambit": {
    "imdb": "tt10048342",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMmRlNjQxNWQtMjk1OS00N2QxLTk0YWQtMzRhYjY5YTFhNjMxXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/queens-gambit.jpg",
    "rating": 8.5,
-   "votes": 680749,
+   "votes": 682768,
    "actors": [
     "Anya Taylor-Joy",
     "Chloe Pirrie",
@@ -2214,9 +2214,9 @@
   },
   "utopia-uk": {
    "imdb": "tt2384811",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjMwMTA5NDc5M15BMl5BanBnXkFtZTgwMjQ4MTY0MjE@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/utopia-uk.jpg",
    "rating": 8.4,
-   "votes": 56538,
+   "votes": 56630,
    "actors": [
     "Adeel Akhtar",
     "Paul Higgins",
@@ -2225,9 +2225,9 @@
   },
   "my-neighbor-totoro": {
    "imdb": "tt0096283",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYWM3MDE3YjEtMzIzZC00ODE5LTgxNTItNmUyMTBkM2M2NmNiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/my-neighbor-totoro.jpg",
    "rating": 8.1,
-   "votes": 441040,
+   "votes": 442097,
    "actors": [
     "Hitoshi Takagi",
     "Noriko Hidaka",
@@ -2236,9 +2236,9 @@
   },
   "howls-moving-castle": {
    "imdb": "tt0347149",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTY1OTg0MjE3MV5BMl5BanBnXkFtZTcwNTUxMTkyMQ@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/howls-moving-castle.jpg",
    "rating": 8.2,
-   "votes": 523168,
+   "votes": 524368,
    "actors": [
     "Chieko Baisho",
     "Takuya Kimura",
@@ -2247,9 +2247,9 @@
   },
   "grave-of-the-fireflies": {
    "imdb": "tt0095327",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNTY5MmE2OGMtN2IxNC00MDY4LTkwMGEtZDUzOTYyNWE0ZTNjXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/grave-of-the-fireflies.jpg",
    "rating": 8.5,
-   "votes": 398279,
+   "votes": 399644,
    "actors": [
     "Tsutomu Tatsumi",
     "Ayano Shiraishi",
@@ -2258,9 +2258,9 @@
   },
   "weathering-with-you": {
    "imdb": "tt9426210",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMmJiYWI4ZjktMzgyZS00MjBiLThmOTYtZWJmOTUzOTFkMTFiXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+   "poster": "assets/posters/weathering-with-you.jpg",
    "rating": 7.5,
-   "votes": 72800,
+   "votes": 73157,
    "actors": [
     "Kotaro Daigo",
     "Nana Mori",
@@ -2269,16 +2269,16 @@
   },
   "a-silent-voice": {
    "imdb": "tt8207132",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGVlNjBhMDAtYWI4OS00Yzk2LTlhMTItODlhNWY1NjgwNDQ0XkEyXkFqcGc@._V1_SX300.jpg",
-   "rating": null,
-   "votes": 41,
+   "poster": "assets/posters/a-silent-voice.jpg",
+   "rating": 6.4,
+   "votes": 49,
    "actors": []
   },
   "millennium-actress": {
    "imdb": "tt0291350",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjcwZDFlMTgtN2Q1Ny00MTgxLTk5OGItNTllMDg3MjE0NjZlXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/millennium-actress.jpg",
    "rating": 7.8,
-   "votes": 37740,
+   "votes": 37809,
    "actors": [
     "Miyoko Shôji",
     "Shozo Iizuka",
@@ -2287,9 +2287,9 @@
   },
   "tokyo-godfathers": {
    "imdb": "tt0388473",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNmEzNDcwYzQtMzM0Zi00YWYxLTkzOWEtY2Y0ZTJiNDVjM2NkXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/tokyo-godfathers.jpg",
    "rating": 7.8,
-   "votes": 56008,
+   "votes": 56139,
    "actors": [
     "Tôru Emori",
     "Yoshiaki Umegaki",
@@ -2298,9 +2298,9 @@
   },
   "garden-of-words": {
    "imdb": "tt2591814",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjdiMDdlMDItOGM4Ny00YmE4LTk0MTEtMGRhM2Y4OWZkZDZkXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/garden-of-words.jpg",
    "rating": 7.4,
-   "votes": 61701,
+   "votes": 61852,
    "actors": [
     "Miyu Irino",
     "Kana Hanazawa",
@@ -2309,9 +2309,9 @@
   },
   "5-centimeters-per-second": {
    "imdb": "tt0983213",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODVmZjhhYTYtYzRiOC00YzFiLThlZjMtZTQxNWY0MTI1MzlmXkEyXkFqcGc@._V1_QL75_UY562_CR8,0,380,562_.jpg",
+   "poster": "assets/posters/5-centimeters-per-second.jpg",
    "rating": 7.4,
-   "votes": 72185,
+   "votes": 72334,
    "actors": [
     "Kenji Mizuhashi",
     "Yoshimi Kondou",
@@ -2320,9 +2320,9 @@
   },
   "wolf-children": {
    "imdb": "tt2140203",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMDc4MTk0ZTEtMWNiMC00MTM3LWFmOTQtMDAwMjQ2MjhiNTcxXkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/wolf-children.jpg",
    "rating": 8.1,
-   "votes": 55893,
+   "votes": 56010,
    "actors": [
     "Aoi Miyazaki",
     "Takao Osawa",
@@ -2331,9 +2331,9 @@
   },
   "summer-wars": {
    "imdb": "tt1474276",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZGQ4MWE3Y2ItYjllYi00ZTVlLTljMTUtNTUwOWMwZWIyYmM1XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/summer-wars.jpg",
    "rating": 7.4,
-   "votes": 34609,
+   "votes": 34654,
    "actors": [
     "Ryûnosuke Kamiki",
     "Nanami Sakuraba",
@@ -2342,9 +2342,9 @@
   },
   "girl-who-leapt-through-time": {
    "imdb": "tt0808506",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODE1YjEzYzYtNWVmZC00ZjU5LTgzNjgtZWRmNjhiMTVjNGU0XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/girl-who-leapt-through-time.jpg",
    "rating": 7.6,
-   "votes": 76846,
+   "votes": 76955,
    "actors": [
     "Riisa Naka",
     "Takuya Ishida",
@@ -2353,9 +2353,9 @@
   },
   "kikis-delivery-service": {
    "imdb": "tt0097814",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTFhYWI1NGUtZWFhZS00MTdkLWIzZTItMDBhNWNiZDNlMjYyXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/kikis-delivery-service.jpg",
    "rating": 7.8,
-   "votes": 192528,
+   "votes": 193119,
    "actors": [
     "Minami Takayama",
     "Rei Sakuma",
@@ -2364,9 +2364,9 @@
   },
   "nausicaa": {
    "imdb": "tt0087544",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODBhMTI3YzMtNTRjYS00OTFkLWJmODUtNjJiNzcwYTVkNDhiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/nausicaa.jpg",
    "rating": 8,
-   "votes": 199714,
+   "votes": 199991,
    "actors": [
     "Sumi Shimamoto",
     "Mahito Tsujimura",
@@ -2375,9 +2375,9 @@
   },
   "castle-in-the-sky": {
    "imdb": "tt0092067",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjcyMjg2MzktNjg4YS00MjQzLTg0YWQtMjUyZDk2Y2Y0YzZjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/castle-in-the-sky.jpg",
    "rating": 8,
-   "votes": 201105,
+   "votes": 201408,
    "actors": [
     "Mayumi Tanaka",
     "Keiko Yokozawa",
@@ -2386,9 +2386,9 @@
   },
   "porco-rosso": {
    "imdb": "tt0104652",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOGNjMDM1NWEtMzI4OC00YzdlLWJmMjktNmJiYTlkNTNlODM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/porco-rosso.jpg",
    "rating": 7.7,
-   "votes": 119072,
+   "votes": 119362,
    "actors": [
     "Shûichirô Moriyama",
     "Tokiko Katô",
@@ -2397,9 +2397,9 @@
   },
   "the-wind-rises": {
    "imdb": "tt2013293",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTU4NDg0MzkzNV5BMl5BanBnXkFtZTgwODA3Mzc1MDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/the-wind-rises.jpg",
    "rating": 7.8,
-   "votes": 115597,
+   "votes": 115851,
    "actors": [
     "Hideaki Anno",
     "Miori Takimoto",
@@ -2408,9 +2408,9 @@
   },
   "ponyo": {
    "imdb": "tt0876563",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDkzMzQ5ZmQtOTA3MC00MjhiLTk5M2UtNzk0MjEzZmVjN2UxXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/ponyo.jpg",
    "rating": 7.6,
-   "votes": 189632,
+   "votes": 190068,
    "actors": [
     "Tomoko Yamaguchi",
     "Kazushige Nagashima",
@@ -2419,9 +2419,9 @@
   },
   "boy-and-the-heron": {
    "imdb": "tt6587046",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMzA5Zjg3MTAtM2FhZS00NTNjLTg3NjEtNWQ4MTRhZjhiNzVmXkEyXkFqcGc@._V1_QL75_UY562_CR2,0,380,562_.jpg",
+   "poster": "assets/posters/boy-and-the-heron.jpg",
    "rating": 7.3,
-   "votes": 151848,
+   "votes": 152317,
    "actors": [
     "Soma Santoki",
     "Masaki Suda",
@@ -2430,9 +2430,9 @@
   },
   "tale-of-princess-kaguya": {
    "imdb": "tt2576852",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTcwODI0MzEwOF5BMl5BanBnXkFtZTgwNjkyNTEwMTE@._V1_QL75_UY562_CR10,0,380,562_.jpg",
+   "poster": "assets/posters/tale-of-princess-kaguya.jpg",
    "rating": 8,
-   "votes": 63309,
+   "votes": 63484,
    "actors": [
     "Aki Asakura",
     "Kengo Kôra",
@@ -2441,9 +2441,9 @@
   },
   "metropolis-2001": {
    "imdb": "tt0293416",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzA1YWYyNDctMDZmYS00ZGJiLTg5NzktMGE0ZTUyMjYwOTQ1XkEyXkFqcGc@._V1_QL75_UY562_CR12,0,380,562_.jpg",
+   "poster": "assets/posters/metropolis-2001.jpg",
    "rating": 7.2,
-   "votes": 24194,
+   "votes": 24216,
    "actors": [
     "Toshio Furukawa",
     "Yuka Imoto",
@@ -2452,7 +2452,7 @@
   },
   "redline": {
    "imdb": "tt1714890",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_SX300.jpg",
+   "poster": "assets/posters/redline.jpg",
    "rating": 7.5,
    "votes": 5561,
    "actors": [
@@ -2464,9 +2464,9 @@
   },
   "violet-evergarden-movie": {
    "imdb": "tt8652818",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOWUyNDFjOWUtNGM5MS00YTUzLWFhYzYtZDg5NDNjMWJiY2MyXkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/violet-evergarden-movie.jpg",
    "rating": 8.3,
-   "votes": 15354,
+   "votes": 15461,
    "actors": [
     "Yui Ishikawa",
     "Daisuke Namikawa",
@@ -2475,9 +2475,9 @@
   },
   "suzume": {
    "imdb": "tt16428256",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODhkNDhmNzktODFmMC00NDZiLWEzN2UtY2YwYzgzYTVlMWZmXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/suzume.jpg",
    "rating": 7.6,
-   "votes": 66413,
+   "votes": 66854,
    "actors": [
     "Nanoka Hara",
     "Hokuto Matsumura",
@@ -2486,9 +2486,9 @@
   },
   "look-back": {
    "imdb": "tt31711040",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOTVhN2ZlNmUtZTY1Mi00OTUwLWIxNzEtYzgwZjg2ZTlhNWU1XkEyXkFqcGc@._V1_QL75_UY562_CR34,0,380,562_.jpg",
+   "poster": "assets/posters/look-back.jpg",
    "rating": 7.8,
-   "votes": 24475,
+   "votes": 24779,
    "actors": [
     "Yumi Kawai",
     "Mizuki Yoshida",
@@ -2497,9 +2497,9 @@
   },
   "colorful-2010": {
    "imdb": "tt1677561",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNmM1YTAxYjYtOGYyMy00MjUyLTk5ZjYtNzgzNWI3ZDNiNzI3XkEyXkFqcGc@._V1_QL75_UY562_CR11,0,380,562_.jpg",
+   "poster": "assets/posters/colorful-2010.jpg",
    "rating": 7.3,
-   "votes": 8078,
+   "votes": 8096,
    "actors": [
     "Kumiko Aso",
     "Keiji Fujiwara",
@@ -2517,9 +2517,9 @@
   },
   "belle-2021": {
    "imdb": "tt13651628",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNmFkMzZjMmYtYWI4Mi00ZDY2LWEzNGItMjA1NGI2ZGVjYmI0XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/belle-2021.jpg",
    "rating": 7,
-   "votes": 21021,
+   "votes": 21091,
    "actors": [
     "Kaho Nakamura",
     "Ryo Narita",
@@ -2528,9 +2528,9 @@
   },
   "cowboy-bebop": {
    "imdb": "tt0213338",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMTU3ZTdiOGQtYmYwYy00OGM5LThmNjMtZGJmNTVlZjk1ZmEyXkEyXkFqcGc@._V1_QL75_UY562_CR16,0,380,562_.jpg",
+   "poster": "assets/posters/cowboy-bebop.jpg",
    "rating": 8.9,
-   "votes": 174152,
+   "votes": 174694,
    "actors": [
     "Koichi Yamadera",
     "Unsho Ishizuka",
@@ -2539,9 +2539,9 @@
   },
   "neon-genesis-evangelion": {
    "imdb": "tt0112159",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjZjZGI3ZDQtODNmZC00NjE0LTlmYTUtOTljMWI2YjNmMTQ0XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/neon-genesis-evangelion.jpg",
    "rating": 8.5,
-   "votes": 115835,
+   "votes": 116418,
    "actors": [
     "Megumi Ogata",
     "Megumi Hayashibara",
@@ -2550,9 +2550,9 @@
   },
   "death-note": {
    "imdb": "tt0877057",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/death-note.jpg",
    "rating": 8.9,
-   "votes": 502096,
+   "votes": 504299,
    "actors": [
     "Mamoru Miyano",
     "Brad Swaile",
@@ -2561,9 +2561,9 @@
   },
   "fullmetal-alchemist-brotherhood": {
    "imdb": "tt1355642",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMzNiODA5NjYtYWExZS00OTc4LTg3N2ItYWYwYTUyYmM5MWViXkEyXkFqcGc@._V1_QL75_UY562_CR11,0,380,562_.jpg",
+   "poster": "assets/posters/fullmetal-alchemist-brotherhood.jpg",
    "rating": 9.1,
-   "votes": 259347,
+   "votes": 260610,
    "actors": [
     "Kent Williams",
     "Iemasa Kayumi",
@@ -2572,9 +2572,9 @@
   },
   "steins-gate": {
    "imdb": "tt1910272",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjI1YjZiMDUtZTI3MC00YTA5LWIzMmMtZmQ0NTZiYWM4NTYwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/steins-gate.jpg",
    "rating": 8.8,
-   "votes": 97343,
+   "votes": 97840,
    "actors": [
     "Mamoru Miyano",
     "Asami Imai",
@@ -2583,9 +2583,9 @@
   },
   "serial-experiments-lain": {
    "imdb": "tt0500092",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZGJiMmEyMDMtMTJlZi00YTgwLWI1ODgtZDA1YjEyM2Q5MjI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/serial-experiments-lain.jpg",
    "rating": 8,
-   "votes": 23066,
+   "votes": 23192,
    "actors": [
     "Kaori Shimizu",
     "Ali Moriizumi",
@@ -2594,9 +2594,9 @@
   },
   "ergo-proxy": {
    "imdb": "tt0791205",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYmZmOGM3MjAtYWI3My00N2QyLWJmNTctNTE5MTU2ZjcxYzNiXkEyXkFqcGc@._V1_QL75_UY562_CR21,0,380,562_.jpg",
+   "poster": "assets/posters/ergo-proxy.jpg",
    "rating": 7.8,
-   "votes": 19245,
+   "votes": 19314,
    "actors": [
     "Kôji Yusa",
     "Akiko Yajima",
@@ -2605,9 +2605,9 @@
   },
   "cyberpunk-edgerunners": {
    "imdb": "tt12590266",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNGNiZjJkZmItYjJhYy00N2M5LTg4ZmYtMzUxZWI0ZTU2MmEzXkEyXkFqcGc@._V1_QL75_UY562_CR35,0,380,562_.jpg",
+   "poster": "assets/posters/cyberpunk-edgerunners.jpg",
    "rating": 8.3,
-   "votes": 136080,
+   "votes": 139739,
    "actors": [
     "Kentarô Tone",
     "Koki Uchiyama",
@@ -2616,9 +2616,9 @@
   },
   "attack-on-titan": {
    "imdb": "tt2560140",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/attack-on-titan.jpg",
    "rating": 9.1,
-   "votes": 746262,
+   "votes": 755584,
    "actors": [
     "Jessie James Grelle",
     "Bryce Papenbrook",
@@ -2627,9 +2627,9 @@
   },
   "one-punch-man": {
    "imdb": "tt4508902",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzMwOGQ5MWItNzE3My00ZDYyLTk4NzAtZWIyYWI0NTZhYzY0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/one-punch-man.jpg",
    "rating": 8.6,
-   "votes": 231227,
+   "votes": 231970,
    "actors": [
     "Makoto Furukawa",
     "Kaito Ishikawa",
@@ -2638,9 +2638,9 @@
   },
   "mob-psycho-100": {
    "imdb": "tt5897304",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzU3NDM4ZjgtY2UyMi00YTczLTgyNDEtMjBiMDJlOGUxNjcxXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/mob-psycho-100.jpg",
    "rating": 8.5,
-   "votes": 72192,
+   "votes": 72732,
    "actors": [
     "Setsuo Ito",
     "Takahiro Sakurai",
@@ -2649,9 +2649,9 @@
   },
   "hunter-x-hunter-2011": {
    "imdb": "tt2098220",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzYxOTlkYzctNGY2MC00MjNjLWIxOWMtY2QwYjcxZWIwMmEwXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/hunter-x-hunter-2011.jpg",
    "rating": 9,
-   "votes": 206442,
+   "votes": 207704,
    "actors": [
     "Issei Futamata",
     "Megumi Han",
@@ -2660,9 +2660,9 @@
   },
   "monster-2004": {
    "imdb": "tt0434706",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzU2MWQ5NGQtYmNlMC00ZjJkLWJmODItZDM5MDM3YmUyMWJkXkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/monster-2004.jpg",
    "rating": 8.8,
-   "votes": 76129,
+   "votes": 76803,
    "actors": [
     "Hidenobu Kiuchi",
     "Liam O&apos;Brien",
@@ -2671,9 +2671,9 @@
   },
   "haikyuu": {
    "imdb": "tt3398540",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYjYxMWFlYTAtYTk0YS00NTMxLWJjNTQtM2E0NjdhYTRhNzE4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/haikyuu.jpg",
    "rating": 8.7,
-   "votes": 57194,
+   "votes": 57545,
    "actors": [
     "Ayumu Murase",
     "Kaito Ishikawa",
@@ -2682,9 +2682,9 @@
   },
   "frieren": {
    "imdb": "tt22248376",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/frieren.jpg",
    "rating": 8.9,
-   "votes": 85660,
+   "votes": 86502,
    "actors": [
     "Atsumi Tanezaki",
     "Kana Ichinose",
@@ -2693,9 +2693,9 @@
   },
   "samurai-champloo": {
    "imdb": "tt0423731",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjBhZTY4NzMtOGU3OC00ZDllLWE2ZjUtMGFjYTU5OWI0YTQ2XkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/samurai-champloo.jpg",
    "rating": 8.5,
-   "votes": 65219,
+   "votes": 65379,
    "actors": [
     "Kazuya Nakai",
     "Ginpei Sato",
@@ -2704,9 +2704,9 @@
   },
   "mushishi": {
    "imdb": "tt0807832",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMmUxZjA2ZTgtYmIzNy00YWE0LTliMjktZGY5NTQ5ZDEzYmM1XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/mushishi.jpg",
    "rating": 8.5,
-   "votes": 16528,
+   "votes": 16583,
    "actors": [
     "Yûto Nakano",
     "Travis Willingham",
@@ -2715,9 +2715,9 @@
   },
   "texhnolyze": {
    "imdb": "tt0409630",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNzc0NTY4ZWQtZTkyMC00ZDI5LWE3NjAtYmQ4NGM4NmUwZmMwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/texhnolyze.jpg",
    "rating": 7.5,
-   "votes": 3816,
+   "votes": 3840,
    "actors": [
     "Liam O&apos;Brien",
     "Patrick Seitz",
@@ -2726,9 +2726,9 @@
   },
   "code-geass": {
    "imdb": "tt0994314",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNTk4MWYwNmUtODFjNC00NWJhLWExNGYtMGU4YmRlNzEwOTY1XkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/code-geass.jpg",
    "rating": 8.7,
-   "votes": 109175,
+   "votes": 110803,
    "actors": [
     "Jun Fukuyama",
     "Takahiro Sakurai",
@@ -2737,9 +2737,9 @@
   },
   "jujutsu-kaisen": {
    "imdb": "tt12343534",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMjBlNTExMDAtMWZjZi00MDc5LWFkMjgtZDU0ZWQ5ODk3YWY5XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/jujutsu-kaisen.jpg",
    "rating": 8.5,
-   "votes": 223472,
+   "votes": 224886,
    "actors": [
     "Jun&apos;ya Enoki",
     "Adam McArthur",
@@ -2748,9 +2748,9 @@
   },
   "demon-slayer": {
    "imdb": "tt9335498",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/demon-slayer.jpg",
    "rating": 8.5,
-   "votes": 238883,
+   "votes": 240010,
    "actors": [
     "Natsuki Hanae",
     "Zach Aguilar",
@@ -2759,9 +2759,9 @@
   },
   "chainsaw-man": {
    "imdb": "tt13616990",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/chainsaw-man.jpg",
    "rating": 8.3,
-   "votes": 112823,
+   "votes": 113850,
    "actors": [
     "Kikunosuke Toya",
     "Ryan Colt Levy",
@@ -2770,9 +2770,9 @@
   },
   "vinland-saga": {
    "imdb": "tt10233448",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNDA3MGNmZTEtMzFiMy00ZmViLThhNmQtMjQ4ZDc5MDEyN2U1XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/vinland-saga.jpg",
    "rating": 8.9,
-   "votes": 152737,
+   "votes": 154108,
    "actors": [
     "Shinya Takahashi",
     "Yûto Uemura",
@@ -2781,9 +2781,9 @@
   },
   "made-in-abyss": {
    "imdb": "tt7222086",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZjM4ODA5YTktNjliMC00NzI5LTk3ZTctZWYyYWEyNTJhMmQzXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/made-in-abyss.jpg",
    "rating": 8.3,
-   "votes": 22410,
+   "votes": 22554,
    "actors": [
     "Miyu Tomita",
     "Mariya Ise",
@@ -2792,9 +2792,9 @@
   },
   "odd-taxi": {
    "imdb": "tt14134550",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMGZiNWNlZDYtNjVhOS00MjMxLWFjZDgtYmE1NjI5YjA4MzdkXkEyXkFqcGc@._V1_QL75_UY562_CR15,0,380,562_.jpg",
+   "poster": "assets/posters/odd-taxi.jpg",
    "rating": 8.3,
-   "votes": 8336,
+   "votes": 8437,
    "actors": [
     "Natsuki Hanae",
     "Mike McFarland",
@@ -2803,9 +2803,9 @@
   },
   "spy-x-family": {
    "imdb": "tt13706018",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZDkwNjc0NWEtNzJlOC00N2YwLTk4MjktZGFlZDE2Y2QzOWI0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/spy-x-family.jpg",
    "rating": 8.2,
-   "votes": 65612,
+   "votes": 65987,
    "actors": [
     "Atsumi Tanezaki",
     "Takuya Eguchi",
@@ -2814,9 +2814,9 @@
   },
   "your-lie-in-april": {
    "imdb": "tt3895150",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZGMyYmFmNzgtMWQ4NS00MWE2LTg4YmEtZGY1MTBiODE0YmE5XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/your-lie-in-april.jpg",
    "rating": 8.6,
-   "votes": 54551,
+   "votes": 54897,
    "actors": [
     "Natsuki Hanae",
     "Risa Taneda",
@@ -2825,9 +2825,9 @@
   },
   "violet-evergarden": {
    "imdb": "tt7078180",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMWUwNDFiNjQtYjQ0MC00MTcxLWE0MGQtNTdkYTlhZGU2NDFmXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+   "poster": "assets/posters/violet-evergarden.jpg",
    "rating": 8.4,
-   "votes": 43571,
+   "votes": 43889,
    "actors": [
     "Yui Ishikawa",
     "Erika Harlacher",
@@ -2836,9 +2836,9 @@
   },
   "erased-2016": {
    "imdb": "tt5249462",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZWQ2YmI5NWMtZTY2Mi00MGUxLWFhMmEtYjVjZjMwOTNkOThjXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+   "poster": "assets/posters/erased-2016.jpg",
    "rating": 8.4,
-   "votes": 77468,
+   "votes": 77844,
    "actors": [
     "Shinnosuke Mitsushima",
     "Tao Tsuchiya",
@@ -2847,9 +2847,9 @@
   },
   "trigun": {
    "imdb": "tt0251439",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjVjZDE0MzEtN2Q1Mi00YjgyLWE0NTMtMWJiNDA5MGRmMmM2XkEyXkFqcGc@._V1_QL75_UY562_CR8,0,380,562_.jpg",
+   "poster": "assets/posters/trigun.jpg",
    "rating": 8.2,
-   "votes": 26899,
+   "votes": 26958,
    "actors": [
     "Masaya Onosaka",
     "Hiromi Tsuru",
@@ -2858,9 +2858,9 @@
   },
   "berserk-1997": {
    "imdb": "tt0318871",
-   "poster": "https://m.media-amazon.com/images/M/MV5BMzEzMzhkNDgtY2Q0YS00MDk0LTg0YzItODY5ZjNjMDc4ODI3XkEyXkFqcGc@._V1_QL75_UY562_CR17,0,380,562_.jpg",
+   "poster": "assets/posters/berserk-1997.jpg",
    "rating": 8.8,
-   "votes": 83863,
+   "votes": 84413,
    "actors": [
     "Marc Diraison",
     "Nobutoshi Canna",
@@ -2869,9 +2869,9 @@
   },
   "paranoia-agent": {
    "imdb": "tt0433722",
-   "poster": "https://m.media-amazon.com/images/M/MV5BODgwMjc0YzEtNGJlYi00OWE3LWExNzAtMGNlOWFhMmE3YjdhXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/paranoia-agent.jpg",
    "rating": 7.9,
-   "votes": 17137,
+   "votes": 17199,
    "actors": [
     "Mamiko Noto",
     "Shozo Iizuka",
@@ -2880,9 +2880,9 @@
   },
   "dorohedoro": {
    "imdb": "tt11147852",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzE2M2I0ZmYtYjMxYS00NzYzLWEzNmEtZjQ4ODhmMDNmN2MyXkEyXkFqcGc@._V1_QL75_UY562_CR12,0,380,562_.jpg",
+   "poster": "assets/posters/dorohedoro.jpg",
    "rating": 8.1,
-   "votes": 16996,
+   "votes": 17114,
    "actors": [
     "Reina Kondô",
     "Kengo Takanashi",
@@ -2891,9 +2891,9 @@
   },
   "stand-alone-complex": {
    "imdb": "tt0346314",
-   "poster": "https://m.media-amazon.com/images/M/MV5BY2NkZmQwOWQtNDc3Mi00MzVhLWI5NGUtNzg2ODBhMWZhNjgzXkEyXkFqcGc@._V1_QL75_UY562_CR25,0,380,562_.jpg",
+   "poster": "assets/posters/stand-alone-complex.jpg",
    "rating": 8.5,
-   "votes": 22735,
+   "votes": 22804,
    "actors": [
     "Osamu Saka",
     "Shirô Saitô",
@@ -2902,9 +2902,9 @@
   },
   "psycho-pass": {
    "imdb": "tt2379308",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjQ1OTNkZGYtODVlMC00NWI0LWJiYjItMzM4M2U4NjY0ZTYwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/psycho-pass.jpg",
    "rating": 8.1,
-   "votes": 26412,
+   "votes": 26500,
    "actors": [
     "Kana Hanazawa",
     "Miyuki Sawashiro",
@@ -2913,9 +2913,9 @@
   },
   "pluto-2023": {
    "imdb": "tt26737616",
-   "poster": "https://m.media-amazon.com/images/M/MV5BZTI1YTYxMzgtMzM5MS00YWQzLTk1YTAtNWE2NTJhODVhNTZlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+   "poster": "assets/posters/pluto-2023.jpg",
    "rating": 8.1,
-   "votes": 21525,
+   "votes": 21688,
    "actors": [
     "Shinshû Fuji",
     "Yoko Hikasa",
@@ -2924,9 +2924,9 @@
   },
   "dungeon-meshi": {
    "imdb": "tt21621494",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNmU3ZGFhMmYtNzczYy00NTE0LThkYjgtNWFiYTY2NzRkM2QzXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/dungeon-meshi.jpg",
    "rating": 8.1,
-   "votes": 15366,
+   "votes": 15486,
    "actors": [
     "Kentarô Kumagai",
     "Sayaka Senbongi",
@@ -2935,9 +2935,9 @@
   },
   "bocchi-the-rock": {
    "imdb": "tt17158756",
-   "poster": "https://m.media-amazon.com/images/M/MV5BOWI1MzA5YTMtNDZiYy00M2Q2LTgxNzQtZTE1MGJmMDhhZWI3XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/bocchi-the-rock.jpg",
    "rating": 8.3,
-   "votes": 9703,
+   "votes": 9789,
    "actors": [
     "Yoshino Aoyama",
     "Sayumi Suzushiro",
@@ -2946,9 +2946,9 @@
   },
   "oshi-no-ko": {
    "imdb": "tt21030032",
-   "poster": "https://m.media-amazon.com/images/M/MV5BYzM3ZGJkN2YtOTQ5Ny00MzEyLTlkMzQtZDVhYzM3YWFlM2QwXkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+   "poster": "assets/posters/oshi-no-ko.jpg",
    "rating": 8.3,
-   "votes": 18332,
+   "votes": 18485,
    "actors": [
     "Jack Stansbury",
     "Takeo Otsuka",
@@ -2957,9 +2957,9 @@
   },
   "apothecary-diaries": {
    "imdb": "tt26743760",
-   "poster": "https://m.media-amazon.com/images/M/MV5BNjAxMmFjZjgtYjM1ZS00NzdmLTliZDktZmIyMzU5YTBlNDBmXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+   "poster": "assets/posters/apothecary-diaries.jpg",
    "rating": 8.6,
-   "votes": 28453,
+   "votes": 29086,
    "actors": [
     "Aoi Yûki",
     "Emi Lo",
